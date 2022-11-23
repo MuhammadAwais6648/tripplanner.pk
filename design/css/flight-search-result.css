@@ -1,0 +1,47 @@
+.short-header{background: #333333;height: 12vh;padding: 0px;min-height: 5rem;}
+.left-bar {background: #f8f8f8;border:solid 1px #a7a7a7;}
+.sub-title{font-size: 16px;font-weight: 600;}
+.fr-br-botm{border-bottom: solid 1px #a7a7a7;}
+.left-bar .sub-txt{font-size: 13px;font-weight: 300;}
+.filter-list ul li{list-style: none;}
+.filter-list ul li label{font-size: 13px;}
+.right-bar{border:solid 1px #a7a7a7;}
+.right-bar .dep-det{font-size: 15px; font-weight: 400;}
+.right-bar .sub-txt{font-size: 13px;font-weight: 300;color: black;}
+ .right-bar .view-btn{background: #fb6311;border: none;border-radius: 6px;padding: 8px 5px;text-transform: uppercase;font-size: 12px;}
+ .right-bar .total-fare{font-size: 40px}
+ .right-bar .curency-sign{font-size: 15px;margin-bottom: -15px;margin-left: -34px;display: block;}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .search-fligh .form-control{font-size: 14px!important;}
+  .sub-title{font-size: 12px;}
+  .left-bar .sub-txt{font-size: 11px;}
+
+}
+
+
+
+
+
+@media (min-width: 992px) {
+
+}
+@media (max-width: 767px) {
+
+}
+@media (min-width: 640px) {}
+@media (min-width: 560px) {}
+@media (max-width: 425px) {
+}
+@media (min-width: 320px) {
+
+}
+
+

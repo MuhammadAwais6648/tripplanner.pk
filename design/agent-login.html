@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Trip Planner</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favi.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/trip-planner.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- Start Template Main CSS File for menu bar -->
+  <link href="css/menubar-bootstrap.min.css" rel="stylesheet">
+  <link href="css/menubar-style.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <!-- End Template Main CSS File for menu bar -->
+  <!-- Date  CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+  <style>
+    #page-top {
+      background: #6c6d70;
+    }
+
+    #page-top {
+      /*background: url("../public/img/bg-register-login.jpg") no-repeat center center fixed #333438;*/
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .for-login input {
+      border-radius: 5px;
+      border: none;;
+      text-align: left;
+      color: #6c6d70;
+      width: 100%;
+      height: 48px;
+      padding-left: 15px;
+    }
+
+    .for-login button {
+      background-color: #dda420;
+      border-radius: 5px;
+      border: none;
+      text-align: left;
+      color: #6c6d70;
+      width: 100%;
+      height: 48px;
+      color: white;
+      text-align: center;
+    }
+
+    .for-login-outline button {
+      background-color: #212834;
+      border-radius: 5px;
+      border: solid 2px #dda420;
+      text-align: left;
+      color: #6c6d70;
+      width: 100%;
+      height: 48px;
+      color: white;
+      text-align: center;
+    }
+    .login-sect{
+      width:60%;
+      margin:0 auto;
+    }
+    .user-regist1 {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 50px;
+      background: rgba(0, 0, 0, 0.6);
+      color:white;
+      padding-bottom: 20px;
+    }
+    a{
+      color:white ;
+    }
+    a:hover{
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body id="user-registration-page">
+<div class="login-screen1 user-regist1">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12  pt-lg-5 pt-3 ">
+      <div class="text-center">
+        <a href="index.html"><img class="" src="assets/img/user-registration-logo.png"></a>
+      </div>
+      <form action="<?php echo base_url(); ?>auth/doAgentLogin" class="remember-agent-login-frm"
+            id="remember-agent-login-frm" method="post" accept-charset="utf-8"
+            enctype="multipart/form-data">
+        <input type="hidden" id="AgentLoginCaptcha" name="AgentLoginCaptcha" value="<?= $code ?>">
+        <div class="login-title text-center mt-4">Login As Agent</div>
+        <div class="row">
+          <div class="col-lg-3 col-md-2 col-sm-2 col-1"></div>
+          <div class="col-lg-6 col-md-8 col-sm-8 col-10">
+            <div class="for-login pt-4 mt-lg-3">
+              <label class="text-left">Email</label>
+              <input type="text" id="agent_email" name="agent_email" value="Email *">
+            </div>
+            <div class="for-login pt-3">
+              <label class="text-left">Password</label>
+              <input type="password" id="agent_password" name="agent_password"
+                     value="Password *">
+            </div>
+            <div class="for-login pt-3" style="margin-bottom: 20px;">
+              <label class="text-left">Captcha </label><span class="float-right">321456</span>
+              <input type="text" id="AgentCaptcha" name="AgentCaptcha"
+                     placeholder="Kindly write white text as below" value="" autocomplete="off">
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="login-title text-center mt-4">
+                  <a href="#">
+                    <span id="LoginLabel"><u> Register As B2B ?</u></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="login-btn pt-3">
+                  <button class="btn w-50">LOG IN</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-2 col-sm-2 col-1"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

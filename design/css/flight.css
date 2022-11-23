@@ -1,0 +1,56 @@
+.flight-header{
+    background: url(../assets/img/flight-main-header.png) top no-repeat;
+    background-size: cover;
+}
+.flight-det .title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.flight-det img{}
+.world-map{background: url(../assets/img/world-map.png) no-repeat center;min-height: 700px;}
+.world-map{position: relative;}
+.africa{position: absolute;left: 64px;top: 31px;}
+.south-america{position: absolute;left: 421px;top: 31px;}
+.oceania{position: absolute;right: 89px;top: 31px;}
+.europe{position: absolute;left: 64px;top: 391px;}
+.north-america{position: absolute;left: 421px;top : 391px;}
+.asia{position: absolute;right: 89px;top : 391px;}
+
+
+
+.country-name{color: black;font-size: 25px;text-transform: uppercase;}
+.view-all-btn{background: #fb6311;border: none;border-radius: 6px;padding: 12px 23px;color: white;text-transform: uppercase;font-size: 14px;font-weight: 500;}
+.dropdown-style{border:solid 2px #fb6311 !important;padding: 10px 25px 10px 25px;right: 0px;}
+.flight-dropdown .dropbtn{width: 100%;}
+.flight-dropdown .custom-dropdown:hover .dropdown-content{display: contents;text-align: center;}
+.flight-dropdown .dropbtn{width: 100%;}
+.flight-dropdown .dropdown-content a{display: block;z-index: 1;}
+.view-all-btn :hover{background: #fb6311;border: none;border-radius: 6px;padding: 12px 23px;color: white;text-transform: uppercase;font-size: 14px;font-weight: 500;}
+
+
+
+
+@media (min-width: 768px) {
+.world-map{background-size: 100%;}
+.country-name {font-size: 20px;}
+}
+    
+
+
+
+@media (min-width: 992px) {
+
+}
+@media (max-width: 767px) {
+
+}
+@media (min-width: 640px) {}
+@media (min-width: 560px) {}
+@media (max-width: 425px) {
+}
+@media (min-width: 320px) {
+
+}
+
+
