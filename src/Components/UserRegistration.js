@@ -3,18 +3,20 @@ import '../Components/tripplanner.css';
 import '../Components/styles.css';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import CaptchaTest from "./CaptchaTest";
 import { useNavigate } from 'react-router-dom';
-
-
+import CaptchaTest from "./CaptchaTest";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha
+} from "react-simple-captcha";
 
 const UserRegistration = () => {
 
   useEffect(() => {
     document.title = "Sign Up | Tripplanner ";
   })
-
-
   const [first_name, setFName] = useState('');
   const [last_name, setLName] = useState('');
   const [email, setEmail] = useState('');
@@ -28,38 +30,67 @@ const UserRegistration = () => {
   let key = "UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
   let domain = "tripplanner.ae";
 
-  //const user = { key, domain, first_name, last_name, email, phone, password, confirm_password };
+  const user = { key, domain, first_name, last_name, email, phone, password, confirm_password };
+
+  let axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+      mode: 'no-cors',
+    }
+  };
 
   const doSubmit = (e) => {
     e.preventDefault();
-    const user = { key, domain, first_name, last_name, email, phone, password, confirm_password };
+    //  axios.post(`https://api.tripplanner.ae/web/sign-up`)
+    //      .then(res => {
+    //        console.log(res);
+    //        console.log(user);
+    //        console.log(res.data);
+    //      });
+
+    let user_captcha = document.getElementById("user_captcha_input").value;
+    console.log('user_captcha: ', user_captcha);
+
+    if (validateCaptcha(user_captcha) == false) {
+      alert("Captcha Does Not Match");
+      document.getElementById("user_captcha_input").value = "";
+      return;
+    }
+
+    axios.post('https://api.tripplanner.ae/web/sign-up', user, axiosConfig)
+      .then((res) => {
+        console.log("RESPONSE RECEIVED: ", res);
+      })
+      .catch((err) => {
+        console.log("AXIOS ERROR: ", err);
+      })
+
+    console.log(user);
 
     fetch('https://api.tripplanner.ae/web/sign-up', {
+
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
         "accept": "application/json"
       },
       body: JSON.stringify(user)
-
     }).then(async response => {
-      if (!response.ok) {
-        const jsonData = await response.json();
-        doSubmit(jsonData);
-        // setMsg(validation.errors);
-        // setIncorrect(true);
-        // alert("Hello! I am an alert box!!");
-        navigate('/user-login');
-      } else {
+      if (response.status === 'fail') {
+        setMsg(response.message);
+        setIncorrect(true);
+        alert()
+      }
+      else {
 
         localStorage.setItem('user', JSON.stringify(user));
-        //console.log(user);
+        console.log(user);
         console.log(response.json());
-        alert('Saved Successfully');
-        console.log(user)
+
+        navigate('/User-login');
       }
     });
-
   }
 
 

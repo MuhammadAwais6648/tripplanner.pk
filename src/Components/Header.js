@@ -30,6 +30,7 @@ const Header = () => {
     const [returned, setReturned] = useState("");
     const [selectedDate, setselectedDate] = useState('');
     const [msg, setMsg] = useState('');
+    const height = 18;
 
     const [incorrect, setIncorrect] = useState(false);
 
@@ -274,7 +275,7 @@ const Header = () => {
 
                                                                 <Autocomplete
                                                                 freeSolo
-                                                                style={{width: 250, marginRight: '5em', display:'flex'}}
+                                                                style={{width: 284, border: '0.3px' , height , marginRight: '5em',  display:'flex'}}
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
                                                                 options={departure.map((option) => option.Name)}
@@ -304,7 +305,7 @@ const Header = () => {
 
                                                             <Autocomplete
                                                                 freeSolo
-                                                                style={{width: 250, marginRight: '5em'}}
+                                                                style={{width: 284, marginRight: '5em',}}
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
                                                                 options={arrival.map((option) => option.Name)}

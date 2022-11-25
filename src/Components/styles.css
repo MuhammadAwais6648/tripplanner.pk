@@ -42,6 +42,15 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.capchaOuterBlock > div{
+    float: right !important;
+    text-align: end !important;
+}
+ 
+.capchaOuterBlock > div > canvas {
+    width: 61% !important;
+}
+
 *,
 *::before,
 *::after {
@@ -461,7 +470,7 @@ mark,
     color: #6c757d;
 }
 .blockquote-footer::before {
-    content: "— ";
+    content: "��";
 }
 
 .img-fluid {
@@ -10367,4 +10376,15 @@ body {
 .footer {
     padding: 5rem 0;
 }
+
+
+h3{
+    letter-spacing:1px;
+}
+
+
+h2{
+    letter-spacing:1px;
+}
+
 

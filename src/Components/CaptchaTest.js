@@ -7,6 +7,9 @@ import {
   LoadCanvasTemplateNoReload,
   validateCaptcha
 } from "react-simple-captcha";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class  CaptchaTest extends Component {
   componentDidMount() {
@@ -28,37 +31,23 @@ class  CaptchaTest extends Component {
 
   render() {
     return (
-      <div>
-         <div className="container">
-          <div className="form-group">
-            <div className="col mt-3">
-              <LoadCanvasTemplate />
-            </div>
-
-            <div className="col mt-3">
-              <div>
-                <input
-                  className="form-control"
-                  placeholder="Kindly write text as above *"
-                  id="user_captcha_input"
-                  name="user_captcha_input"
-                  type="text"
-                ></input>
-              </div>
-            </div>
-
-            <div className="col mt-3">
-              <div>
-                {/* <button
-                  className="btn btn-primary"
-                  onClick={() => this.doSubmit()}
-                >
-                  Submit
-                </button> */}
-              </div>
-            </div>
-          </div>
-         </div>
+      <div className="Container fluid" style={{marginTop: '12px'}}>
+      <Row>
+        <Col className="capchaOuterBlock"> 
+          <LoadCanvasTemplateNoReload />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+              className="form-control"
+              placeholder="Kindly write text as above *"
+              id="user_captcha_input"
+              name="user_captcha_input"
+              type="text"
+            ></input>
+         </Col>
+      </Row>
       </div>
     );
   }
