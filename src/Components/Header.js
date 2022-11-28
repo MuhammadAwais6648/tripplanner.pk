@@ -30,9 +30,9 @@ const Header = () => {
     const [returned, setReturned] = useState("");
     const [selectedDate, setselectedDate] = useState('');
     const [msg, setMsg] = useState('');
-    const height = 18;
 
     const [incorrect, setIncorrect] = useState(false);
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -118,7 +118,7 @@ const Header = () => {
 
     const Submit = (e) => {
         e.preventDefault();
-        const searchedItems = {departureAirport, arrivalAirport, returned, adult,child, infant, selectedDate};
+        const searchedItems = {departureAirport, arrivalAirport, returned, selectedDate, Date, showClass,  selectedDate , adult, adultPlus, adultMinus, child, childPlus, childMinus, infant, infantPlus, infantMinus, };
 
         fetch('https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2', {
             method: 'POST',
@@ -149,7 +149,7 @@ const Header = () => {
 
     }
 
-   
+
     const [data, setData] = useState([])
     useEffect(() => {
         const url = "https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
@@ -271,11 +271,10 @@ const Header = () => {
                                                         {/*       onChange={(e) => setDeparture(e.target.value)}  />*/}
 
 
-                                                        <Stack spacing={2} sx={{width: 300}}>
+                                                        <Stack spacing={2}>
 
-                                                                <Autocomplete
+                                                            <Autocomplete
                                                                 freeSolo
-                                                                style={{width: 284, border: '0.3px' , height , marginRight: '5em',  display:'flex'}}
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
                                                                 options={departure.map((option) => option.Name)}
@@ -283,7 +282,7 @@ const Header = () => {
                                                                     <TextField
                                                                         onChange={(e) => setDepartureAirport(e.target.value)}
                                                                         {...params}
-                                                                        label="Islamabad (ISB)..."
+                                                                        label=" Going Airport..."
                                                                         InputProps={{
                                                                             ...params.InputProps,
                                                                             type: 'search',
@@ -301,11 +300,10 @@ const Header = () => {
                                                                                                          src="assets/img/location-icon.png"/>
                                                         </div>
 
-                                                        <Stack spacing={2} sx={{width: 300}}>
+                                                        <Stack spacing={2}>
 
                                                             <Autocomplete
                                                                 freeSolo
-                                                                style={{width: 284, marginRight: '5em',}}
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
                                                                 options={arrival.map((option) => option.Name)}
@@ -313,7 +311,7 @@ const Header = () => {
                                                                     <TextField
                                                                         onChange={(e) => setArrivalAirport(e.target.value)}
                                                                         {...params}
-                                                                        label=" Going Airport..."
+                                                                        label=" Arrival Airport..."
                                                                         InputProps={{
                                                                             ...params.InputProps,
                                                                             type: 'search',
@@ -322,20 +320,13 @@ const Header = () => {
                                                                 )}
                                                             />
                                                         </Stack>
-
-                                                        {/*<input type="text" className="form-control"*/}
-                                                        {/*       placeholder=" Going Airport..." required*/}
-                                                        {/*       onChange={(e) => setArrival(e.target.value)} value={users.airports}/>*/}
                                                     </div>
 
-                                                    <div
-                                                        className="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4 onClickHide">
+                                                    <div className="col-xl-3 col-lg-3 col-md-4 col-12 pt-lg-0 pt-4 onClickHide">
                                                         <label className="form-label pl-2">Departure/Return Date</label>
-                                                        <Date style={{width: 250, marginRight: '5em'}}
-                                                              selectedDate={(e) => setValue(e)}
-                                                              onChange={(e) => setselectedDate(e.target.value)}/>
-
-
+                                                        <Stack spacing={2}>
+                                                            <Date selectedDate={(e) => setValue(e)} onChange={(e) => setselectedDate(e.target.value)}/>
+                                                        </Stack>
                                                     </div>
 
                                                     {showClass &&
@@ -354,7 +345,7 @@ const Header = () => {
                                                         <div
                                                             className="col-xl-2 col-lg-2 col-md-2 col-12 pb-lg-0 pb-0 mt-1 onClickHide">
                                                             <Link to="/flight-search-result">
-                                                                <button className="search-btn  w-100"
+                                                                <button className="search-btn w-100"
                                                                         type="submit" onClick={Submit}>SEARCH
                                                                 </button>
                                                             </Link>
