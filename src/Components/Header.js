@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Axios from "axios";
 
+
 let margintop = {
     marginTop: "0px",
 }
@@ -23,13 +24,15 @@ const Header = () => {
     const [searchBtn, setSearchBtn] = useState(true);
     const [showClass, setShowClass] = useState(false);
 
-    const [departureAirport, setDepartureAirport] = useState();
-    const [arrivalAirport, setArrivalAirport] = useState([]);
+    const [departureAirport, setDepartureAirport] = useState('');
+    const [arrivalAirport, setArrivalAirport] = useState('');
     const [departure, setDeparture] = useState([]);
     const [arrival, setArrival] = useState([]);
-    const [returned, setReturned] = useState("");
+    const [returned, setReturned] = useState("Return");
+    const [economyClass, setEconomyClass] = useState("Economy Class")
     const [selectedDate, setselectedDate] = useState('');
     const [msg, setMsg] = useState('');
+    const axios = require('axios').default;
 
     const [incorrect, setIncorrect] = useState(false);
 
@@ -114,54 +117,135 @@ const Header = () => {
     // const key="UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
     //const domain = "tripplanner.ae";
 
-    let navigate = useNavigate();
+    //let navigate = useNavigate();
+    // const searchedItems = {departureAirport, arrivalAirport, returned,  infant, economyClass, child, selectedDate};
+    // const Submit = (e) => {
+    //     e.preventDefault();
 
+    //     console.log('searchedItems: ', searchedItems);
+    //     return;
+    //     fetch('https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2', {
+    //         method: 'POST',
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             "accept": "application/json"
+    //         },
+    //         body: JSON.stringify(searchedItems)
+
+    //     }).then(async response => {
+    //         if (!response.ok) {
+    //             const jsonData = await response.json();
+    //             searchBtn(jsonData.data);
+    //             // setMsg(validation.errors);
+    //             // setIncorrect(true);
+    //             //alert("Hello! I am an alert box!!");
+
+    //         } else {
+
+    //             localStorage.setItem('user', JSON.stringify(searchedItems));
+    //             //console.log(user);
+    //             console.log(response.json());
+    //             alert('Saved Successfully');
+    //             navigate('/flight-search-result');
+    //             console.log(searchedItems)
+    //         }
+    //     });
+
+    // }
+
+    // // const [users, setUsers] = useState([])
+    // // users.airports = undefined;
+    // //
+    // // const fetchData = (users) => {
+    // //     return fetch('https://api.tripplanner.ae/web/airports', {
+    // //         method: 'POST',
+    // //         headers: {
+    // //             'Content-Type': 'application/json'
+    // //         },
+    // //         body: JSON.stringify(users)
+    // //     })
+    // //         .then(function(response) {
+    // //             if (!response.ok) {
+    // //                 throw new Error('Bad status code from server.');
+    // //
+    // //             }
+    // //
+    // //             return response.json();
+    // //         })
+    // //         .then(function(responseData) {
+    // //             if (!(responseData.data && responseData.data.success)) {
+    // //                 throw new Error('Bad response from server');
+    // //                 console.log(users)
+    // //             }
+    // //
+    // //         });
+    // //
+    // // }
+    //
+    // useEffect(() => {
+    //     fetchData().then(r => users)
+    // }, [])
+
+    // fetch("https://api.tripplanner.ae/web/airports")
+    //     .then((res) => res.json())
+    //     .then((data)=> {
+    //         console.log(data)
+    //     })
+
+    // const [cities, setCities] = useState()
+    // useEffect(()=>{
+    // Axios.post("https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2").then((res)=>{
+    //     setCities(res.data.cities);
+    //     console.log(cities)
+    // });
+    // } );
+    let navigate = useNavigate();
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+        }
+    }
+    const key='UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2'
+    const searchedItems = {key, departureAirport, arrivalAirport, returned, adult,infant,economyClass,child, selectedDate};
     const Submit = (e) => {
         e.preventDefault();
-        const searchedItems = {departureAirport, arrivalAirport, returned, selectedDate, Date, showClass,  selectedDate , adult, adultPlus, adultMinus, child, childPlus, childMinus, infant, infantPlus, infantMinus, };
+        // let user_captcha = document.getElementById("user_captcha_input").value;
 
-        fetch('https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2', {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "accept": "application/json"
-            },
-            body: JSON.stringify(searchedItems)
+        axios.post('https://api.tripplanner.ae/web/airports', searchedItems, axiosConfig)
+            .then((response) => {
+                console.log("response: ", response);
 
-        }).then(async response => {
-            if (!response.ok) {
-                const jsonData = await response.json();
-                searchBtn(jsonData.data);
-                // setMsg(validation.errors);
-                // setIncorrect(true);
-                //alert("Hello! I am an alert box!!");
+                if (response.data.status === 'fail') {
+                    console.log("if block");
+                    setMsg(response.data.message);
+                    setIncorrect(true);
+                    // alert(response.data.message);
+                }
+                else {
+                    console.log("else block");
+                    localStorage.setItem('searchedItems', JSON.stringify(searchedItems));
+                    console.log(searchedItems);
+                    navigate('/flight-search-result', { state: { searchedItems } });
 
-            } else {
-
-                localStorage.setItem('user', JSON.stringify(searchedItems));
-                //console.log(user);
-                console.log(response.json());
-                alert('Saved Successfully');
-                navigate('/flight-search-result');
-                console.log(searchedItems)
-            }
-        });
-
+                }
+            })
+            .catch((err) => {
+                console.log("AXIOS ERROR: ", err);
+            })
     }
-
-
     const [data, setData] = useState([])
     useEffect(() => {
         const url = "https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
         Axios.post(url).then(function (result) {
-            console.log('result: ', result);
             setDeparture(result.data.data);
             setArrival(result.data.data);
         });
     }, [])
 
-    console.log('departure: ', departure);
-
+    const handleSelectedDate = (dateString) => {
+        console.log('e================== ', dateString);
+        setselectedDate(dateString[0] + ' - ' + dateString[1]);
+    }
     return (
         <div>
             <header className="masthead main-header mob-header">
@@ -174,10 +258,10 @@ const Header = () => {
 
                                 <div className="col-xl-12 col-lg-12 col-md-7 mb-md-2 mb-sm-0 mb-0 mob-top-margin">
                                     <div className="custom-dropdown cus-down-arrow pr-0">
-                                        <button onChange={(e) => setReturned(e.target.value)} className="dropbtn">Return<i
-                                            className="fa fa-angle-down"></i></button>
+                                        <button className="dropbtn">{returned}<i className="fa fa-angle-down"></i></button>
                                         <div className="dropdown-content">
-                                            <a href="#">Any Way</a>
+                                            <a href="#" data-value="Return" onClick={(e) => {setReturned(e.target.getAttribute('data-value'))}}>Return</a>
+                                            <a href="#" data-value="any_way" onClick={(e) => {setReturned(e.target.getAttribute('data-value'))}}>Any Way</a>
                                         </div>
                                     </div>
                                     <div className="custom-dropdown cus-down-arrow cus-down-arrow pr-0">
@@ -230,15 +314,16 @@ const Header = () => {
                                         </div>
                                     </div>
                                     <div className="custom-dropdown cus-down-arrow pr-0">
-                                        <button className="dropbtn">Economy<i className="fa fa-angle-down"></i></button>
+                                        <button className="dropbtn">{economyClass}<i className="fa fa-angle-down"></i></button>
                                         <div className="dropdown-content">
-                                            <a href="#">Business</a>
+                                            <a href="#" data-value="Economy Class" onClick={(e) => {setEconomyClass(e.target.getAttribute('data-value'))}}>Economy Class</a>
+                                            <a href="#" data-value="Premium Economy Class" onClick={(e) => {setEconomyClass(e.target.getAttribute('data-value'))}}>Premium Economy Class</a>
+                                            <a href="#" data-value="Business Class" onClick={(e) => {setEconomyClass(e.target.getAttribute('data-value'))}}>Business Class</a>
+                                            <a href="#" data-value="First Class" onClick={(e) => {setEconomyClass(e.target.getAttribute('data-value'))}}>First Class</a>
                                         </div>
                                     </div>
                                     <div className="custom-dropdown cus-down-arrow pr-0">
-                                        <button className="dropbtn multicities" onClick={Increment}>Multi Cities
-                                        </button>
-
+                                        <button className="dropbtn multicities" onClick={Increment}>Multi Cities</button>
                                     </div>
                                 </div>
                             </div>
@@ -277,10 +362,13 @@ const Header = () => {
                                                                 freeSolo
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
-                                                                options={departure.map((option) => option.Name)}
-                                                                renderInput={(params) => (
+                                                                onChange={(event, newValue) => {
+                                                                    setDepartureAirport(newValue);
+                                                                }}
+                                                                options={departure.map((option) => option.Code + ' - ' + option.Name + ' ' + ' ' + option.CountryName)}                                                                renderInput={(params) => {
+                                                                console.log(params);
+                                                                return (
                                                                     <TextField
-                                                                        onChange={(e) => setDepartureAirport(e.target.value)}
                                                                         {...params}
                                                                         label=" Going Airport..."
                                                                         InputProps={{
@@ -288,7 +376,7 @@ const Header = () => {
                                                                             type: 'search',
                                                                         }}
                                                                     />
-                                                                )}
+                                                                )}}
                                                             />
                                                         </Stack>
                                                     </div>
@@ -296,8 +384,7 @@ const Header = () => {
                                                     <div
                                                         className="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4 onClickHide">
                                                         <label className="form-label pl-2">Arrival Airport</label>
-                                                        <div className="dep-icon d-none d-lg-block"><img className=""
-                                                                                                         src="assets/img/location-icon.png"/>
+                                                        <div className="dep-icon d-none d-lg-block"><img className="" src="assets/img/location-icon.png"/>
                                                         </div>
 
                                                         <Stack spacing={2}>
@@ -306,10 +393,12 @@ const Header = () => {
                                                                 freeSolo
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
-                                                                options={arrival.map((option) => option.Name)}
+                                                                onChange={(event, newValue) => {
+                                                                    setArrivalAirport(newValue);
+                                                                }}
+                                                                options={arrival.map((option) => option.Code + ' - ' + option.Name + ' ' + ' ' + option.CountryName)}
                                                                 renderInput={(params) => (
                                                                     <TextField
-                                                                        onChange={(e) => setArrivalAirport(e.target.value)}
                                                                         {...params}
                                                                         label=" Arrival Airport..."
                                                                         InputProps={{
@@ -325,7 +414,7 @@ const Header = () => {
                                                     <div className="col-xl-3 col-lg-3 col-md-4 col-12 pt-lg-0 pt-4 onClickHide">
                                                         <label className="form-label pl-2">Departure/Return Date</label>
                                                         <Stack spacing={2}>
-                                                            <Date selectedDate={(e) => setValue(e)} onChange={(e) => setselectedDate(e.target.value)}/>
+                                                            <Date onChange={handleSelectedDate}/>
                                                         </Stack>
                                                     </div>
 

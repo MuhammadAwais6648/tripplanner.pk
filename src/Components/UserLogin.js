@@ -28,9 +28,9 @@ useEffect(() => {
  const [email , setUserEmail] = useState('');
  const [password , setUserPassword] = useState('');
 
-  const [msg,setMsg] = useState('');
+ const [msg,setMsg] = useState('');
 
-  const [incorrect , setIncorrect] = useState(false);
+ const [incorrect , setIncorrect] = useState(false);
 
 let navigate = useNavigate();
 
