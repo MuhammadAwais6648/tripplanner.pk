@@ -58,7 +58,7 @@ return(
                   <div class="row g-3 needs-validation main-search p-4 bot-search-eng mt-2 m-0" novalidate>
                      <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
                         <label class="form-label pl-3">Departure Airport</label>
-                        <input type="text" class="form-control" placeholder=" Islamabad (ISB)..." required />
+                        <input type="text" className="form-control" placeholder=" Islamabad (ISB)..." required />
                       </div>
                        <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
                           <label class="form-label pl-3">Arrival Airport</label>

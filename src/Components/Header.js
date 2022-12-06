@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Axios from "axios";
+import AsyncSelect from "react-select/async";
+//import $ from 'jquery';
 
 
 let margintop = {
@@ -113,92 +115,6 @@ const Header = () => {
         }
     }
 
-    //const [posts, setPosts] = useState('');
-    // const key="UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
-    //const domain = "tripplanner.ae";
-
-    //let navigate = useNavigate();
-    // const searchedItems = {departureAirport, arrivalAirport, returned,  infant, economyClass, child, selectedDate};
-    // const Submit = (e) => {
-    //     e.preventDefault();
-
-    //     console.log('searchedItems: ', searchedItems);
-    //     return;
-    //     fetch('https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2', {
-    //         method: 'POST',
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "accept": "application/json"
-    //         },
-    //         body: JSON.stringify(searchedItems)
-
-    //     }).then(async response => {
-    //         if (!response.ok) {
-    //             const jsonData = await response.json();
-    //             searchBtn(jsonData.data);
-    //             // setMsg(validation.errors);
-    //             // setIncorrect(true);
-    //             //alert("Hello! I am an alert box!!");
-
-    //         } else {
-
-    //             localStorage.setItem('user', JSON.stringify(searchedItems));
-    //             //console.log(user);
-    //             console.log(response.json());
-    //             alert('Saved Successfully');
-    //             navigate('/flight-search-result');
-    //             console.log(searchedItems)
-    //         }
-    //     });
-
-    // }
-
-    // // const [users, setUsers] = useState([])
-    // // users.airports = undefined;
-    // //
-    // // const fetchData = (users) => {
-    // //     return fetch('https://api.tripplanner.ae/web/airports', {
-    // //         method: 'POST',
-    // //         headers: {
-    // //             'Content-Type': 'application/json'
-    // //         },
-    // //         body: JSON.stringify(users)
-    // //     })
-    // //         .then(function(response) {
-    // //             if (!response.ok) {
-    // //                 throw new Error('Bad status code from server.');
-    // //
-    // //             }
-    // //
-    // //             return response.json();
-    // //         })
-    // //         .then(function(responseData) {
-    // //             if (!(responseData.data && responseData.data.success)) {
-    // //                 throw new Error('Bad response from server');
-    // //                 console.log(users)
-    // //             }
-    // //
-    // //         });
-    // //
-    // // }
-    //
-    // useEffect(() => {
-    //     fetchData().then(r => users)
-    // }, [])
-
-    // fetch("https://api.tripplanner.ae/web/airports")
-    //     .then((res) => res.json())
-    //     .then((data)=> {
-    //         console.log(data)
-    //     })
-
-    // const [cities, setCities] = useState()
-    // useEffect(()=>{
-    // Axios.post("https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2").then((res)=>{
-    //     setCities(res.data.cities);
-    //     console.log(cities)
-    // });
-    // } );
     let navigate = useNavigate();
     let axiosConfig = {
         headers: {
@@ -215,6 +131,11 @@ const Header = () => {
             .then((response) => {
                 console.log("response: ", response);
 
+                if(searchedItems == "" ){
+                    return null
+                }
+
+
                 if (response.data.status === 'fail') {
                     console.log("if block");
                     setMsg(response.data.message);
@@ -226,7 +147,6 @@ const Header = () => {
                     localStorage.setItem('searchedItems', JSON.stringify(searchedItems));
                     console.log(searchedItems);
                     navigate('/flight-search-result', { state: { searchedItems } });
-
                 }
             })
             .catch((err) => {
@@ -235,15 +155,18 @@ const Header = () => {
     }
     const [data, setData] = useState([])
     useEffect(() => {
+
+
         const url = "https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
         Axios.post(url).then(function (result) {
+
             setDeparture(result.data.data);
             setArrival(result.data.data);
         });
     }, [])
 
     const handleSelectedDate = (dateString) => {
-        console.log('e================== ', dateString);
+       // console.log('e================== ', dateString);
         setselectedDate(dateString[0] + ' - ' + dateString[1]);
     }
     return (
@@ -362,6 +285,8 @@ const Header = () => {
                                                                 freeSolo
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
+                                                                autoComplete="off"
+                                                                filterSelectedOptions
                                                                 onChange={(event, newValue) => {
                                                                     setDepartureAirport(newValue);
                                                                 }}
@@ -375,6 +300,7 @@ const Header = () => {
                                                                             ...params.InputProps,
                                                                             type: 'search',
                                                                         }}
+
                                                                     />
                                                                 )}}
                                                             />
@@ -390,16 +316,18 @@ const Header = () => {
                                                         <Stack spacing={2}>
 
                                                             <Autocomplete
+
                                                                 freeSolo
                                                                 id="free-solo-2-demo"
                                                                 disableClearable
-                                                                onChange={(event, newValue) => {
+                                                                onInputChange={(event, newValue) => {
                                                                     setArrivalAirport(newValue);
                                                                 }}
                                                                 options={arrival.map((option) => option.Code + ' - ' + option.Name + ' ' + ' ' + option.CountryName)}
                                                                 renderInput={(params) => (
                                                                     <TextField
                                                                         {...params}
+
                                                                         label=" Arrival Airport..."
                                                                         InputProps={{
                                                                             ...params.InputProps,

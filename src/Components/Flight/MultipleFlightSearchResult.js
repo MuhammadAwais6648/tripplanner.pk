@@ -65,7 +65,7 @@ return (
                   <div class="sub-title mt-3 p-2"> Total <span> 960</span> </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary apply-btn">Apply Filter</button>
                 </div>
               </div>
