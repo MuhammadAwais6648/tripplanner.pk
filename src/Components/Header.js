@@ -131,11 +131,6 @@ const Header = () => {
             .then((response) => {
                 console.log("response: ", response);
 
-                if(searchedItems == "" ){
-                    return null
-                }
-
-
                 if (response.data.status === 'fail') {
                     console.log("if block");
                     setMsg(response.data.message);
@@ -327,7 +322,7 @@ const Header = () => {
                                                                 renderInput={(params) => (
                                                                     <TextField
                                                                         {...params}
-
+  required
                                                                         label=" Arrival Airport..."
                                                                         InputProps={{
                                                                             ...params.InputProps,
