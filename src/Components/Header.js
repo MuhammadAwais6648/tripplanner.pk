@@ -6,7 +6,6 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Axios from "axios";
-import {omit} from 'lodash'
 import AsyncSelect from "react-select/async";
 //import $ from 'jquery';
 
@@ -36,7 +35,7 @@ const Header = () => {
     const [selectedDate, setselectedDate] = useState('');
     const [msg, setMsg] = useState('');
     const axios = require('axios').default;
-    const [required, setRequired] = useState({ required: true });
+
     const [incorrect, setIncorrect] = useState(false);
 
 
@@ -122,69 +121,11 @@ const Header = () => {
             'Content-Type': 'application/json;charset=UTF-8',
         }
     }
-
-    // //Form values
-     const [values, setValues] = useState({});
-    // //Errors
-     const [errors, setErrors] = useState({});
-    //
-    //
-    // const validate = (event, searchedItems) => {
-    //     //A function to validate each input values
-    //
-    //     switch (searchedItems) {
-    //         case 'departureAirport':
-    //             if(departureAirport === (null)){
-    //                 // we will set the error state
-    //
-    //                 setErrors({
-    //                     ...errors,
-    //                     departureAirport:'Departure Airport is empty'
-    //                 })
-    //             }else{
-    //                 // set the error state empty or remove the error for username input
-    //
-    //                 //omit function removes/omits the value from given object and returns a new object
-    //                 let newObj = omit(errors, "username");
-    //                 setErrors(newObj);
-    //
-    //             }
-    //             break;
-    //     }
-    // }
-
     const key='UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2'
     const searchedItems = {key, departureAirport, arrivalAirport, returned, adult,infant,economyClass,child, selectedDate};
     const Submit = (e) => {
         e.preventDefault();
         // let user_captcha = document.getElementById("user_captcha_input").value;
-
-
-
-
-        const validate = (event, searchedItems) => {
-            //A function to validate each input values
-
-            switch (searchedItems) {
-                case 'departureAirport':
-                    if(departureAirport === (null)){
-                        // we will set the error state
-
-                        setErrors({
-                            ...errors,
-                            departureAirport:'Departure Airport is empty'
-                        })
-                    }else{
-                        // set the error state empty or remove the error for username input
-
-                        //omit function removes/omits the value from given object and returns a new object
-                        let newObj = omit(errors, "username");
-                        setErrors(newObj);
-
-                    }
-                    break;
-            }
-        }
 
         axios.post('https://api.tripplanner.ae/web/airports', searchedItems, axiosConfig)
             .then((response) => {
@@ -235,7 +176,7 @@ const Header = () => {
 
                                 <div className="col-xl-12 col-lg-12 col-md-7 mb-md-2 mb-sm-0 mb-0 mob-top-margin">
                                     <div className="custom-dropdown cus-down-arrow pr-0">
-                                        <button className="dropbtn">{returned}<i className="fa fa-angle-down" aria-required={required}></i></button>
+                                        <button className="dropbtn">{returned}<i className="fa fa-angle-down"></i></button>
                                         <div className="dropdown-content">
                                             <a href="#" data-value="Return" onClick={(e) => {setReturned(e.target.getAttribute('data-value'))}}>Return</a>
                                             <a href="#" data-value="any_way" onClick={(e) => {setReturned(e.target.getAttribute('data-value'))}}>Any Way</a>
@@ -355,7 +296,7 @@ const Header = () => {
                                                                             type: 'search',
                                                                         }}
 
-                                                                        required={required} />
+                                                                    />
                                                                 )}}
                                                             />
                                                         </Stack>

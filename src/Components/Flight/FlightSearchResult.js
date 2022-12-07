@@ -10,6 +10,7 @@ import '../../Components/HomeCarousal.css';
 import BlackNavbar from "../../Components/BlackNavbar";
 import $ from "jquery";
 import { useLocation } from "react-router-dom";
+import Axios from "axios";
 
 
 const FlightSearchResult = () => {
@@ -35,6 +36,17 @@ const FlightSearchResult = () => {
     console.log("searchedResult 2: ", searchedResult);
 
   }, []);
+
+  useEffect(() => {
+
+
+    const url = "https://api.tripplanner.ae/web/airports?key=UXVpUGVja0BBUElAS0VZQEZPUkBEQVRBQE1JTklORzkxNTY2";
+    Axios.post(url).then(function (result) {
+
+      //setDeparture(result.data.data);
+      //setArrival(result.data.data);
+    });
+  }, [])
 
   return(
       <div>
