@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import '../Components/tripplanner.css';
 import '../Components/styles.css';
@@ -17,43 +17,43 @@ import AffordableTours from "../Components/Deals/AffordableTours";
 import FavouriteDestinations from "../Components/Deals/FavouriteDestinations";
 
 
-const ViewAll = () =>{
-useEffect(() => {
-  window.scrollTo(0, 0);
-  document.title = "View All Deals | Tripplanner ";
-}, [])
+const ViewAll = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "View All Deals | Tripplanner ";
+  }, [])
 
 
 
 
 
-return (
-<div>
+  return (
+    <div>
 
-<DealsHeader />
+      <DealsHeader />
 
-<section className="flight-det hotel-page view-all">
-     <div className="container">
+      <section className="flight-det hotel-page view-all">
+        <div className="container">
 
-        <CheapestFlights heading="Cheapest Flights Available" />
+          <CheapestFlights heading="Cheapest Flights Available" />
 
-         <LuxuryHotel />
+          <LuxuryHotel />
 
-         <CheapUmrahPackages />
+          <CheapUmrahPackages />
 
-         <AffordableTours />
+          <AffordableTours />
 
-         <FavouriteDestinations heading="Travel to favourite Destinations"/>
+          <FavouriteDestinations heading="Travel to favourite Destinations" />
 
-         <CompaniesLogo />
+          <CompaniesLogo />
 
 
-     </div>
-</section>
+        </div>
+      </section>
 
-<Footer />
-</div>
-)
+      <Footer />
+    </div>
+  )
 }
 
 export default ViewAll;

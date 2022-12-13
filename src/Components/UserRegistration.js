@@ -31,45 +31,44 @@ const UserRegistration = () => {
   let domain = "tripplanner.ae";
   let navigate = useNavigate();
 
-let axiosConfig = {
-   headers: {
-       'Content-Type': 'application/json;charset=UTF-8',
-   }
- };
+  let axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+    }
+  };
 
-const user = { key, domain, first_name, last_name, email, phone, password, confirm_password };
-const doSubmit = (e) =>
-  {
+  const user = { key, domain, first_name, last_name, email, phone, password, confirm_password };
+  const doSubmit = (e) => {
     e.preventDefault();
     let user_captcha = document.getElementById("user_captcha_input").value;
     console.log('user_captcha: ', user_captcha);
 
-     if (validateCaptcha(user_captcha) == false) {
-       alert("Captcha Does Not Match");
-       document.getElementById("user_captcha_input").value = "";
-       return;
-     }
+    if (validateCaptcha(user_captcha) == false) {
+      alert("Captcha Does Not Match");
+      document.getElementById("user_captcha_input").value = "";
+      return;
+    }
 
     axios.post('https://api.tripplanner.ae/web/sign-up', user, axiosConfig)
-    .then((response) => {
-      console.log("response: ", response);
+      .then((response) => {
+        console.log("response: ", response);
 
-      if (response.data.status === 'fail') {
-        console.log("if block");
-        setMsg(response.data.message);
-        setIncorrect(true);
-        alert(response.data.message);
-      }
-      else{
-        console.log("else block");
-        localStorage.setItem('user', JSON.stringify(user));
-        console.log(user);
-        navigate('/user-login');
-      }
-    })
-    .catch((err) => {
-      console.log("AXIOS ERROR: ", err);
-    })
+        if (response.data.status === 'fail') {
+          console.log("if block");
+          setMsg(response.data.message);
+          setIncorrect(true);
+          alert(response.data.message);
+        }
+        else {
+          console.log("else block");
+          localStorage.setItem('user', JSON.stringify(user));
+          console.log(user);
+          navigate('/user-login');
+        }
+      })
+      .catch((err) => {
+        console.log("AXIOS ERROR: ", err);
+      })
   }
 
   return (

@@ -1,82 +1,439 @@
-body {font-family: 'Montserrat', sans-serif!important; font-size: 14px!important; font-weight: 400!important; letter-spacing: 0; overflow-x: hidden;}
-h1,h2,h3,h4,h5,h6{font-size: 28px!important;font-weight: 400!important; text-transform: uppercase;letter-spacing: 5px;}
-p{color: #333333!important; line-height: 30px; font-family: Arial, Helvetica, sans-serif;}
-button, .dropbtn{outline: none;}
-.cus-down-arrow .fa-chevron-down{ font-size: 10px; }
-.main-header{background: url("/assets/img/main-header-bg.png") top no-repeat; background-size: cover; }
-.main-logo-width{}
-#mainNav{font-size: 14px; font-weight: 300;}
-.js-menu-toggle{color: white;}
-.js-menu-toggle:hover{color: white;}
-.main-logo{width: 98px;}
-.login-info select{background: transparent;border:none;color:white;}
-.login-info select option:hover{background: transparent;border:none;}
-.nav-link{display: inline!important;}
-.custom-nav a {color: #fff; display: inline-flex; text-decoration: none!important;}
-.custom-nav a span{color: #fff!important;}
-#mainNav:hover{background: #333333;}
-.for-postion{position: absolute;right: 0px;top:0px;}
-.nopadding{padding: 0px!important;}
-.search-form{  bottom: 0px!important; position: absolute; right: 0%;margin-bottom: 10px; }
-.main-search .dep-icon{position:absolute;right:23px;bottom:9px;color: #c1cad4;}
-.btn-primary:hover{background: #155088;border-color:#155088; }
-.search-form .btn-secondary{background: transparent;border:none;font-size: 13px;color: white;}
-.search-form .btn-secondary:hover {background: transparent;border:none;}
-.main-search{background-color: white;border-radius: 10px;border:solid 2px #155088;position: relative;}
-.main-search .search-btn{background: #155088;border:none;margin-top: 23px;border-radius: 6px;padding: 12px 5px;color: white;}
-.main-search .search-btn:hover{background: #155088;border:none;}
-.form-control{font-weight: 500!important;font-size: 18px!important;padding: 10px 5px!important;height: 45px!important;}
-.best-deals{background:#f5f5f5;}
-.best-deals button{background: transparent;border:solid 1px #155088;border-radius: 22px;color:#155088;padding: 7px 30px;}
-.best-deals button:hover{background: #155088;border:solid 1px #155088;color:#fff;}
-.best-services .title{font-size: 16px; font-weight: 700; text-transform: uppercase;}
-.world-wide .title{font-size: 18px;font-weight: 500;text-transform: uppercase;}
-.form-label{font-size: 13px;font-weight: 500;}
-.sub-txt{font-size: 12px;font-weight: 500; color: #333333;}
-.find-hotel{background: url("/assets/img/find-hotel.png")!important;background-position: center;background-repeat: no-repeat;background-size: cover;height: 65vh;}
-.hotel-details{color: white;padding-top: 76px;}
-.hotel-details .price{font-size: 65px;line-height: 57px; font-weight: bold;}
-.hotel-details .title{font-size: 30px;font-weight: 500;}
-.find-hotel button{background: #155088;border:none;border-radius: 6px;padding: 12px 24px;color:white;text-transform: uppercase;font-size: 16px;font-weight: 500;}
-.find-hotel button:hover{border:none;}
-.find-hotel .sub-txt{font-size: 16px;font-weight: 500;text-transform: uppercase; color: #fff;}
-.fixed-top .main-logo{background: url("/assets/img/main-logo.png") center no-repeat; width:185px; height: 36px;}
-.custom-width{width: 100%!important;}
-.dropdown-toggle:hover {cursor:pointer}
-.dropbtn {background: transparent;color: white;border: none; font-weight: 300!important;}
-.custom-dropdown {position: relative;display: inline-block;padding: .5rem 1rem;}
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0;
+    overflow-x: hidden;
+}
 
-.dropdown-content a {color: black; text-decoration: none; display:  block;}
-.custom-dropdown:hover .dropdown-content {display: block; width: max-content;}
-.passenger{width: 175px;}
-.title-pax {width: 40%; float: left; padding-right: 15px;}
-.count-pax{width: 60%; float: left;}
-.owl-dots {display: none!important}
-.owl-next{left:30px;}
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{width: 50px; height: 50px;position: absolute;top: 177px;right: 32px;border-radius: 30px;}
-.owl-nav button.owl-next{background: url("/assets/img/icon-next.png")!important;}
-.owl-nav button.owl-prev{background: url("/assets/img/icon-prev.png")!important;}
-.right-cour-arrow {position: absolute;z-index: 99;right: 67px;top:192px;}
-.left-cour-arrow {position: absolute;z-index: 99;top:192px;left:65px;}
-.search-form .custom-dropdown .dropdown-content a:hover{color: black;}
-.navbar .custom-nav .cus-down-arrow .dropdown-content{color: black !important;}
-.navbar .custom-nav .cus-down-arrow .dropdown-content a:hover{color: black;}
-.no-border{border:none!important;}
-.sub-detail input{border-radius: 3px;border:none;}
-.owl-stage-outer .owl-stage{transition:all 0.5s ease 0s!important;}
-.hovereffect .title{position: relative;background:white;}
-.hover-1-description a{text-decoration: none;color: black; text-align: left; float: left;}
-.hover-1-description a:hover{text-decoration: none;color: black;}
-.for-umrah-height{position: absolute;bottom: 0;left: 0;right: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+p {
+    color: #333333 !important;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+.dropbtn {
+    outline: none;
+}
+
+.cus-down-arrow .fa-chevron-down {
+    font-size: 10px;
+}
+
+.main-header {
+    background: url("/assets/img/main-header-bg.png") top no-repeat;
+    background-size: cover;
+}
+
+.main-logo-width {}
+
+#mainNav {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.js-menu-toggle {
+    color: white;
+}
+
+.js-menu-toggle:hover {
+    color: white;
+}
+
+.main-logo {
+    width: 98px;
+}
+
+.login-info select {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.login-info select option:hover {
+    background: transparent;
+    border: none;
+}
+
+.nav-link {
+    display: inline !important;
+}
+
+.custom-nav a {
+    color: #fff;
+    display: inline-flex;
+    text-decoration: none !important;
+}
+
+.custom-nav a span {
+    color: #fff !important;
+}
+
+#mainNav:hover {
+    background: #333333;
+}
+
+.for-postion {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.nopadding {
+    padding: 0px !important;
+}
+
+.search-form {
+    bottom: 0px !important;
+    position: absolute;
+    right: 0%;
+    margin-bottom: 10px;
+}
+
+.main-search .dep-icon {
+    position: absolute;
+    right: 23px;
+    bottom: 9px;
+    color: #c1cad4;
+}
+
+.btn-primary:hover {
+    background: #155088;
+    border-color: #155088;
+}
+
+.search-form .btn-secondary {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    color: white;
+}
+
+.search-form .btn-secondary:hover {
+    background: transparent;
+    border: none;
+}
+
+.main-search {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px #155088;
+    position: relative;
+}
+
+.main-search .search-btn {
+    background: #155088;
+    border: none;
+    margin-top: 23px;
+    border-radius: 6px;
+    padding: 12px 5px;
+    color: white;
+}
+
+.main-search .search-btn:hover {
+    background: #155088;
+    border: none;
+}
+
+.form-control {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    padding: 10px 5px !important;
+    height: 45px !important;
+}
+
+.best-deals {
+    background: #f5f5f5;
+}
+
+.best-deals button {
+    background: transparent;
+    border: solid 1px #155088;
+    border-radius: 22px;
+    color: #155088;
+    padding: 7px 30px;
+}
+
+.best-deals button:hover {
+    background: #155088;
+    border: solid 1px #155088;
+    color: #fff;
+}
+
+.best-services .title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.world-wide .title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sub-txt {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.find-hotel {
+    background: url("/assets/img/find-hotel.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+}
+
+.hotel-details {
+    color: white;
+    padding-top: 76px;
+}
+
+.hotel-details .price {
+    font-size: 65px;
+    line-height: 57px;
+    font-weight: bold;
+}
+
+.hotel-details .title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.find-hotel button {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.find-hotel button:hover {
+    border: none;
+}
+
+.find-hotel .sub-txt {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.fixed-top .main-logo {
+    background: url("/assets/img/main-logo.png") center no-repeat;
+    width: 185px;
+    height: 36px;
+}
+
+.custom-width {
+    width: 100% !important;
+}
+
+.dropdown-toggle:hover {
+    cursor: pointer
+}
+
+.dropbtn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-weight: 300 !important;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.custom-dropdown:hover .dropdown-content {
+    display: block;
+    width: max-content;
+}
+
+.passenger {
+    width: 175px;
+}
+
+.title-pax {
+    width: 40%;
+    float: left;
+    padding-right: 15px;
+}
+
+.count-pax {
+    width: 60%;
+    float: left;
+}
+
+.owl-dots {
+    display: none !important
+}
+
+.owl-next {
+    left: 30px;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 177px;
+    right: 32px;
+    border-radius: 30px;
+}
+
+.owl-nav button.owl-next {
+    background: url("/assets/img/icon-next.png") !important;
+}
+
+.owl-nav button.owl-prev {
+    background: url("/assets/img/icon-prev.png") !important;
+}
+
+.right-cour-arrow {
+    position: absolute;
+    z-index: 99;
+    right: 67px;
+    top: 192px;
+}
+
+.left-cour-arrow {
+    position: absolute;
+    z-index: 99;
+    top: 192px;
+    left: 65px;
+}
+
+.search-form .custom-dropdown .dropdown-content a:hover {
+    color: black;
+}
+
+.navbar .custom-nav .cus-down-arrow .dropdown-content {
+    color: black !important;
+}
+
+.navbar .custom-nav .cus-down-arrow .dropdown-content a:hover {
+    color: black;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.sub-detail input {
+    border-radius: 3px;
+    border: none;
+}
+
+.owl-stage-outer .owl-stage {
+    transition: all 0.5s ease 0s !important;
+}
+
+.hovereffect .title {
+    position: relative;
+    background: white;
+}
+
+.hover-1-description a {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    float: left;
+}
+
+.hover-1-description a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.for-umrah-height {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .dark-fix-bg {
     background: #333333;
 }
-.free-cancel {color: #57a70f!important;}
-.for-height-cont{bottom: -22px!important;}
-.hovereffect {width: 100%;height: 100%;float: left;overflow: hidden;position: relative;text-align: center;cursor: default;}
-.hovereffect .overlay {width: 100%;left: 0;top: auto;bottom: 0;height: 4.75em;background: #79FAC4;color: #3c4a50;-webkit-transition: -webkit-transform 0.35s;transition: transform 0.35s; -webkit-transform: translate3d(0,100%,0);transform: translate3d(0,100%,0);visibility: hidden;}
-.hovereffect img {display: block;position: relative;-webkit-transition: -webkit-transform 0.35s;transition: transform 0.35s;}
-.hovereffect:hover img {-webkit-transform: translate3d(0,-10%,0);transform: translate3d(0,-10%,0);}
+
+.free-cancel {
+    color: #57a70f !important;
+}
+
+.for-height-cont {
+    bottom: -22px !important;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    height: 4.75em;
+    background: #79FAC4;
+    color: #3c4a50;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+.hovereffect:hover img {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+}
+
 .hovereffect h2 {
     text-transform: uppercase;
     color: black;
@@ -87,6 +444,7 @@ button, .dropbtn{outline: none;}
     margin: 0px;
     display: inline-block;
 }
+
 .hovereffect a.info {
     display: inline-block;
     text-decoration: none;
@@ -97,24 +455,28 @@ button, .dropbtn{outline: none;}
     margin: 50px 0 0 0;
     background-color: transparent;
 }
+
 .hovereffect a.info:hover {
     box-shadow: 0 0 5px #fff;
 }
+
 .hovereffect p.icon-links a {
     float: right;
     color: #3c4a50;
     font-size: 1.4em;
 }
+
 .hovereffect:hover p.icon-links a:hover,
 .hovereffect:hover p.icon-links a:focus {
     color: #252d31;
 }
+
 .hovereffect h2,
 .hovereffect p.icon-links a {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
-    -webkit-transform: translate3d(0,200%,0);
-    transform: translate3d(0,200%,0);
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
     visibility: visible;
 }
 
@@ -130,8 +492,8 @@ button, .dropbtn{outline: none;}
 .hovereffect:hover .overlay,
 .hovereffect:hover h2,
 .hovereffect:hover p.icon-links a {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .hovereffect:hover h2 {
@@ -161,6 +523,7 @@ button, .dropbtn{outline: none;}
     overflow: hidden;
     height: 400px;
 }
+
 .image-box img {
     max-width: 100%;
     transition: all 0.9s;
@@ -183,6 +546,7 @@ button, .dropbtn{outline: none;}
     height: 250px;
 
 }
+
 .image-box1 .img {
     max-width: 100%;
     transition: all 0.9s;
@@ -209,17 +573,58 @@ button, .dropbtn{outline: none;}
     padding: 5px 15px 5px 15px !important;
 }
 
-.name-desc {overflow: hidden;position: initial;padding-bottom: 9.8%;background: white;}
-.rounded{border-radius: 0px!important;}
+.name-desc {
+    overflow: hidden;
+    position: initial;
+    padding-bottom: 9.8%;
+    background: white;
+}
+
+.rounded {
+    border-radius: 0px !important;
+}
+
 /* DEMO 1 ============================== */
-.hover-1 img {width: 105%;position: absolute;top: 0;transition: all 0.8s;}
-.hover-1-content {position: absolute;bottom: 0; left: 0; z-index: 99;transition: all 0.4s;background: white;
-    width: 100%;color: #212529;}
-.hover-1 .hover-overlay {/*background: rgba(0, 0, 0, 0.5);*/}
-.hover-1-description {transform: translateY(0.5rem);transition: all 0.4s;opacity: 0;}
-.hover-1:hover .hover-1-content {bottom: 2rem;}
-.hover-1:hover .hover-1-description {opacity: 1;transform: none;}
-.sec-pt{padding-top: 0px!important;}
+.hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    transition: all 0.8s;
+}
+
+.hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+    background: white;
+    width: 100%;
+    color: #212529;
+}
+
+.hover-1 .hover-overlay {
+    /*background: rgba(0, 0, 0, 0.5);*/
+}
+
+.hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.hover-1:hover .hover-1-content {
+    bottom: 2rem;
+}
+
+.hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+}
+
+.sec-pt {
+    padding-top: 0px !important;
+}
 
 
 
@@ -230,7 +635,7 @@ button, .dropbtn{outline: none;}
 
 /* End Home Carousal*/
 
-.text-left{
+.text-left {
 
     text-align: left;
 }
@@ -247,16 +652,18 @@ button, .dropbtn{outline: none;}
     width: 35px;
     text-align: center;
 }
+
 .qty .plus {
     cursor: pointer;
     display: inline-block;
     color: white;
     width: 20px;
     height: 20px;
-    font: 20px/1 Arial,sans-serif;
+    font: 20px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
 }
+
 .qty .minus {
     cursor: pointer;
     display: inline-block;
@@ -264,77 +671,182 @@ button, .dropbtn{outline: none;}
     color: white;
     width: 20px;
     height: 20px;
-    font: 20px/1 Arial,sans-serif;
+    font: 20px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
     background-clip: padding-box;
     line-height: 17px;
 }
-.qty .minus:hover{
+
+.qty .minus:hover {
     background-color: #155088 !important;
 }
-.qty .plus:hover{
+
+.qty .plus:hover {
     background-color: #155088 !important;
 }
+
 /*Prevent text selection*/
-.qty span{
+.qty span {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-.qty input{
+
+.qty input {
     border: 0;
     width: 2%;
 }
+
 .qty input::-webkit-outer-spin-button,
 .qty input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.qty input:disabled{
-    background-color:white;
+
+.qty input:disabled {
+    background-color: white;
 }
-.comp-name{border-radius: 5px; border:solid 1px #c5c5c5;}
-.social-btn{border-radius: 50%;height: 40px;width: 40px; display: inline-block; }
-.fb-btn{background:#4e76bc;}
-.whats-btn{background:#4bca5a;}
-.twitter-btn{background:#00c7ff;}
-.google-btn{background:#dc4e41;}
-.linked-btn{background:#1885c6;}
-.social-btn a{margin-left: 25px;}
-.social-btn svg{font-size: 22px; color: #fff;}
-.bg-footer{background:#212121!important;}
-.footer{color: white!important;}
-.footer a{color: white;}
-.footer a:hover{color: #fa620e;}
-.footer .title{text-transform: uppercase;font-size: 14px;border-bottom: solid 1px white;font-weight: 500;letter-spacing: 3px;}
-.footer .sub-detail label{text-transform: capitalize;}
-.footer ul li{list-style-type: none;font-weight: 300;font-size: 14px;}
-.number-details{font-size: 22px!important;font-weight: 400!important;}
-.sub-detail label{display: block;font-size: 14px;font-weight: 300;text-transform: uppercase;}
-.sub-btn button{background: #155088;border:none;border-radius: 6px;padding: 8px 16px;color:white;text-transform: uppercase;font-size: 14px;font-weight: 500;}
-.login-info{width: 18%;}
-.svg-inline--fa.fa-w-14{width: 1.875em;}
-.for-color{color: white!important;font-size: 14px; font-weight: 300;}
-.flight-detail button{background: transparent;border:none;}
-.nav-post{position: absolute;}
+
+.comp-name {
+    border-radius: 5px;
+    border: solid 1px #c5c5c5;
+}
+
+.social-btn {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+.fb-btn {
+    background: #4e76bc;
+}
+
+.whats-btn {
+    background: #4bca5a;
+}
+
+.twitter-btn {
+    background: #00c7ff;
+}
+
+.google-btn {
+    background: #dc4e41;
+}
+
+.linked-btn {
+    background: #1885c6;
+}
+
+.social-btn a {
+    margin-left: 25px;
+}
+
+.social-btn svg {
+    font-size: 22px;
+    color: #fff;
+}
+
+.bg-footer {
+    background: #212121 !important;
+}
+
+.footer {
+    color: white !important;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #fa620e;
+}
+
+.footer .title {
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: solid 1px white;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.footer .sub-detail label {
+    text-transform: capitalize;
+}
+
+.footer ul li {
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.number-details {
+    font-size: 22px !important;
+    font-weight: 400 !important;
+}
+
+.sub-detail label {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.sub-btn button {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login-info {
+    width: 18%;
+}
+
+.svg-inline--fa.fa-w-14 {
+    width: 1.875em;
+}
+
+.for-color {
+    color: white !important;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.flight-detail button {
+    background: transparent;
+    border: none;
+}
+
+.nav-post {
+    position: absolute;
+}
 
 /*** Start Flights CSS ***/
-.flight-header{
+.flight-header {
     background: url("/assets/img/flight-main-header.png") top no-repeat;
     background-size: cover;
 }
+
 .flight-det .title {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 
 }
-.title1{
-    color:#007bff;
+
+.title1 {
+    color: #007bff;
 }
 
-.error-msg{
+.error-msg {
     background-color: red;
     opacity: 0.4;
     color: white;
@@ -354,28 +866,30 @@ button, .dropbtn{outline: none;}
 }
 
 
-.umrah-pack-type{
+.umrah-pack-type {
     margin-top: 10px !important;
 }
 
-.search-form1{
-    bottom:0 !important;
+.search-form1 {
+    bottom: 0 !important;
     margin-top: 50px !important;
 }
-.umrah-main-search1{
+
+.umrah-main-search1 {
     margin-top: 120px !important;
 
 }
-.umrah-search-frm2{
+
+.umrah-search-frm2 {
     margin-top: 220px !important;
 }
 
 
-.bgActive{
+.bgActive {
     background-color: #155088 !important;
 }
 
-.total-fare1{
+.total-fare1 {
     font-size: 23px;
     font-weight: 400;
 }
@@ -399,58 +913,280 @@ button, .dropbtn{outline: none;}
 }
 
 
-.no-border{border:none!important;}
-.flight-det img{}
-.world-map{background: url("/assets/img/world-map.png") no-repeat center;min-height: 840px;position: relative;}
-.flight-dropdown .view-all{background: #155088;border: none;border-radius: 6px;padding: 7px 19px;text-transform: uppercase;font-size: 12px;}
-.flight-dropdown .dropdown-content{width:200px;position: relative; margin:auto;}
-.all-contnt{position: absolute;}
-.africa{position: absolute;left: 70px;top: 173px;border:solid 1px black;min-width: 250px;}
-.south-america{position: absolute;left: 434px;top: 173px;}
-.oceania{position: absolute;right: 98px;top: 173px;}
-.europe{position: absolute;left: 64px;top: 544px;}
-.north-america{position: absolute;left: 437px;top : 544px;}
-.asia{position: absolute;right: 89px;top : 544px;}
-.map-africa{background: url("/assets/img/map-africa.png") top no-repeat; position: absolute;width: 100%;}
-.map-south-america{background: url("/assets/img/map-south-america.png") top no-repeat; position: absolute;width: 100%;}
-.map-oceania{background: url("/assets/img/map-oceania.png") top no-repeat; position: absolute;width: 100%;}
-.map-europe{background: url("/assets/img/map-europe.png") top no-repeat; position: absolute;width: 100%;}
-.map-north-america{background: url("/assets/img/map-north-america.png") top no-repeat;  position: absolute;width: 100%;}
-.map-asia{background: url("/assets/img/map-asia.png") top no-repeat; position: absolute;width: 100%;}
-.map-btn{background: #155088; color: #fff; width: 115px; margin: auto;border-radius: 6px;padding: 7px 19px;}
-.flight-dropdown-content{position: inherit;}
-.flight-dropdown-content a{line-height: 35px; border-bottom: solid 1px #dad9d9; text-decoration: none!important;text-align: left;}
-.custom-dropdown :hover{z-index: 9999;}
-.min-height{min-height: 300px;display: grid;}
-.country-name{color: black;font-size: 20px;text-transform: uppercase;}
-.for-loct{position: relative;}
+.no-border {
+    border: none !important;
+}
+
+.flight-det img {}
+
+.world-map {
+    background: url("/assets/img/world-map.png") no-repeat center;
+    min-height: 840px;
+    position: relative;
+}
+
+.flight-dropdown .view-all {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 19px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.flight-dropdown .dropdown-content {
+    width: 200px;
+    position: relative;
+    margin: auto;
+}
+
+.all-contnt {
+    position: absolute;
+}
+
+.africa {
+    position: absolute;
+    left: 70px;
+    top: 173px;
+    border: solid 1px black;
+    min-width: 250px;
+}
+
+.south-america {
+    position: absolute;
+    left: 434px;
+    top: 173px;
+}
+
+.oceania {
+    position: absolute;
+    right: 98px;
+    top: 173px;
+}
+
+.europe {
+    position: absolute;
+    left: 64px;
+    top: 544px;
+}
+
+.north-america {
+    position: absolute;
+    left: 437px;
+    top: 544px;
+}
+
+.asia {
+    position: absolute;
+    right: 89px;
+    top: 544px;
+}
+
+.map-africa {
+    background: url("/assets/img/map-africa.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-south-america {
+    background: url("/assets/img/map-south-america.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-oceania {
+    background: url("/assets/img/map-oceania.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-europe {
+    background: url("/assets/img/map-europe.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-north-america {
+    background: url("/assets/img/map-north-america.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-asia {
+    background: url("/assets/img/map-asia.png") top no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.map-btn {
+    background: #155088;
+    color: #fff;
+    width: 115px;
+    margin: auto;
+    border-radius: 6px;
+    padding: 7px 19px;
+}
+
+.flight-dropdown-content {
+    position: inherit;
+}
+
+.flight-dropdown-content a {
+    line-height: 35px;
+    border-bottom: solid 1px #dad9d9;
+    text-decoration: none !important;
+    text-align: left;
+}
+
+.custom-dropdown :hover {
+    z-index: 9999;
+}
+
+.min-height {
+    min-height: 300px;
+    display: grid;
+}
+
+.country-name {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.for-loct {
+    position: relative;
+}
+
 /*** End Flights CSS ***/
 
 
 /*** Flights Search Result CSS ***/
-.short-header{background: #333333;height: 12vh;padding: 0px;min-height: 4.5rem;}
-.left-bar {background: #f8f8f8;border:solid 1px #a7a7a7;}
-.sub-title{font-size: 18px;font-weight: 600;}
-.fr-br-botm{border-bottom: solid 1px #a7a7a7;}
-.left-bar .sub-txt{font-size: 14px;font-weight: 400;}
-.filter-list ul li{list-style: none;}
-.filter-list ul li label{font-size: 12px;color: #5e5e5e;}
-.right-bar{border:solid 1px #a7a7a7;}
-.right-bar .dep-det{font-size: 15px; font-weight: 500;}
-.right-bar .sub-txt{font-size: 13px;font-weight: 400;color: black;}
-.right-bar .view-btn{background: #155088;border: none;border-radius: 6px;padding: 8px;font-size: 13px;color: white;}
-.right-bar .total-fare{font-size: 40px}
-.right-bar .curency-sign{font-size: 15px;margin-bottom: -15px;margin-left: -34px;display: block;}
-.filter-result{margin-top:-36px;}
-.airline-btn{padding:1!important;background-color: transparent!important;border:none!important;color: black!important;box-shadow: none!important;text-transform: capitalize;letter-spacing: 1px;font-size: 18px !important;}
-.modal-body ul{list-style: none;}
-.close-btn{font-size: 14px!important;text-transform: capitalize;letter-spacing: 1px;font-weight: 200!important;background-color: #6c757d!important;}
-.apply-btn{font-size: 14px!important;text-transform: capitalize;letter-spacing: 1px;font-weight: 200!important;background-color: #155088!important;}
-.modal-header{font-size: 18px!important;color: black!important;}
-.modal-content{margin-top: 94px;}
-.modal-lg, .modal-xl{max-width: 598px!important;}
-.for-border-btm{border-bottom: solid 2px #a7a7a7;}
-.bot-search-eng{background: #f1f1f1;}
+.short-header {
+    background: #333333;
+    height: 12vh;
+    padding: 0px;
+    min-height: 4.5rem;
+}
+
+.left-bar {
+    background: #f8f8f8;
+    border: solid 1px #a7a7a7;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.fr-br-botm {
+    border-bottom: solid 1px #a7a7a7;
+}
+
+.left-bar .sub-txt {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.filter-list ul li {
+    list-style: none;
+}
+
+.filter-list ul li label {
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+.right-bar {
+    border: solid 1px #a7a7a7;
+}
+
+.right-bar .dep-det {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.right-bar .sub-txt {
+    font-size: 13px;
+    font-weight: 400;
+    color: black;
+}
+
+.right-bar .view-btn {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+    color: white;
+}
+
+.right-bar .total-fare {
+    font-size: 40px
+}
+
+.right-bar .curency-sign {
+    font-size: 15px;
+    margin-bottom: -15px;
+    margin-left: -34px;
+    display: block;
+}
+
+.filter-result {
+    margin-top: -36px;
+}
+
+.airline-btn {
+    padding: 1 !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 18px !important;
+}
+
+.modal-body ul {
+    list-style: none;
+}
+
+.close-btn {
+    font-size: 14px !important;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 200 !important;
+    background-color: #6c757d !important;
+}
+
+.apply-btn {
+    font-size: 14px !important;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 200 !important;
+    background-color: #155088 !important;
+}
+
+.modal-header {
+    font-size: 18px !important;
+    color: black !important;
+}
+
+.modal-content {
+    margin-top: 94px;
+}
+
+.modal-lg,
+.modal-xl {
+    max-width: 598px !important;
+}
+
+.for-border-btm {
+    border-bottom: solid 2px #a7a7a7;
+}
+
+.bot-search-eng {
+    background: #f1f1f1;
+}
 
 
 .topnav {
@@ -463,7 +1199,7 @@ button, .dropbtn{outline: none;}
     margin-top: 33px;
     position: fixed;
     z-index: 999;
-    width:67%;
+    width: 67%;
 }
 
 .topnav a {
@@ -473,7 +1209,7 @@ button, .dropbtn{outline: none;}
     display: block;
     font-weight: 400;
     padding-left: 13px;
-    padding:12px;
+    padding: 12px;
 }
 
 .topnav a.icon {
@@ -486,61 +1222,187 @@ button, .dropbtn{outline: none;}
 .topnav a:hover {
     color: black;
 }
-.fa-filter{color: red;}
+
+.fa-filter {
+    color: red;
+}
 
 /***End Flights Search Result CSS ***/
 
 
 /***Start Selected Flights page CSS ***/
-.flight-detail .left-bar {border:solid 1px #a7a7a7;}
-.flight-detail .sub-txt{font-size: 12px;font-weight: 400;color: black;}
-.flight-detail .dep-det{font-weight: 600;}
-.flight-detail .sub-txt span{float: right;}
-.flight-detail .sub-title span{float: right;}
-.flight-detail .for-bg{background: #155088;color: white;}
-.right-bar .fr-br-botm{border-bottom:solid 2px #a7a7a7;}
-.flight-detail .view-btn{padding: 8px 31px;}
-.flight-detail .dep-det span{color:#1e93f5; display: block;font-size: 14px;font-weight: 200;}
-.Traveller-info select{border-radius: 3px; border:solid 1px #7d7d7d;}
-.Traveller-info input{border-radius: 3px; border:solid 1px #7d7d7d;}
-.for-tit-bor{border-bottom: solid 1px #a7a7a7}
+.flight-detail .left-bar {
+    border: solid 1px #a7a7a7;
+}
+
+.flight-detail .sub-txt {
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+}
+
+.flight-detail .dep-det {
+    font-weight: 600;
+}
+
+.flight-detail .sub-txt span {
+    float: right;
+}
+
+.flight-detail .sub-title span {
+    float: right;
+}
+
+.flight-detail .for-bg {
+    background: #155088;
+    color: white;
+}
+
+.right-bar .fr-br-botm {
+    border-bottom: solid 2px #a7a7a7;
+}
+
+.flight-detail .view-btn {
+    padding: 8px 31px;
+}
+
+.flight-detail .dep-det span {
+    color: #1e93f5;
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.Traveller-info select {
+    border-radius: 3px;
+    border: solid 1px #7d7d7d;
+}
+
+.Traveller-info input {
+    border-radius: 3px;
+    border: solid 1px #7d7d7d;
+}
+
+.for-tit-bor {
+    border-bottom: solid 1px #a7a7a7
+}
+
 /***End Flights detail page CSS ***/
 
 /*** Start Boonking Details CSS ***/
-.booking .right-bar .sub-txt{font-size: 12px;}
-.booking .left-bar .sub-txt{color: #4e4e4e;font-size: 12px;}
-.booking-detail .contnt-detail{font-size: 12px;color: #4e4e4e;font-weight: 400;}
-.booking-detail .contnt-detail span{color:#ee0c0c;}
-.enter-name input{width: 100%; border:solid 1px #7d7d7d;border-radius: 6px;padding: 7px 10px;font-size: 12px;}
-.enter-name select{width: 100%; border:solid 1px #7d7d7d;border-radius: 6px;padding: 7px 10px;font-size: 12px;}
-.protection{color: #59940c;display: inline-block;}
-.protection ul{list-style: none;}
-.confrim-chk label{font-size: 12px;}
-.confrim-chk input{border:solid 1px #7d7d7d;border-radius: 6px;}
-.book-now button{background: #155088;
-    color:white !important;
+.booking .right-bar .sub-txt {
+    font-size: 12px;
+}
+
+.booking .left-bar .sub-txt {
+    color: #4e4e4e;
+    font-size: 12px;
+}
+
+.booking-detail .contnt-detail {
+    font-size: 12px;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+
+.booking-detail .contnt-detail span {
+    color: #ee0c0c;
+}
+
+.enter-name input {
+    width: 100%;
+    border: solid 1px #7d7d7d;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.enter-name select {
+    width: 100%;
+    border: solid 1px #7d7d7d;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.protection {
+    color: #59940c;
+    display: inline-block;
+}
+
+.protection ul {
+    list-style: none;
+}
+
+.confrim-chk label {
+    font-size: 12px;
+}
+
+.confrim-chk input {
+    border: solid 1px #7d7d7d;
+    border-radius: 6px;
+}
+
+.book-now button {
+    background: #155088;
+    color: white !important;
     border: none;
     border-radius: 6px;
     padding: 8px 15px !important;
     text-transform: uppercase;
-    font-size: 12px;color: white;}
-.features span{font-size: 12px;font-weight: 400;}
-.total-price{font-size: 16px;font-weight: 400;}
-.protection ul li{float: left;}
-.book-cont-detail{font-size: 12px;}
-/*** End Boonking Details CSS ***/
-.book-now a{
-    color:white !important;
+    font-size: 12px;
+    color: white;
 }
+
+.features span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.total-price {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.protection ul li {
+    float: left;
+}
+
+.book-cont-detail {
+    font-size: 12px;
+}
+
+/*** End Boonking Details CSS ***/
+.book-now a {
+    color: white !important;
+}
+
 /*** Start tour page CSS ***/
-.tour-header{background: url("/assets/img/hotel-main-bg.png") top no-repeat;background-size: cover;}
-.btn-view-all {position: relative;top: 5px;}
-.explore a{text-decoration: underline;font-size: 14px;}
+.tour-header {
+    background: url("/assets/img/hotel-main-bg.png") top no-repeat;
+    background-size: cover;
+}
+
+.btn-view-all {
+    position: relative;
+    top: 5px;
+}
+
+.explore a {
+    text-decoration: underline;
+    font-size: 14px;
+}
+
 /*** End tour page CSS ***/
 
 
 /*** Star Hotel page CSS ***/
-.hotel-page .star-ranking{background: #27c708;width:30px;color: white;}
+.hotel-page .star-ranking {
+    background: #27c708;
+    width: 30px;
+    color: white;
+}
+
 /*** End Hotel page CSS ***/
 
 
@@ -549,83 +1411,375 @@ button, .dropbtn{outline: none;}
 /*** End Visa page CSS ***/
 
 /*** Start Hotel search result CSS ***/
-.nav{font-weight: 400;}
-.nav a{color: #5e9be8;}
-.nav span{margin-top: 1px;margin-left: 10px;}
-.gand-exce{color: black!important;}
-.hotel-search-list ul li label{display: contents;}
-.hotel-search-list input{margin-right: 5px;margin-bottom: 15px;}
-.hotel-search-list .fa-star{color:#fec223;font-size: 12px;margin-bottom: 4px; }
-.hotel-search-left-bar .sub-title{font-size: 14px;}
-.top-pick{background: #155088;color: white;font-weight: 400;}
-.services{border:solid 1px #155088;color: black;font-weight: 500;font-size: 12px;}
-.brd-right{border-right: solid 1px #155088;}
-.hotel-detail .hotel-name{font-size: 20px;color: #3568cd;font-weight: 400;}
-.hotel-detail .fa-star{font-size: 10px!important;color: #fec223!important;}
-.hotel-map a{font-size: 12px;color: #3568cd; text-decoration: underline;font-weight: 500;}
-.hotel-detail .review{font-size: 14px;font-weight: 600;}
-.hotel-detail .review-count{font-size: 11px;font-weight: 600;}
-.ranking{background-color: #57a70f;border-radius: 6px;width: 30px;color: white;margin-left: -31px;margin-top: 5px;}
-.hotel-detail{border-bottom: solid 1px #a7a7a7;}
-.room-detail .dep-det{color: black;}
-.room-detail .sub-txt span{color: #cf0909;}
-.room-detail .total-fare{font-size: 23px;font-weight: 400;}
-.flight-fare{margin-top: -7px;}
-.flight-fare .view-btn{letter-spacing: 0.5px;}
-.green-color{color: #57a70f!important;}
-.hotel-sear-rslt .services a{color: black;}
-.hotel-sear-rslt .services a:hover {color: black;text-decoration: none;}
+.nav {
+    font-weight: 400;
+}
+
+.nav a {
+    color: #5e9be8;
+}
+
+.nav span {
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+.gand-exce {
+    color: black !important;
+}
+
+.hotel-search-list ul li label {
+    display: contents;
+}
+
+.hotel-search-list input {
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.hotel-search-list .fa-star {
+    color: #fec223;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.hotel-search-left-bar .sub-title {
+    font-size: 14px;
+}
+
+.top-pick {
+    background: #155088;
+    color: white;
+    font-weight: 400;
+}
+
+.services {
+    border: solid 1px #155088;
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.brd-right {
+    border-right: solid 1px #155088;
+}
+
+.hotel-detail .hotel-name {
+    font-size: 20px;
+    color: #3568cd;
+    font-weight: 400;
+}
+
+.hotel-detail .fa-star {
+    font-size: 10px !important;
+    color: #fec223 !important;
+}
+
+.hotel-map a {
+    font-size: 12px;
+    color: #3568cd;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.hotel-detail .review {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hotel-detail .review-count {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ranking {
+    background-color: #57a70f;
+    border-radius: 6px;
+    width: 30px;
+    color: white;
+    margin-left: -31px;
+    margin-top: 5px;
+}
+
+.hotel-detail {
+    border-bottom: solid 1px #a7a7a7;
+}
+
+.room-detail .dep-det {
+    color: black;
+}
+
+.room-detail .sub-txt span {
+    color: #cf0909;
+}
+
+.room-detail .total-fare {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.flight-fare {
+    margin-top: -7px;
+}
+
+.flight-fare .view-btn {
+    letter-spacing: 0.5px;
+}
+
+.green-color {
+    color: #57a70f !important;
+}
+
+.hotel-sear-rslt .services a {
+    color: black;
+}
+
+.hotel-sear-rslt .services a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 /*** End Hotel search result CSS ***/
 
 
 /*** Start Hotel Detail CSS ***/
-.un-statisfied{background-color: #c62424;width:33px;height: 27px;border-radius: 6px;border:none;}
-.statisfied{background-color: #0c9222;width:33px;height: 27px;border-radius: 6px;border:none;}
-.un-statisfied .fa-thumbs-down{color: white;font-size: 16px;}
-.statisfied .fa-thumbs-up{color: white;font-size: 16px;}
-.ask-quest button{background: #dae9cc; border:solid 1px #028017;border-radius: 5px;text-transform: uppercase;}
-.client-review .ranking{margin-left: 0px;margin-top: 3px;font-weight: 500;font-size: 16px;width: 35px;}
-.client-review .review{font-size: 15px;font-weight: 400;color: #57a70f;}
-.client-review .review-count{font-size: 10px;font-weight: 400;color: #757575;}
-.client-name{font-size: 12px;}
-.client-name img{margin-bottom: 3px;}
-.show-reviews button{border:none;background-color: #155088;border-radius: 5px;color: white;}
-.hotel-detail-left-bar .sub-txt{font-size: 12px;}
-.bor-btm{border-bottom: solid 2px black;}
-.all-hotel-deatil .sub-title{font-size: 20px; font-weight: 400;}
-.fact-include{font-size: 12px;color:#3f3f3f;}
-.guest-lover{background: #f5fdee;}
-.client-attaction .star{background:#37b008;height: 25px;width: 25px;border-radius: 16px; }
-.client-attaction .fa-star{color: white!important;font-size: 12px!important;margin-bottom: 3px;}
-.guest-lover .sub-txt{font-size:12px;}
-.guest-lover  .fa-check{margin-top:4px;color:#37b008;}
-.reserve button{background: #155088;border:none;border-radius: 6px;color: white;}
-.reserve ul li{list-style: none;}
-.date-chnge{background: #f8f8f8;}
-.date-chnge .sub-title{font-size: 14px!important;font-weight: 600!important;}
-.date-chnge .sub-txt{font-size: 16px!important;color: #2776e1;font-weight: 600!important;}
-.date-chnge .from{font-size: 12px;}
-.date-chng-btn{background: #155088;border:none;border-radius: 6px;color: white;}
-.hotel-room-detail {border:solid 1px #a7a7a7;}
-.hotel-room-detail .main-headings{background: #e5e3db;}
-.hotel-room-detail .main-headings .sub-title{font-size: 14px;font-weight: 600;}
-.hotel-room-detail .main-headings .br-right{border-right: solid 1px #bbb9b2;}
-.hotel-detail-right-bar .bor-btm{border-bottom: solid 1px #a7a7a7;}
-.all-room .br-right{border-right: solid 1px #a7a7a7;}
-.deluxe-room{color: #0675cd;font-weight: 500;text-decoration: underline;}
-.all-room .sub-txt{font-size: 12px;font-weight: 600;}
-.all-room .bed-details label{font-size: 12px;font-weight: 500;}
-.all-room .price-cancel{text-decoration: line-through;font-size: 13px;}
-.all-room .ori-price{font-size: 16px;font-weight: 600;}
-.all-room .price-det{font-size: 12px;}
-.all-room .breakfast-details{font-size: 12px;}
-.all-room .breakfast-details img{margin-top:-5px;}
-.all-room .free-cancel{color:#37b008;}
-.all-room .free-cancel .fa-check{margin-top: 3px;}
-.no-room select{width:100%;}
-.bor-btm{border-bottom: solid 2px #bbb9b2;}
-.reserve  ul li{font-size: 12px;}
-.hotel-detail-right-bar .fa-star{color: #ffcc00;font-size: 16px;}
+.un-statisfied {
+    background-color: #c62424;
+    width: 33px;
+    height: 27px;
+    border-radius: 6px;
+    border: none;
+}
+
+.statisfied {
+    background-color: #0c9222;
+    width: 33px;
+    height: 27px;
+    border-radius: 6px;
+    border: none;
+}
+
+.un-statisfied .fa-thumbs-down {
+    color: white;
+    font-size: 16px;
+}
+
+.statisfied .fa-thumbs-up {
+    color: white;
+    font-size: 16px;
+}
+
+.ask-quest button {
+    background: #dae9cc;
+    border: solid 1px #028017;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.client-review .ranking {
+    margin-left: 0px;
+    margin-top: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    width: 35px;
+}
+
+.client-review .review {
+    font-size: 15px;
+    font-weight: 400;
+    color: #57a70f;
+}
+
+.client-review .review-count {
+    font-size: 10px;
+    font-weight: 400;
+    color: #757575;
+}
+
+.client-name {
+    font-size: 12px;
+}
+
+.client-name img {
+    margin-bottom: 3px;
+}
+
+.show-reviews button {
+    border: none;
+    background-color: #155088;
+    border-radius: 5px;
+    color: white;
+}
+
+.hotel-detail-left-bar .sub-txt {
+    font-size: 12px;
+}
+
+.bor-btm {
+    border-bottom: solid 2px black;
+}
+
+.all-hotel-deatil .sub-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fact-include {
+    font-size: 12px;
+    color: #3f3f3f;
+}
+
+.guest-lover {
+    background: #f5fdee;
+}
+
+.client-attaction .star {
+    background: #37b008;
+    height: 25px;
+    width: 25px;
+    border-radius: 16px;
+}
+
+.client-attaction .fa-star {
+    color: white !important;
+    font-size: 12px !important;
+    margin-bottom: 3px;
+}
+
+.guest-lover .sub-txt {
+    font-size: 12px;
+}
+
+.guest-lover .fa-check {
+    margin-top: 4px;
+    color: #37b008;
+}
+
+.reserve button {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.reserve ul li {
+    list-style: none;
+}
+
+.date-chnge {
+    background: #f8f8f8;
+}
+
+.date-chnge .sub-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.date-chnge .sub-txt {
+    font-size: 16px !important;
+    color: #2776e1;
+    font-weight: 600 !important;
+}
+
+.date-chnge .from {
+    font-size: 12px;
+}
+
+.date-chng-btn {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.hotel-room-detail {
+    border: solid 1px #a7a7a7;
+}
+
+.hotel-room-detail .main-headings {
+    background: #e5e3db;
+}
+
+.hotel-room-detail .main-headings .sub-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hotel-room-detail .main-headings .br-right {
+    border-right: solid 1px #bbb9b2;
+}
+
+.hotel-detail-right-bar .bor-btm {
+    border-bottom: solid 1px #a7a7a7;
+}
+
+.all-room .br-right {
+    border-right: solid 1px #a7a7a7;
+}
+
+.deluxe-room {
+    color: #0675cd;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.all-room .sub-txt {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.all-room .bed-details label {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.all-room .price-cancel {
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.all-room .ori-price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.all-room .price-det {
+    font-size: 12px;
+}
+
+.all-room .breakfast-details {
+    font-size: 12px;
+}
+
+.all-room .breakfast-details img {
+    margin-top: -5px;
+}
+
+.all-room .free-cancel {
+    color: #37b008;
+}
+
+.all-room .free-cancel .fa-check {
+    margin-top: 3px;
+}
+
+.no-room select {
+    width: 100%;
+}
+
+.bor-btm {
+    border-bottom: solid 2px #bbb9b2;
+}
+
+.reserve ul li {
+    font-size: 12px;
+}
+
+.hotel-detail-right-bar .fa-star {
+    color: #ffcc00;
+    font-size: 16px;
+}
+
 .carousel-inner img {
     width: 100%;
     /*height: 100%*/
@@ -656,16 +1810,39 @@ button, .dropbtn{outline: none;}
 .carousel-item img {
     width: 100%
 }
-.carousel-indicators .list-inline-item{text-indent: 0px!important;cursor: pointer;}
-.carousel-indicators{display: contents!important;}
+
+.carousel-indicators .list-inline-item {
+    text-indent: 0px !important;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    display: contents !important;
+}
+
 /*** End Hotel Detail CSS ***/
 
 /*** Start Umrah CSS ***/
-.umrah-header{background: url("/assets/img/umrah-main-bg.png") top no-repeat;background-size: cover;}
-.header-main-heading{font-size:30px;color: white;}
-.umrah-main-search{margin-top: 406px;}
-.signup-step-container .umrah-main-search{position: initial;margin-top: 105px;}
-.count-btn-nxt{}
+.umrah-header {
+    background: url("/assets/img/umrah-main-bg.png") top no-repeat;
+    background-size: cover;
+}
+
+.header-main-heading {
+    font-size: 30px;
+    color: white;
+}
+
+.umrah-main-search {
+    margin-top: 406px;
+}
+
+.signup-step-container .umrah-main-search {
+    position: initial;
+    margin-top: 105px;
+}
+
+.count-btn-nxt {}
 
 
 
@@ -697,7 +1874,7 @@ button, .dropbtn{outline: none;}
     border-bottom-color: transparent;
 }
 
-.wizard > div.wizard-inner {
+.wizard>div.wizard-inner {
     position: relative;
     text-align: center;
 }
@@ -714,7 +1891,9 @@ button, .dropbtn{outline: none;}
     z-index: 1;
 }
 
-.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+.wizard .nav-tabs>li.active>a,
+.wizard .nav-tabs>li.active>a:hover,
+.wizard .nav-tabs>li.active>a:focus {
     color: #555555;
     cursor: default;
     border: 0;
@@ -737,22 +1916,26 @@ span.round-tab {
     font-weight: 500;
     border: 1px solid #ddd;
 }
-span.round-tab i{
-    color:#555555;
+
+span.round-tab i {
+    color: #555555;
 }
+
 .wizard li.active span.round-tab {
     background: #155088;
     color: #fff;
     border-color: #155088;
 }
-.wizard li.active span.round-tab i{
+
+.wizard li.active span.round-tab i {
     color: #5bc0de;
 }
-.wizard .nav-tabs > li.active > a i{
+
+.wizard .nav-tabs>li.active>a i {
     color: #155088;
 }
 
-.wizard .nav-tabs > li {
+.wizard .nav-tabs>li {
     width: 16%;
 }
 
@@ -770,7 +1953,7 @@ span.round-tab i{
 
 
 
-.wizard .nav-tabs > li a {
+.wizard .nav-tabs>li a {
     width: 30px;
     height: 30px;
     margin: 20px auto;
@@ -780,7 +1963,8 @@ span.round-tab i{
     position: relative;
     top: 0;
 }
-.wizard .nav-tabs > li a i{
+
+.wizard .nav-tabs>li a i {
     /*position: absolute;*/
     /*top: 41px;*/
     /*font-style: normal;*/
@@ -801,7 +1985,7 @@ span.round-tab i{
     color: #fff;
 }
 
-.wizard .nav-tabs > li a:hover {
+.wizard .nav-tabs>li a:hover {
     background: transparent;
 }
 
@@ -815,12 +1999,12 @@ span.round-tab i{
 }
 
 
-.car-img img{
+.car-img img {
     width: 100px;
     height: 50px !important;
 }
 
-.search-btn1{
+.search-btn1 {
     background-color: #155088 !important;
     color: white !important;
     padding: 10px 20px !important;
@@ -831,32 +2015,139 @@ span.round-tab i{
 /*** End Umrah CSS ***/
 
 /*** Start Umrah package CSS ***/
-.cust-umrah{background: #155088!important;color: white;border:none;border-radius: 6px;padding: 6px 10px;}
-.cust-umrah2{background-color: transparent!important;;border:none;color: white;}
-.umrah-packages .starting-price{background: #155088;color: white;}
-.umrah-packages .starting-price .sub-txt{color: white;margin-bottom: -5px;}
-.umrah-packages .starting-price .total-price{font-size: 36px;font-weight: 600;}
-.umrah-packages .chk-all a {color: white;font-size:16px;font-weight: 500;}
-.umrah-packages .chk-all{margin-top: -5px;}
-.umrah-packages .chk-all .fa-angle-double-right{padding-top: 2px;}
-.umrah-packages .sort-by select{width: 100%;border:solid 1px #a7a7a7;font-size: 12px;font-weight: 300;color: #333333;}
-.umrah-packages .sort-by .sub-title{font-size: 16px;color: #333333;}
-.umrah-search-frm{margin-top:346px;}
-.umrah-packages .view-by .fa-list {color: black;}
-.umrah-packages .view-by .fa-th {color: black;}
-.umrah-pack-det .hotel-name{color: black;font-size: 16px;font-weight: 600;}
-.umrah-hotel-detail .review{font-size: 14px;font-weight: 600;}
-.umrah-hotel-detail .review-count{font-size: 11px;font-weight: 600;}
-.makkah-hotel-name{font-size: 16px;font-weight: 500;}
-.madinah-hotel img{margin-top:-8px;}
-.umrah-hotel-detail .sub-txt{color: #4e4e4e;font-size: 12px;}
-.umrah-hotel-detail .hotel-rating{color: #fec223;}
-.umrah-hotel-detail .hotel-rating .fa-star{font-size: 12px;}
-.umrah-hotel-detail .fac-include button{border:none; background: #155088;font-size: 12px;color: white; border-radius: 3px;padding: 3px 12px;}
-.umrah-hotel-detail .room-detail {margin-top: 119px;}
-.umrah-type{margin-top: 64px; }
-.umrah-header .card{background: none; border:none;}
-.umrah-pack-type{margin-top: 101px;}
+.cust-umrah {
+    background: #155088 !important;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+.cust-umrah2 {
+    background-color: transparent !important;
+    ;
+    border: none;
+    color: white;
+}
+
+.umrah-packages .starting-price {
+    background: #155088;
+    color: white;
+}
+
+.umrah-packages .starting-price .sub-txt {
+    color: white;
+    margin-bottom: -5px;
+}
+
+.umrah-packages .starting-price .total-price {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.umrah-packages .chk-all a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.umrah-packages .chk-all {
+    margin-top: -5px;
+}
+
+.umrah-packages .chk-all .fa-angle-double-right {
+    padding-top: 2px;
+}
+
+.umrah-packages .sort-by select {
+    width: 100%;
+    border: solid 1px #a7a7a7;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.umrah-packages .sort-by .sub-title {
+    font-size: 16px;
+    color: #333333;
+}
+
+.umrah-search-frm {
+    margin-top: 346px;
+}
+
+.umrah-packages .view-by .fa-list {
+    color: black;
+}
+
+.umrah-packages .view-by .fa-th {
+    color: black;
+}
+
+.umrah-pack-det .hotel-name {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.umrah-hotel-detail .review {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.umrah-hotel-detail .review-count {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.makkah-hotel-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.madinah-hotel img {
+    margin-top: -8px;
+}
+
+.umrah-hotel-detail .sub-txt {
+    color: #4e4e4e;
+    font-size: 12px;
+}
+
+.umrah-hotel-detail .hotel-rating {
+    color: #fec223;
+}
+
+.umrah-hotel-detail .hotel-rating .fa-star {
+    font-size: 12px;
+}
+
+.umrah-hotel-detail .fac-include button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+
+.umrah-hotel-detail .room-detail {
+    margin-top: 119px;
+}
+
+.umrah-type {
+    margin-top: 64px;
+}
+
+.umrah-header .card {
+    background: none;
+    border: none;
+}
+
+.umrah-pack-type {
+    margin-top: 101px;
+}
+
 /*** End Umrah package CSS ***/
 
 /*** Start Umrah Visa CSS ***/
@@ -864,31 +2155,111 @@ span.round-tab i{
 /*** End Umrah Visa CSS ***/
 
 /*** Start Umrah Visa search result CSS ***/
-.umrah-visa-search .view-btn{background: #155088;border: none;border-radius: 6px;padding: 8px;font-size: 13px;color: white;}
-.umrah-visa-search-img{border: solid 1px #a7a7a7;}
-.reserve button{width:100%!important;}
-.price-person{background:#707070;color: white; font-size: 18px;}
-.left-bar .sub-heading{font-size:14px;margin-top:0px!important; margin-bottom: 0px!important;}
-.booking-points {color: #2b9d07;}
-.booking-points span {color: black;font-size: 12px;font-weight: 600;}
-.for-tabel{width:100%;border-collapse:collapse;font-weight: 500;}
-.for-tabel th,td{border:solid 1px black;}
-.border-title th{padding:10px;}
-.border-data td{padding:10px;}
-.border-title{border-bottom: solid 2px black;}
-.Continue-btn button{width:100%;background-color: #e3a011;border:none;margin-top:10px;color: white!important;padding: 5px;border-radius: 5px;}
+.umrah-visa-search .view-btn {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+    color: white;
+}
+
+.umrah-visa-search-img {
+    border: solid 1px #a7a7a7;
+}
+
+.reserve button {
+    width: 100% !important;
+}
+
+.price-person {
+    background: #707070;
+    color: white;
+    font-size: 18px;
+}
+
+.left-bar .sub-heading {
+    font-size: 14px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.booking-points {
+    color: #2b9d07;
+}
+
+.booking-points span {
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.for-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
+.for-tabel th,
+td {
+    border: solid 1px black;
+}
+
+.border-title th {
+    padding: 10px;
+}
+
+.border-data td {
+    padding: 10px;
+}
+
+.border-title {
+    border-bottom: solid 2px black;
+}
+
+.Continue-btn button {
+    width: 100%;
+    background-color: #e3a011;
+    border: none;
+    margin-top: 10px;
+    color: white !important;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 /*** End Umrah Visa search result CSS ***/
 
 
 /*** Start hajj guide CSS ***/
-.hajj-guide .sub-title{font-size: 20px;}
-.hajj-guide .sub-txt{font-size: 20px;}
-.fr-img-width img{width: 100%;}
+.hajj-guide .sub-title {
+    font-size: 20px;
+}
+
+.hajj-guide .sub-txt {
+    font-size: 20px;
+}
+
+.fr-img-width img {
+    width: 100%;
+}
+
 /*** End hajj guide CSS ***/
 
 /*** Start Ziyarat page CSS ***/
-.ziyarat .sub-txt{line-height: 30px;}
-.view-detail button{background: #155088;border: none;border-radius: 6px;padding: 8px 16px;text-transform: uppercase;font-size: 12px;color: white;}
+.ziyarat .sub-txt {
+    line-height: 30px;
+}
+
+.view-detail button {
+    background: #155088;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+}
+
 /*** End Ziyarat page CSS ***/
 
 /*** Start Ziyarat Detail page CSS ***/
@@ -900,202 +2271,721 @@ span.round-tab i{
 
 
 /*** Start gallery page CSS ***/
-.gallery-img-sect #image-gallery .modal-footer{display: block;}
-.gallery-img-sect .thumb{margin-top: 15px;margin-bottom: 15px;}
-.gallery-img-sect .img-thumbnail{border:none!important;}
+.gallery-img-sect #image-gallery .modal-footer {
+    display: block;
+}
+
+.gallery-img-sect .thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.gallery-img-sect .img-thumbnail {
+    border: none !important;
+}
+
 /*** End gallery page CSS ***/
 
 /*** Start tour detail page CSS ***/
-.tour-detail-slider{border:solid 1px #a7a7a7;}
-.tour-detail-right-bar .carousel-control-prev{top:86px;}
-.tour-detail-right-bar .carousel-control-next{top:63px!important;}
-.tour-detail-right-bar .carousel-control-next-icon{background: white;width:35px;height:35px;border-radius: 25px;opacity: 100;padding:8px;}
-.tour-detail-right-bar .carousel-control-prev-icon{background: white;width:35px;height:35px;border-radius: 25px;opacity: 100;padding:8px;}
-.tour-detail-right-bar .carousel-control-next, .carousel-control-prev{opacity: 100!important;}
-.tour-detail-right-bar .fa-angle-right{color: black;}
-.tour-detail-right-bar .fa-angle-left{color: black;}
-.tour-detail-right-bar .carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{opacity: 100;}
-.tour-detail-right-bar .booking-flex button{border:none;background:#e1dfdf;border-radius: 13px;font-size: 10px;font-weight: 600;padding: 4px 10px;color: #696767;}
-.tour-detail-right-bar .book-flex span{color: #a5a5a5;font-size: 16px;font-weight: 600;}
-.tour-detail-right-bar .fac-include button{border: none;background: #155088;font-size: 12px;color: white;border-radius: 3px;padding: 3px 12px;}
-.tour-detail-right-bar .bor-left{border-left: solid 2px #dbdbdb;}
-.tour-detail-right-bar .price span{text-decoration: line-through;}
-.tour-detail-right-bar .reduce-pre{background: #e74c3c;color: white;display: inline;border-radius: 10px;font-weight: 600;padding: 2px 5px;}
-.tour-detail-right-bar .book-flex{background:#f8f8f8;}
-.tour-detail-right-bar .book-flex .sub-title{color: #7d7d7d;}
-.tour-detail-right-bar .start-plane{background: #e9fee7;color:#25671e;}
-.tour-detail-right-bar .start-plane .sub-txt{color: #25671e;font-weight: 300;font-size: 13px;}
-.tour-detail-right-bar .gmap_canvas {overflow:hidden;background:none!important;height:300px;width:823px!important;}
-.mapouter{position:relative;text-align:right;height:300px;width:633px;}
-.tour-detail-right-bar .travel-reason .find-more button{border: none;background: #155088;font-size: 14px;color: white;border-radius: 6px;padding: 8px 22px;}
-.tour-detail-right-bar .card{border:none;}
-.tour-detail-right-bar .card .for-border{border-bottom:dotted 2px #bebebe;}
-.tour-detail-right-bar .card button{background:transparent; border:none;}
-.tour-detail-right-bar .card button:hover{border:none;}
-.tour-detail-right-bar .want-read{background: #f8f8f8;}
-.tour-detail-right-bar .want-read button{border: none;background: #155088;font-size: 12px;color: white;border-radius: 6px;padding: 8px 22px;}
-.tour-detail-right-bar .want-read .sub-title{font-size: 20px;color: #7d7d7d;}
-.tour-detail-right-bar .review-sect .cust-name{font-size:20px;font-weight: 600;color: black;}
-.tour-detail-right-bar .review-sect .points span{background: #00aa6c;width:15px;height: 15px;border-radius: 11px;display:inline-block;}
-.tour-detail-right-bar .review-sect .client-review{border:solid 1px #e0e0e0;border-radius: 3px;}
-.tour-detail-right-bar .review-sect .client-review .client-1 img{width: 50px;height: 50px;border-radius: 43px;}
-.tour-detail-right-bar .review-sect .client-review .client-1 .fa-edit{display: block;margin-left: 61px;margin-top: -15px;}
-.tour-detail-right-bar .review-sect .client-review .client-1 .fa-thumbs-up{display: block;margin-left: 94px;margin-top: -15px;}
-.tour-detail-right-bar .review-sect .client-review .client-1 .sub-title{font-size: 14px;}
-.review-sect .carousel-control-prev, .carousel-control-next{}
-.tour-detail-right-bar .date-avail{background: #f8f8f8;}
-.tour-detail-right-bar .date-avail button{border: none;background: #155088;font-size: 12px;color: white;border-radius: 6px;padding: 8px 33px;}
-.tour-detail-right-bar .date-avail .sub-title{font-size: 20px;color: #7d7d7d;}
-.book-flex .sub-txt-heading{color: black; font-size: 16px;font-weight: 600;}
-.travel-reason .sub-txt-heading{color: black; font-size: 16px;font-weight: 600;}
-.left-bar .fac-include button {border: none;background: #155088;font-size: 12px;color: white;border-radius: 3px;padding: 3px 12px;}
-.bor-left .sub-title{font-size: 12px;}
-.org-price .reduce-pre{background: #e74c3c;color: white;display: inline;border-radius: 10px;font-weight: 600;padding: 2px 5px;}
-.org-price span{text-decoration: line-through;font-size: 16px;}
-.org-price .final-price{font-size: 28px;font-weight: 600;}
+.tour-detail-slider {
+    border: solid 1px #a7a7a7;
+}
+
+.tour-detail-right-bar .carousel-control-prev {
+    top: 86px;
+}
+
+.tour-detail-right-bar .carousel-control-next {
+    top: 63px !important;
+}
+
+.tour-detail-right-bar .carousel-control-next-icon {
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    opacity: 100;
+    padding: 8px;
+}
+
+.tour-detail-right-bar .carousel-control-prev-icon {
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    opacity: 100;
+    padding: 8px;
+}
+
+.tour-detail-right-bar .carousel-control-next,
+.carousel-control-prev {
+    opacity: 100 !important;
+}
+
+.tour-detail-right-bar .fa-angle-right {
+    color: black;
+}
+
+.tour-detail-right-bar .fa-angle-left {
+    color: black;
+}
+
+.tour-detail-right-bar .carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+    opacity: 100;
+}
+
+.tour-detail-right-bar .booking-flex button {
+    border: none;
+    background: #e1dfdf;
+    border-radius: 13px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    color: #696767;
+}
+
+.tour-detail-right-bar .book-flex span {
+    color: #a5a5a5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tour-detail-right-bar .fac-include button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+
+.tour-detail-right-bar .bor-left {
+    border-left: solid 2px #dbdbdb;
+}
+
+.tour-detail-right-bar .price span {
+    text-decoration: line-through;
+}
+
+.tour-detail-right-bar .reduce-pre {
+    background: #e74c3c;
+    color: white;
+    display: inline;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
+.tour-detail-right-bar .book-flex {
+    background: #f8f8f8;
+}
+
+.tour-detail-right-bar .book-flex .sub-title {
+    color: #7d7d7d;
+}
+
+.tour-detail-right-bar .start-plane {
+    background: #e9fee7;
+    color: #25671e;
+}
+
+.tour-detail-right-bar .start-plane .sub-txt {
+    color: #25671e;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.tour-detail-right-bar .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 823px !important;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 633px;
+}
+
+.tour-detail-right-bar .travel-reason .find-more button {
+    border: none;
+    background: #155088;
+    font-size: 14px;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 22px;
+}
+
+.tour-detail-right-bar .card {
+    border: none;
+}
+
+.tour-detail-right-bar .card .for-border {
+    border-bottom: dotted 2px #bebebe;
+}
+
+.tour-detail-right-bar .card button {
+    background: transparent;
+    border: none;
+}
+
+.tour-detail-right-bar .card button:hover {
+    border: none;
+}
+
+.tour-detail-right-bar .want-read {
+    background: #f8f8f8;
+}
+
+.tour-detail-right-bar .want-read button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 22px;
+}
+
+.tour-detail-right-bar .want-read .sub-title {
+    font-size: 20px;
+    color: #7d7d7d;
+}
+
+.tour-detail-right-bar .review-sect .cust-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.tour-detail-right-bar .review-sect .points span {
+    background: #00aa6c;
+    width: 15px;
+    height: 15px;
+    border-radius: 11px;
+    display: inline-block;
+}
+
+.tour-detail-right-bar .review-sect .client-review {
+    border: solid 1px #e0e0e0;
+    border-radius: 3px;
+}
+
+.tour-detail-right-bar .review-sect .client-review .client-1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 43px;
+}
+
+.tour-detail-right-bar .review-sect .client-review .client-1 .fa-edit {
+    display: block;
+    margin-left: 61px;
+    margin-top: -15px;
+}
+
+.tour-detail-right-bar .review-sect .client-review .client-1 .fa-thumbs-up {
+    display: block;
+    margin-left: 94px;
+    margin-top: -15px;
+}
+
+.tour-detail-right-bar .review-sect .client-review .client-1 .sub-title {
+    font-size: 14px;
+}
+
+.review-sect .carousel-control-prev,
+.carousel-control-next {}
+
+.tour-detail-right-bar .date-avail {
+    background: #f8f8f8;
+}
+
+.tour-detail-right-bar .date-avail button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 33px;
+}
+
+.tour-detail-right-bar .date-avail .sub-title {
+    font-size: 20px;
+    color: #7d7d7d;
+}
+
+.book-flex .sub-txt-heading {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.travel-reason .sub-txt-heading {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.left-bar .fac-include button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+
+.bor-left .sub-title {
+    font-size: 12px;
+}
+
+.org-price .reduce-pre {
+    background: #e74c3c;
+    color: white;
+    display: inline;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
+.org-price span {
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.org-price .final-price {
+    font-size: 28px;
+    font-weight: 600;
+}
+
 /*** End tour detail page CSS ***/
 
 /*** Start tour package page CSS ***/
-.tour-package .select-pack button{border: none;background: #155088;font-size: 12px;color: white;border-radius: 6px;padding: 5px 10px;}
+.tour-package .select-pack button {
+    border: none;
+    background: #155088;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
 /*** End tour package page CSS ***/
 
 /*** Start transport page CSS ***/
 /*.transport-header{background: url("../../public/assets/img/transport-main-bg.png") top no-repeat;background-size: cover;}*/
-.transport-option{background: #f4f4f4;}
-.luxury-trans .featured-carousel .owl-prev{top:76px;}
-.luxury-trans .right-cour-arrow{top:91px;}
-.luxury-trans .left-cour-arrow{top:91px;}
-.img-resize img{height: auto!important; width:250px !important; vertical-align: center !important;}
-.style-height-set{height: 273px!important;}
-.canc-detail{color: #4c9609;
+.transport-option {
+    background: #f4f4f4;
+}
+
+.luxury-trans .featured-carousel .owl-prev {
+    top: 76px;
+}
+
+.luxury-trans .right-cour-arrow {
+    top: 91px;
+}
+
+.luxury-trans .left-cour-arrow {
+    top: 91px;
+}
+
+.img-resize img {
+    height: auto !important;
+    width: 250px !important;
+    vertical-align: center !important;
+}
+
+.style-height-set {
+    height: 273px !important;
+}
+
+.canc-detail {
+    color: #4c9609;
     font-size: 12px;
-    font-weight: 400;}
-.fact-pro img{padding-bottom: 7px;}
+    font-weight: 400;
+}
+
+.fact-pro img {
+    padding-bottom: 7px;
+}
+
 /*** End transport page CSS ***/
 
 /*** Start transport search result page CSS ***/
-.main-search .sub-title{color: #545454;}
-.transport-serach-result .car-type{background: #f5fdee;width: 193px;height: 185px;}
-.transport-serach-result .sub-txt{font-size: 12px;font-weight: 600;color: #4e4e4e;}
-.transport-serach-result .sub-txt img{margin-top:-4px;}
-.transport-serach-result .car-detail ul li{list-style: none;color: #4c9609;font-size: 12px;font-weight: 400;}
-.transport-serach-result .car-detail .fa-check{font-size: 12px;}
-.transport-serach-result .car-type img{margin-left: -15px; margin-top: 24px;}
-.luxury-trans .featured-carousel .owl-prev{top:76px!important;}
-.luxury-trans .featured-carousel .owl-next{top:76px!important;}
+.main-search .sub-title {
+    color: #545454;
+}
+
+.transport-serach-result .car-type {
+    background: #f5fdee;
+    width: 193px;
+    height: 185px;
+}
+
+.transport-serach-result .sub-txt {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4e4e4e;
+}
+
+.transport-serach-result .sub-txt img {
+    margin-top: -4px;
+}
+
+.transport-serach-result .car-detail ul li {
+    list-style: none;
+    color: #4c9609;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.transport-serach-result .car-detail .fa-check {
+    font-size: 12px;
+}
+
+.transport-serach-result .car-type img {
+    margin-left: -15px;
+    margin-top: 24px;
+}
+
+.luxury-trans .featured-carousel .owl-prev {
+    top: 76px !important;
+}
+
+.luxury-trans .featured-carousel .owl-next {
+    top: 76px !important;
+}
+
 /*** End transport search result page CSS ***/
 
-.left-bar-tour-pack{border: solid 1px #a7a7a7;}
-.left-bar-tour-pack .final-price{font-size: 30px;}
-.left-bar-tour-pack .for-green-color{color: #4c9609;}
-.left-bar-tour-pack .sub-txt{font-size:12px;}
-.left-bar-tour-pack .benifits ul li{list-style: none;color: #4c9609;font-size: 12px;font-weight: 400;display: flex;}
-.tour-pack-detail .list-inline-item{display: table-cell;}
-.transport-detail .form-to{font-size: 16px;font-weight: 400;}
-.trans-pack-detail .clean-safety ul li{float: right;width:33%;list-style: none;font-size: 12px}
-.right-bar-transport{border: solid 1px #a7a7a7;}
+.left-bar-tour-pack {
+    border: solid 1px #a7a7a7;
+}
+
+.left-bar-tour-pack .final-price {
+    font-size: 30px;
+}
+
+.left-bar-tour-pack .for-green-color {
+    color: #4c9609;
+}
+
+.left-bar-tour-pack .sub-txt {
+    font-size: 12px;
+}
+
+.left-bar-tour-pack .benifits ul li {
+    list-style: none;
+    color: #4c9609;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+}
+
+.tour-pack-detail .list-inline-item {
+    display: table-cell;
+}
+
+.transport-detail .form-to {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.trans-pack-detail .clean-safety ul li {
+    float: right;
+    width: 33%;
+    list-style: none;
+    font-size: 12px
+}
+
+.right-bar-transport {
+    border: solid 1px #a7a7a7;
+}
 
 /*** Start city country page CSS ***/
-.city-country-header{background: url("/assets/img/city-country-main-header.png") top no-repeat;background-size: cover;}
-.ret-flig-det .box-1{background: #e8e8e8;}
-.ret-flig-det .airplane-logo{background: #0189fb;width:30px;}
-.ret-flig-det .rtn-final-price{background: #155088; width: 40%;margin:0 auto;color: white;font-size: 20px;}
-.flight-sect ul li{float: left;width: 33%;padding: 8px;}
-.other-airline-sect ul li{padding: 8px;}
-.flight-sect ul li{list-style: none;width: 33%;padding-top: 18px;color: #005eb0;}
-.city-count-sect a{color: black;text-decoration: none;}
-.city-count-sect a:hover {color: black;text-decoration: none;}
+.city-country-header {
+    background: url("/assets/img/city-country-main-header.png") top no-repeat;
+    background-size: cover;
+}
+
+.ret-flig-det .box-1 {
+    background: #e8e8e8;
+}
+
+.ret-flig-det .airplane-logo {
+    background: #0189fb;
+    width: 30px;
+}
+
+.ret-flig-det .rtn-final-price {
+    background: #155088;
+    width: 40%;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+}
+
+.flight-sect ul li {
+    float: left;
+    width: 33%;
+    padding: 8px;
+}
+
+.other-airline-sect ul li {
+    padding: 8px;
+}
+
+.flight-sect ul li {
+    list-style: none;
+    width: 33%;
+    padding-top: 18px;
+    color: #005eb0;
+}
+
+.city-count-sect a {
+    color: black;
+    text-decoration: none;
+}
+
+.city-count-sect a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 /*** End city country page CSS ***/
 
 /*** Start visa page CSS ***/
-.visa-detail .sub-txt{font-size: 12px;color: #999999;}
-.visa-detail .book-now button{padding: 5px 8px!important;color: white;}
+.visa-detail .sub-txt {
+    font-size: 12px;
+    color: #999999;
+}
+
+.visa-detail .book-now button {
+    padding: 5px 8px !important;
+    color: white;
+}
+
 /*** End visa page CSS ***/
 
 
 /*** Start User Registartion page CSS ***/
-#user-registration-page {background: url("/assets/img/user-registration.png")  no-repeat fixed;background-size: cover; padding: 1% 2% 15% 2%; height: 100vh;}
-.user-regist{width: 50%; margin: 0 auto;margin-top: 50px;background: rgba(0, 0, 0, 0.6); }
-.user-regist .code{color: #fe2f2f;font-size: 16px;font-weight: 500;}
-.login-btn button{background: #155088;color: white;border:none;border-radius: 3px;padding: 10px 10px;}
-.login-btn label{color: white;font-size: 18px;font-weight: 500;}
-.user-regist .form-control{font-size: 16px!important;padding: 22px 9px!important;color: black;}
-.login-screen{width: 40%;}
+#user-registration-page {
+    background: url("/assets/img/user-registration.png") no-repeat fixed;
+    background-size: cover;
+    padding: 1% 2% 15% 2%;
+    height: 100vh;
+}
+
+.user-regist {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.user-regist .code {
+    color: #fe2f2f;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login-btn button {
+    background: #155088;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
+
+.login-btn label {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user-regist .form-control {
+    font-size: 16px !important;
+    padding: 22px 9px !important;
+    color: black;
+}
+
+.login-screen {
+    width: 40%;
+}
+
 /*** End User Registartion page CSS ***/
 
 /*** Start faqs page CSS ***/
-.faqs button{border:none;background: transparent;}
-.faqs .border-botm {border-bottom: solid 1px #dbdada;}
+.faqs button {
+    border: none;
+    background: transparent;
+}
+
+.faqs .border-botm {
+    border-bottom: solid 1px #dbdada;
+}
+
 /*** End faqs page CSS ***/
 
 /*** Start complaints page CSS ***/
-.complaints .form-control-comp{width: 100%;border-radius: 3px;border:solid 1px #7d7d7d;padding: 6px 8px;}
-.complaints .book-now button{padding: 8px 32px!important;color: white;}
-.for-msg-box{height: 150px;}
+.complaints .form-control-comp {
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px #7d7d7d;
+    padding: 6px 8px;
+}
+
+.complaints .book-now button {
+    padding: 8px 32px !important;
+    color: white;
+}
+
+.for-msg-box {
+    height: 150px;
+}
+
 /*** Start complaints page CSS ***/
 
 /*** start about us page CSS ***/
-.about-us .reason-1{border:solid 1px #bbbbbb;}
-.icon-bg{background: #155088;border-radius: 8px;width: 50px;height: 50px;margin: 0 auto;}
+.about-us .reason-1 {
+    border: solid 1px #bbbbbb;
+}
+
+.icon-bg {
+    background: #155088;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
 /*** End about us page CSS ***/
 
 /*** Start contact us page CSS ***/
-.contact-us .gmap_canvas{width: 100%;}
-.contact-us #gmap_canvas{width: 100%;height: 400px;}
-.contact-us .mapouter{height: 400px;}
-.contact-us .customer-services{background: #f9f9f9;}
-.contact-us .customer-services .address{line-height: 27px;}
-.contact-us textarea{height: 250px;}
+.contact-us .gmap_canvas {
+    width: 100%;
+}
+
+.contact-us #gmap_canvas {
+    width: 100%;
+    height: 400px;
+}
+
+.contact-us .mapouter {
+    height: 400px;
+}
+
+.contact-us .customer-services {
+    background: #f9f9f9;
+}
+
+.contact-us .customer-services .address {
+    line-height: 27px;
+}
+
+.contact-us textarea {
+    height: 250px;
+}
+
 /*** End contact us page CSS ***/
 
 
 /*** start view-all page CSS ***/
-.view-all .sub-txt{color: #999999;}
-.view-umrah-sect .text-detail{position: absolute;top: 0px;top: 92px;right: 44px;color: white;}
-.view-umrah-sect .owl-prev{top:114px!important;}
-.view-umrah-sect .owl-next{top:114px!important;}
-.view-umrah-sect .right-cour-arrow{top:128px;}
-.view-umrah-sect .left-cour-arrow{top:128px;}
-.tran-view-all img{height: auto!important;width: auto!important;}
-/*** End view-all page CSS ***/
-
-.gen-text{color: #fff;}
-.gen-text a{color: #fff; text-decoration: underline;}
-.gen-text a:hover{color: #fff; text-decoration: underline; font-weight: bold;}
-
-.btn-success {
-    color: #fff!important;
-    background-color: #28a745!important;
-    border-color: #28a745!important;
+.view-all .sub-txt {
+    color: #999999;
 }
 
-.pay-now-det{color: #2b9d07;}
-.trans-sum{color: #2b9d07!important;}
+.view-umrah-sect .text-detail {
+    position: absolute;
+    top: 0px;
+    top: 92px;
+    right: 44px;
+    color: white;
+}
+
+.view-umrah-sect .owl-prev {
+    top: 114px !important;
+}
+
+.view-umrah-sect .owl-next {
+    top: 114px !important;
+}
+
+.view-umrah-sect .right-cour-arrow {
+    top: 128px;
+}
+
+.view-umrah-sect .left-cour-arrow {
+    top: 128px;
+}
+
+.tran-view-all img {
+    height: auto !important;
+    width: auto !important;
+}
+
+/*** End view-all page CSS ***/
+
+.gen-text {
+    color: #fff;
+}
+
+.gen-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.gen-text a:hover {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-success {
+    color: #fff !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.pay-now-det {
+    color: #2b9d07;
+}
+
+.trans-sum {
+    color: #2b9d07 !important;
+}
+
 /**** Start Mouseover CSS ****/
 
 
 
 
 .dropbtn {
-    background:transparent;
+    background: transparent;
     color: white;
     padding: 5px;
     font-size: 14px;
     border: none;
-    width:100%;
-    text-align:left;
+    width: 100%;
+    text-align: left;
 }
 
 
 .search-dropdown {
     position: relative;
     display: inline-block;
-    width:100%;
+    width: 100%;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
-    color:black !important;
+    color: black !important;
     background: #fff;
     /* min-width: 160px; */
     width: 100%;
@@ -1111,26 +3001,117 @@ span.round-tab i{
     text-decoration: none;
     display: block;
 }
+
 /*.dropdown-content a:hover {background:#f1f1f1;}*/
-.search-dropdown:hover .dropdown-content {display: block;}
+.search-dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .search-dropdown:hover .dropbtn {}
-.dropbtn .fa, .dropbtn .far, .dropbtn .fas, .dropbtn .fal{font-size:16px; padding-left:10px;}
-.dropdown-passenger input[type="text"]{line-height:38px;}
-.form-field .fa, .form-field .far, .form-field .fas, .form-field .fal{font-size:22px; color:#f7e300;padding:10px 0px 0px 12px;}
-.btn-main-search button{width:100%; background:#f7e300; line-height:42px; border-bottom-right-radius:25px;  border-top-right-radius:25px; border:none; font-size:14px; text-transform:uppercase;}
-.form-field ::-webkit-input-placeholder{/* Chrome/Opera/Safari */ color:#252327;}
-.form-field ::-moz-placeholder{/* Firefox 19+ */ color:#252327;}
-.form-field :-ms-input-placeholder{/* IE 10+ */ color:#252327;}
-.form-field:-moz-placeholder{/* Firefox 18- */ color:#252327;}
-.bold-field ::-webkit-input-placeholder{/* Chrome/Opera/Safari */ color:#252327; font-size:18px;}
-.bold-field ::-moz-placeholder{/* Firefox 19+ */ color:#252327; font-size:18px;}
-.bold-field :-ms-input-placeholder{/* IE 10+ */ color:#252327; font-size:18px;}
-.bold-field :-moz-placeholder{/* Firefox 18- */ color:#252327; font-size:18px;}
-.dropdown-passenger{}
-.dropdown-passenger .dropbtn{ color:#252327; padding:0px 0px 0px 0px; font-size:13px; font-weight:bold;}
-.dropdown-passenger .fa, .dropdown-passenger .far, .dropdown-passenger .fas, .dropdown-passenger .fal{font-size:22px; color:#f7e300;padding:10px 0px 0px 12px;}
-.icon-passenger .fa, .icon-passenger .far, .icon-passenger .fas, .icon-passenger .fal{padding:0px 0px 0px 12px!important;}
+
+.dropbtn .fa,
+.dropbtn .far,
+.dropbtn .fas,
+.dropbtn .fal {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.dropdown-passenger input[type="text"] {
+    line-height: 38px;
+}
+
+.form-field .fa,
+.form-field .far,
+.form-field .fas,
+.form-field .fal {
+    font-size: 22px;
+    color: #f7e300;
+    padding: 10px 0px 0px 12px;
+}
+
+.btn-main-search button {
+    width: 100%;
+    background: #f7e300;
+    line-height: 42px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.form-field ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #252327;
+}
+
+.form-field ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #252327;
+}
+
+.form-field :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #252327;
+}
+
+.form-field:-moz-placeholder {
+    /* Firefox 18- */
+    color: #252327;
+}
+
+.bold-field ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #252327;
+    font-size: 18px;
+}
+
+.bold-field ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #252327;
+    font-size: 18px;
+}
+
+.bold-field :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #252327;
+    font-size: 18px;
+}
+
+.bold-field :-moz-placeholder {
+    /* Firefox 18- */
+    color: #252327;
+    font-size: 18px;
+}
+
+.dropdown-passenger {}
+
+.dropdown-passenger .dropbtn {
+    color: #252327;
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dropdown-passenger .fa,
+.dropdown-passenger .far,
+.dropdown-passenger .fas,
+.dropdown-passenger .fal {
+    font-size: 22px;
+    color: #f7e300;
+    padding: 10px 0px 0px 12px;
+}
+
+.icon-passenger .fa,
+.icon-passenger .far,
+.icon-passenger .fas,
+.icon-passenger .fal {
+    padding: 0px 0px 0px 12px !important;
+}
+
 .qty {}
+
 .qty .count {
     color: #000;
     display: inline-block;
@@ -1141,6 +3122,7 @@ span.round-tab i{
     min-width: 30px;
     text-align: center;
 }
+
 .qty .plus {
     cursor: pointer;
     display: inline-block;
@@ -1148,10 +3130,11 @@ span.round-tab i{
     color: white;
     width: 20px;
     height: 20px;
-    font: 22px/1 Arial,sans-serif;
+    font: 22px/1 Arial, sans-serif;
     text-align: center;
-    background:#ccc;
+    background: #ccc;
 }
+
 .qty .minus {
     cursor: pointer;
     display: inline-block;
@@ -1159,44 +3142,64 @@ span.round-tab i{
     color: white;
     width: 20px;
     height: 20px;
-    font: 22px/1 Arial,sans-serif;
+    font: 22px/1 Arial, sans-serif;
     text-align: center;
     background-clip: padding-box;
-    background:#ccc;
+    background: #ccc;
 }
 
-.minus:hover{
+.minus:hover {
     background-color: #65199f !important;
 }
-.plus:hover{
+
+.plus:hover {
     background-color: #65199f !important;
 }
+
 /*Prevent text selection*/
-.qty span{
+.qty span {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-.qty input{
+
+.qty input {
     border: 0;
     width: 2%;
 }
+
 .qty input::-webkit-outer-spin-button,
 .qty input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.qty input:disabled{
-    background-color:white;
-}
-.dropdown-content label{font-weight:normal; font-size:13px; padding-left:15px; margin-bottom:0px; color: #000;}
-.dropdown-content hr{margin:0px;border-bottom:solid 1px #d8d8d8;}
 
-.navbar1.colorChange{
+.qty input:disabled {
+    background-color: white;
+}
+
+.dropdown-content label {
+    font-weight: normal;
+    font-size: 13px;
+    padding-left: 15px;
+    margin-bottom: 0px;
+    color: #000;
+}
+
+.dropdown-content hr {
+    margin: 0px;
+    border-bottom: solid 1px #d8d8d8;
+}
+
+.navbar1.colorChange {
     background-color: #333333;
 }
 
-.fa-facebook, .fa-whatsapp , .fa-twitter , .fa-google , .fa-linkedin{
+.fa-facebook,
+.fa-whatsapp,
+.fa-twitter,
+.fa-google,
+.fa-linkedin {
     font-size: 24px;
     padding-top: 7px;
     color: white;
@@ -1248,7 +3251,7 @@ aside .side-inner .nav-menu ul li:hover a {
     margin-left: -40px;
     padding-left: 47px !important;
     border-spacing: 15px 50px;
-    color:white;
+    color: white;
     background-color: #155088;
 
 }
@@ -1256,10 +3259,10 @@ aside .side-inner .nav-menu ul li:hover a {
 .custom-nav a {
     color: #fff;
     display: inline-flex;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.ul{
+.ul {
     list-style-type: none;
 }
 
@@ -1270,249 +3273,734 @@ aside .side-inner .nav-menu ul li:hover a {
     margin-top: 50px;
     background-color: red;
     background: rgba(0, 0, 0, 0.6);
-    color:white;
+    color: white;
     padding-bottom: 20px;
 }
 
 /**** Ends Mouseover CSS ****/
 
 @media (min-width: 992px) {
-    .umrah-pack-type{
+    .umrah-pack-type {
         margin-top: 20px !important;
     }
 
-    .search-form1{
-        bottom:0 !important;
+    .search-form1 {
+        bottom: 0 !important;
         margin-top: 100px;
     }
-    .umrah-main-search1{
+
+    .umrah-main-search1 {
         margin-top: 60px;
     }
 
 }
+
 @media (max-width: 768px) {
-    .sub-title{font-size: 16px;}
-    .find-hotel{height: 42vh;}
-    .masthead{padding: 0rem 0;}
-    .form-label{font-size: 12px;}
-    .form-control{font-size: 13px!important;}
-    .number-details{font-size: 14px!important;}
-    .footer .title{font-size: 15px;}
-    .search-form{margin-top: 323px;}
-    .hotel-page .hotel-img img {height: 253px!important;}
-    .flight-det .title{font-size: 16px;  }
-    .right-bar .view-btn{font-size: 10px;}
-    #mainNav.navbar-shrink{background: #333333;}
-    .heig-width-small-sc .image-box img{height: auto;}
-    .heig-width-small-sc .image-box{height: 326px;}
-    .sub-txt-desc{font-size: 12px;}
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .find-hotel {
+        height: 42vh;
+    }
+
+    .masthead {
+        padding: 0rem 0;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .form-control {
+        font-size: 13px !important;
+    }
+
+    .number-details {
+        font-size: 14px !important;
+    }
+
+    .footer .title {
+        font-size: 15px;
+    }
+
+    .search-form {
+        margin-top: 323px;
+    }
+
+    .hotel-page .hotel-img img {
+        height: 253px !important;
+    }
+
+    .flight-det .title {
+        font-size: 16px;
+    }
+
+    .right-bar .view-btn {
+        font-size: 10px;
+    }
+
+    #mainNav.navbar-shrink {
+        background: #333333;
+    }
+
+    .heig-width-small-sc .image-box img {
+        height: auto;
+    }
+
+    .heig-width-small-sc .image-box {
+        height: 326px;
+    }
+
+    .sub-txt-desc {
+        font-size: 12px;
+    }
 
     /*** Start Flights CSS ***/
-    .world-map{background-size: 100%;}
-    .country-name {font-size: 20px;}
-    .map-africa img{width: auto;}
-    .map-south-america img{width: auto;}
-    .map-oceania img{width: auto;}
-    .map-europe img{width: auto;}
-    .map-north-america img{width: auto;}
-    .map-asia img{width: auto;}
-    .flight-deti-img img{height: 254px;}
+    .world-map {
+        background-size: 100%;
+    }
+
+    .country-name {
+        font-size: 20px;
+    }
+
+    .map-africa img {
+        width: auto;
+    }
+
+    .map-south-america img {
+        width: auto;
+    }
+
+    .map-oceania img {
+        width: auto;
+    }
+
+    .map-europe img {
+        width: auto;
+    }
+
+    .map-north-america img {
+        width: auto;
+    }
+
+    .map-asia img {
+        width: auto;
+    }
+
+    .flight-deti-img img {
+        height: 254px;
+    }
+
     /*** End Flights CSS ***/
 
 
     /***Start Flights Search Result CSS ***/
-    .search-fligh .form-control{font-size: 14px!important;}
-    .left-bar .sub-txt{font-size: 11px;}
-    .short-header{height: 9vh;}
-    .filter-list ul li label{font-size: 12px;}
-    .main-search .search-btn{padding: 12px 1px;margin-top: 51px;}
-    .comp-name img{width: 100%;}
-    .ui-slider-horizontal .ui-slider-handle{top:144px;}
+    .search-fligh .form-control {
+        font-size: 14px !important;
+    }
+
+    .left-bar .sub-txt {
+        font-size: 11px;
+    }
+
+    .short-header {
+        height: 9vh;
+    }
+
+    .filter-list ul li label {
+        font-size: 12px;
+    }
+
+    .main-search .search-btn {
+        padding: 12px 1px;
+        margin-top: 51px;
+    }
+
+    .comp-name img {
+        width: 100%;
+    }
+
+    .ui-slider-horizontal .ui-slider-handle {
+        top: 144px;
+    }
+
     /***End Flights Search Result CSS ***/
-    .confrim-chk label{display: inline;}
+    .confrim-chk label {
+        display: inline;
+    }
 
     /***Start hotel Search Result CSS ***/
-    .hotel-img{width: 100%;}
-    .hotel-search-filter{margin-top: -46px!important;}
-    .hotel-model-content{margin-top:41px;}
-    .modal-body .fa-star{color: #fec223!important;}
-    .mylink-hotel-search{width: 92%!important;margin-top:20px!important;}
+    .hotel-img {
+        width: 100%;
+    }
+
+    .hotel-search-filter {
+        margin-top: -46px !important;
+    }
+
+    .hotel-model-content {
+        margin-top: 41px;
+    }
+
+    .modal-body .fa-star {
+        color: #fec223 !important;
+    }
+
+    .mylink-hotel-search {
+        width: 92% !important;
+        margin-top: 20px !important;
+    }
+
     /***End hotel Search Result CSS ***/
 
     /***Start hotel detail CSS ***/
-    .list-inline-item img{width:85%;}
-    .hotel-room-detail{border:none;}
-    .all-room .br-right{border:none;}
-    .bor-btm{border:none;}
-    .all-room{border:solid 2px #bbb9b2;}
-    .for-small-screen .reserve ul li{font-size: 16px;}
+    .list-inline-item img {
+        width: 85%;
+    }
+
+    .hotel-room-detail {
+        border: none;
+    }
+
+    .all-room .br-right {
+        border: none;
+    }
+
+    .bor-btm {
+        border: none;
+    }
+
+    .all-room {
+        border: solid 2px #bbb9b2;
+    }
+
+    .for-small-screen .reserve ul li {
+        font-size: 16px;
+    }
+
     /***End hotel detail CSS ***/
 
     /***Start umrah CSS ***/
-    .umrah-main img{width: 100%;}
+    .umrah-main img {
+        width: 100%;
+    }
 
     /***Start umrah package CSS ***/
-    .umrah-hotel-detail .room-detail{margin-top: 6px;}
-    .umrah-packages .starting-price .total-price{font-size: 34px;}
-    .umrah-packages .topnav #myLinks{top:286px;}
-    .umrah-search-frm{margin-top:346px;}
-    .umrah-pack-type{margin-top: 280px;}
+    .umrah-hotel-detail .room-detail {
+        margin-top: 6px;
+    }
+
+    .umrah-packages .starting-price .total-price {
+        font-size: 34px;
+    }
+
+    .umrah-packages .topnav #myLinks {
+        top: 286px;
+    }
+
+    .umrah-search-frm {
+        margin-top: 346px;
+    }
+
+    .umrah-pack-type {
+        margin-top: 280px;
+    }
+
     /***end umrah package CSS ***/
 
     /***start ziyarat page CSS ***/
-    .ziyarat img{width: 100%;}
-    .ziyarat .title{font-size: 16px;}
+    .ziyarat img {
+        width: 100%;
+    }
+
+    .ziyarat .title {
+        font-size: 16px;
+    }
+
     /***End ziyarat page CSS ***/
 
     /*** Start tour detail page CSS ***/
-    .bor-left{border:none!important;}
-    .tour-detail-right-bar .gmap_canvas{width:694px!important;}
-    .list-inline-item:not(:last-child){margin-right: 0px!important;}
+    .bor-left {
+        border: none !important;
+    }
+
+    .tour-detail-right-bar .gmap_canvas {
+        width: 694px !important;
+    }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 0px !important;
+    }
+
     /*** End tour detail page CSS ***/
 
     /*** Start tour package page CSS ***/
-    .tour-package img{width: 100%;}
+    .tour-package img {
+        width: 100%;
+    }
+
     /*** End tour package page CSS ***/
 
     /*** Start transport page CSS ***/
-    .day-offers img{width: 100%;}
-    .day-offers .sub-title{font-size: 12px;}
-    .day-offers .sub-txt{font-size: 12px;}
-    .luxury-trans .transport-option img{width: 100%;}
+    .day-offers img {
+        width: 100%;
+    }
+
+    .day-offers .sub-title {
+        font-size: 12px;
+    }
+
+    .day-offers .sub-txt {
+        font-size: 12px;
+    }
+
+    .luxury-trans .transport-option img {
+        width: 100%;
+    }
+
     /*** End transport page CSS ***/
 
     /*** Contact Us page CSS ***/
-    .contact-info img{width: 7%;}
+    .contact-info img {
+        width: 7%;
+    }
+
     /*** Contact Us page CSS ***/
 
     /*** Start city country page CSS ***/
-    .city-country-page .top-page-ads .for-large-img img{width: 100%;}
-    .city-country-page .top-page-ads .for-small-scr img{width: 117%;}
-    .ret-flig-det .rtn-final-price{width: 50%;}
+    .city-country-page .top-page-ads .for-large-img img {
+        width: 100%;
+    }
+
+    .city-country-page .top-page-ads .for-small-scr img {
+        width: 117%;
+    }
+
+    .ret-flig-det .rtn-final-price {
+        width: 50%;
+    }
+
     /*** End city country page CSS ***/
 
     /*** start login screen page CSS ***/
-    .user-regist{width: 70%;}
+    .user-regist {
+        width: 70%;
+    }
+
     /*** End login screen page CSS ***/
-    .view-all img{width: 100%;}
-    .view-umrah-sect .text-detail{right: 35px;}
+    .view-all img {
+        width: 100%;
+    }
+
+    .view-umrah-sect .text-detail {
+        right: 35px;
+    }
 
 
-    .umrah-pack-type{
+    .umrah-pack-type {
         margin-top: -20px !important;
     }
 
-    .search-form1{
-        bottom:0 !important;
+    .search-form1 {
+        bottom: 0 !important;
         margin-top: 100px;
     }
-    .umrah-main-search1{
+
+    .umrah-main-search1 {
         margin-top: 60px;
     }
 
 }
 
 
-@media (min-width: 768px) { }
+@media (min-width: 768px) {}
 
 
 
 @media (max-width: 767px) {
-    .find-hotel{height: 52vh;}
-    .hotel-page .hotel-img img{height: auto!important;}
-    .main-logo-width img{}
-    .user-icon .fa-user{font-size: 20px;}
-    .custom-width{display: contents!important;}
+    .find-hotel {
+        height: 52vh;
+    }
+
+    .hotel-page .hotel-img img {
+        height: auto !important;
+    }
+
+    .main-logo-width img {}
+
+    .user-icon .fa-user {
+        font-size: 20px;
+    }
+
+    .custom-width {
+        display: contents !important;
+    }
+
     /*.main-header{background: url("../../public/assets/img/main-header-bg.png") top no-repeat; background-size: cover; padding: 6rem 0; }*/
-    .search-form{margin-top: 0px;}
-    .hotel-details{padding-top: 0px!important;}
-    .hotel-details .price{font-size: 50px; line-height: 45px;}
-    .hotel-details .title{font-size: 20px;}
-    .find-hotel button{padding: 10px 20px; font-size: 14px;}
-    .main-search .search-btn{margin-top:19px!important;}
-    .mobile-stricky-note{position: fixed;bottom: 0;width: 100%;z-index: 999;}
-    .mobile-stricky-nav{background:#e2e2e2; border-top-right-radius: 7px;border-top-left-radius: 7px;}
-    .br-right-mob-stric{border-right: solid 2px #5c5c5c;}
-    .ranking{margin-left: 77px;margin-top: -31px;}
-    .mylink-hotel-search{width: 67%!important;}
-    .min-height{min-height: 264px;display: grid;}
-    .umrah-hotel-detail .ranking{margin-left: -38px;margin-top: 0px;}
-    .gallery-img-sect .img-thumbnail{width: 100%;}
-    .tour-detail-right-bar .gmap_canvas{width: 504px!important;}
-    .tour-detail-right-bar .travel-reason .sub-txt{font-size: 12px;}
-    .tour-detail-right-bar .book-flex .sub-txt{font-size: 12px;}
-    .tour-detail-right-bar .card button{font-size: 12px;}
-    .day-offers img{width: 60%;}
-    .trans-pack-detail .clean-safety ul li{float: initial;width: 100%;}
-    .trans-pack-detail .sub-txt{text-align: left!important;}
-    .ret-flig-det .rtn-final-price{width: 65%;}
-    .flight-sect ul li{width: 50%;}
-    .hajj-guid img{width: 100%}
-    .btn-view-all{top:17px;}
-    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{top:115px;}
-    .left-cour-arrow{top:129px;}
-    .right-cour-arrow{top:129px;}
-    .luxury-trans .featured-carousel .owl-prev{top:75px;}
-    .view-umrah-sect .text-detail{top:71px;right: 0px;}
-    .book-flex .sub-txt-heading{font-size: 12px;}
-    .travel-reason .sub-txt-heading{font-size: 12px;}
-    .comp-name img{width: auto;}
-    .flight-deti-img img{height: auto;}
-    .for-width-size img{width: auto!important;}
-    .heig-width-small-sc .image-box {height: 385px;}
+    .search-form {
+        margin-top: 0px;
+    }
+
+    .hotel-details {
+        padding-top: 0px !important;
+    }
+
+    .hotel-details .price {
+        font-size: 50px;
+        line-height: 45px;
+    }
+
+    .hotel-details .title {
+        font-size: 20px;
+    }
+
+    .find-hotel button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .main-search .search-btn {
+        margin-top: 19px !important;
+    }
+
+    .mobile-stricky-note {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .mobile-stricky-nav {
+        background: #e2e2e2;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
+
+    .br-right-mob-stric {
+        border-right: solid 2px #5c5c5c;
+    }
+
+    .ranking {
+        margin-left: 77px;
+        margin-top: -31px;
+    }
+
+    .mylink-hotel-search {
+        width: 67% !important;
+    }
+
+    .min-height {
+        min-height: 264px;
+        display: grid;
+    }
+
+    .umrah-hotel-detail .ranking {
+        margin-left: -38px;
+        margin-top: 0px;
+    }
+
+    .gallery-img-sect .img-thumbnail {
+        width: 100%;
+    }
+
+    .tour-detail-right-bar .gmap_canvas {
+        width: 504px !important;
+    }
+
+    .tour-detail-right-bar .travel-reason .sub-txt {
+        font-size: 12px;
+    }
+
+    .tour-detail-right-bar .book-flex .sub-txt {
+        font-size: 12px;
+    }
+
+    .tour-detail-right-bar .card button {
+        font-size: 12px;
+    }
+
+    .day-offers img {
+        width: 60%;
+    }
+
+    .trans-pack-detail .clean-safety ul li {
+        float: initial;
+        width: 100%;
+    }
+
+    .trans-pack-detail .sub-txt {
+        text-align: left !important;
+    }
+
+    .ret-flig-det .rtn-final-price {
+        width: 65%;
+    }
+
+    .flight-sect ul li {
+        width: 50%;
+    }
+
+    .hajj-guid img {
+        width: 100%
+    }
+
+    .btn-view-all {
+        top: 17px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        top: 115px;
+    }
+
+    .left-cour-arrow {
+        top: 129px;
+    }
+
+    .right-cour-arrow {
+        top: 129px;
+    }
+
+    .luxury-trans .featured-carousel .owl-prev {
+        top: 75px;
+    }
+
+    .view-umrah-sect .text-detail {
+        top: 71px;
+        right: 0px;
+    }
+
+    .book-flex .sub-txt-heading {
+        font-size: 12px;
+    }
+
+    .travel-reason .sub-txt-heading {
+        font-size: 12px;
+    }
+
+    .comp-name img {
+        width: auto;
+    }
+
+    .flight-deti-img img {
+        height: auto;
+    }
+
+    .for-width-size img {
+        width: auto !important;
+    }
+
+    .heig-width-small-sc .image-box {
+        height: 385px;
+    }
 
 
 }
+
 @media (min-width: 640px) {}
+
 @media (min-width: 560px) {}
+
 @media (max-width: 425px) {
-    .for-aligment{text-align: left!important;}
-    .comp-name img{width: 100%;}
-    .hotel-details {padding-top: 6px!important;}
-    .min-height{min-height: 225px;}
-    .map-africa img{width: auto;}
-    .map-south-america img {width: auto;}
-    .map-oceania img{width: 20%;}
-    .map-europe img{width:auto;}
-    .map-north-america img{width: auto;}
-    .map-asia img{width: auto;}
-    .map-africa{background-size: 100%}
-    .map-south-america{background-size: 100%}
-    .map-oceania{background-size: 100%}
-    .map-europe{background-size: 100%}
-    .map-north-america{background-size: 100%}
-    .map-asia{background-size: 100%}
-    .map-btn{width: 90px;padding: 7px 16px;}
-    .country-name{font-size: 16px;}
-    .topnav #myLinks{width: 92%;}
-    .right-bar .sub-txt{text-align: center!important;}
-    .right-bar .dep-det{text-align: center!important;}
-    h1, h2, h3, h4{font-size: 20px!important;}
-    .border-small-scr{border-bottom: solid 2px #b3b1b1!important;}
-    .custom-dropdown{padding: 0px!important;}
-    .number-details{font-size: 10px!important;}
-    .room-detail .total-fare{font-size: 22px;}
-    .room-detail .dep-det{text-align: left!important;}
-    .room-detail .sub-txt{text-align: left!important;}
-    .hotel-detail .sub-txt{text-align: left!important;}
-    .mylink-hotel-search {width: 91%!important;}
-    .umrah-hotel-detail .sub-txt{font-size: 10px;text-align: left!important;}
-    .umrah-hotel-detail .room-detail .sub-txt{text-align: center!important;}
-    .umrah-hotel-detail .ranking{margin-left: 83px;margin-top: -33px;}
-    .hajj-guid img{width:100%;}
-    .tour-detail-right-bar .gmap_canvas{width: 373px!important;}
-    .day-offers .for-img-hide img{display: none;}
-    .transport-serach-result .hotel-detail .dep-det{text-align: left!important;}
-    .transport-serach-result .car-detail .flight-fare .sub-txt{text-align: center!important;}
-    .other-airline-sect ul li{width: 70%;}
-    .user-regist{width: 95%;}
-    .right-bar .view-btn{font-size: 9px;}
-    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{top:205px;}
-    .right-cour-arrow {top: 219px;}
-    .left-cour-arrow {top: 219px;}
-    .luxury-trans .featured-carousel .owl-prev{top:76px!important;}
-    .view-umrah-sect .text-detail {top: 89px;right: 57px;}
-    .btn-view-all{top:0px;}
+    .for-aligment {
+        text-align: left !important;
+    }
+
+    .comp-name img {
+        width: 100%;
+    }
+
+    .hotel-details {
+        padding-top: 6px !important;
+    }
+
+    .min-height {
+        min-height: 225px;
+    }
+
+    .map-africa img {
+        width: auto;
+    }
+
+    .map-south-america img {
+        width: auto;
+    }
+
+    .map-oceania img {
+        width: 20%;
+    }
+
+    .map-europe img {
+        width: auto;
+    }
+
+    .map-north-america img {
+        width: auto;
+    }
+
+    .map-asia img {
+        width: auto;
+    }
+
+    .map-africa {
+        background-size: 100%
+    }
+
+    .map-south-america {
+        background-size: 100%
+    }
+
+    .map-oceania {
+        background-size: 100%
+    }
+
+    .map-europe {
+        background-size: 100%
+    }
+
+    .map-north-america {
+        background-size: 100%
+    }
+
+    .map-asia {
+        background-size: 100%
+    }
+
+    .map-btn {
+        width: 90px;
+        padding: 7px 16px;
+    }
+
+    .country-name {
+        font-size: 16px;
+    }
+
+    .topnav #myLinks {
+        width: 92%;
+    }
+
+    .right-bar .sub-txt {
+        text-align: center !important;
+    }
+
+    .right-bar .dep-det {
+        text-align: center !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-size: 20px !important;
+    }
+
+    .border-small-scr {
+        border-bottom: solid 2px #b3b1b1 !important;
+    }
+
+    .custom-dropdown {
+        padding: 0px !important;
+    }
+
+    .number-details {
+        font-size: 10px !important;
+    }
+
+    .room-detail .total-fare {
+        font-size: 22px;
+    }
+
+    .room-detail .dep-det {
+        text-align: left !important;
+    }
+
+    .room-detail .sub-txt {
+        text-align: left !important;
+    }
+
+    .hotel-detail .sub-txt {
+        text-align: left !important;
+    }
+
+    .mylink-hotel-search {
+        width: 91% !important;
+    }
+
+    .umrah-hotel-detail .sub-txt {
+        font-size: 10px;
+        text-align: left !important;
+    }
+
+    .umrah-hotel-detail .room-detail .sub-txt {
+        text-align: center !important;
+    }
+
+    .umrah-hotel-detail .ranking {
+        margin-left: 83px;
+        margin-top: -33px;
+    }
+
+    .hajj-guid img {
+        width: 100%;
+    }
+
+    .tour-detail-right-bar .gmap_canvas {
+        width: 373px !important;
+    }
+
+    .day-offers .for-img-hide img {
+        display: none;
+    }
+
+    .transport-serach-result .hotel-detail .dep-det {
+        text-align: left !important;
+    }
+
+    .transport-serach-result .car-detail .flight-fare .sub-txt {
+        text-align: center !important;
+    }
+
+    .other-airline-sect ul li {
+        width: 70%;
+    }
+
+    .user-regist {
+        width: 95%;
+    }
+
+    .right-bar .view-btn {
+        font-size: 9px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        top: 205px;
+    }
+
+    .right-cour-arrow {
+        top: 219px;
+    }
+
+    .left-cour-arrow {
+        top: 219px;
+    }
+
+    .luxury-trans .featured-carousel .owl-prev {
+        top: 76px !important;
+    }
+
+    .view-umrah-sect .text-detail {
+        top: 89px;
+        right: 57px;
+    }
+
+    .btn-view-all {
+        top: 0px;
+    }
 
 
 
@@ -1520,28 +4008,45 @@ aside .side-inner .nav-menu ul li:hover a {
 
 
 @media (min-width: 360px) {
-    .view-umrah-sect .text-detail{right: 33px!important;}
-    .flight-sub-title {margin-left: 9px!important;}
+    .view-umrah-sect .text-detail {
+        right: 33px !important;
+    }
+
+    .flight-sub-title {
+        margin-left: 9px !important;
+    }
 }
 
 @media (max-width: 320px) {
-    .hotel-details {padding-top: 80px;}
-    .room-detail .total-fare{font-size: 20px!important;}
-    .flight-fare .view-btn{letter-spacing: 0px!important;}
-    .date-chnge .sub-txt{font-size: 14px!important;}
-    .tour-detail-right-bar .gmap_canvas {width: 327px;}
+    .hotel-details {
+        padding-top: 80px;
+    }
+
+    .room-detail .total-fare {
+        font-size: 20px !important;
+    }
+
+    .flight-fare .view-btn {
+        letter-spacing: 0px !important;
+    }
+
+    .date-chnge .sub-txt {
+        font-size: 14px !important;
+    }
+
+    .tour-detail-right-bar .gmap_canvas {
+        width: 327px;
+    }
 
 }
 
 
-.date-picker{
-    height:44px;
+.date-picker {
+    height: 44px;
     border-radius: 5px;
     border: 1px solid gray;
 }
 
-.form-control{
+.form-control {
     border: 1px solid gray !important;
 }
-
-

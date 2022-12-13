@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import '../../Components/tripplanner.css';
 import '../../Components/styles.css';
@@ -12,82 +12,82 @@ import $ from "jquery";
 
 
 const ContinueBookingVisa = () => {
-useEffect(() => {
-  window.scrollTo(0, 0);
-   document.title = "Continue Booking | Tripplanner ";
-}, [])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Continue Booking | Tripplanner ";
+  }, [])
 
 
-const [bgColor , setBgColor] = useState(true);
-const [bgColor2 , setBgColor2] = useState(false);
-const [noOfRows , setNoOfRows] = useState(1);
+  const [bgColor, setBgColor] = useState(true);
+  const [bgColor2, setBgColor2] = useState(false);
+  const [noOfRows, setNoOfRows] = useState(1);
 
-const [deleteButton , setDeleteButton] = useState(false);
-const [count , setCount] = useState();
+  const [deleteButton, setDeleteButton] = useState(false);
+  const [count, setCount] = useState();
 
-const Increment = () => {
-setNoOfRows(noOfRows + 1);
+  const Increment = () => {
+    setNoOfRows(noOfRows + 1);
 
-if(noOfRows >= 1) {
-setCount(noOfRows + 1);
-setDeleteButton(true);
-}
+    if (noOfRows >= 1) {
+      setCount(noOfRows + 1);
+      setDeleteButton(true);
+    }
 
-}
-
-
-const Decrement = () => {
-
-if(noOfRows == 1){
-setNoOfRows(noOfRows - 0);
-setDeleteButton(false);
-}
-else {
-setNoOfRows(noOfRows - 1);
-}
-}
+  }
 
 
+  const Decrement = () => {
+
+    if (noOfRows == 1) {
+      setNoOfRows(noOfRows - 0);
+      setDeleteButton(false);
+    }
+    else {
+      setNoOfRows(noOfRows - 1);
+    }
+  }
 
 
-const activeStep = () => {
-setBgColor(true);
-setBgColor2(false);
-window.scrollTo(0, 0);
-}
-
-const activeStep2 = () => {
-setBgColor(false);
-setBgColor2(true);
-
-window.scrollTo(0, 0);
-}
 
 
-return(
-<div>
-<BlackNavbar />
+  const activeStep = () => {
+    setBgColor(true);
+    setBgColor2(false);
+    window.scrollTo(0, 0);
+  }
+
+  const activeStep2 = () => {
+    setBgColor(false);
+    setBgColor2(true);
+
+    window.scrollTo(0, 0);
+  }
 
 
-   <section className="flight-found flight-detail mt-5">
-          <div className="container">
-            <h2 className="">SECURE BOOKING - ONLY TAKES 2 MINUTES!</h2>
-            <span className="filter-result float-right w-100 d-block d-lg-none d-md-none">
-              <div className="mobile-container">
-                <div className="topnav">
-                  <a href="#home" className="active"></a>
-                    <div className="row">
-                      <div className="col-12">
-                        <div id="myLinks">
-                          <a className="for-border-btm" href="#news">
-                            <button type="button" className="btn  airline-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Price</button>
-                          </a>
-                        </div>
-                      </div>
+  return (
+    <div>
+      <BlackNavbar />
+
+
+      <section className="flight-found flight-detail mt-5">
+        <div className="container">
+          <h2 className="">SECURE BOOKING - ONLY TAKES 2 MINUTES!</h2>
+          <span className="filter-result float-right w-100 d-block d-lg-none d-md-none">
+            <div className="mobile-container">
+              <div className="topnav">
+                <a href="#home" className="active"></a>
+                <div className="row">
+                  <div className="col-12">
+                    <div id="myLinks">
+                      <a className="for-border-btm" href="#news">
+                        <button type="button" className="btn  airline-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Price</button>
+                      </a>
                     </div>
-                  <a href="javascript:void(0);" className="icon" onclick="myFunction()">
-                     <i className="fa fa-filter" aria-hidden="true"></i>
-                  </a>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" className="icon" onclick="myFunction()">
+                  <i className="fa fa-filter" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </span>
@@ -112,83 +112,234 @@ return(
                 </div>
               </div>
             </div>
-      </div>
-            <div className="row mt-5">
+          </div>
+          <div className="row mt-5">
 
-              <div className="col-lg-3 col-md-3 d-none d-lg-block d-md-block">
-                <div className="left-bar">
-                  <div className="row">
-                    <div className="col-lg-12 col-md-12 col-12">
-                      <div className="sub-title for-tit-bor pl-3 pt-3 pb-3">Visa Summary</div>
-                    </div>
+            <div className="col-lg-3 col-md-3 d-none d-lg-block d-md-block">
+              <div className="left-bar">
+                <div className="row">
+                  <div className="col-lg-12 col-md-12 col-12">
+                    <div className="sub-title for-tit-bor pl-3 pt-3 pb-3">Visa Summary</div>
                   </div>
-                  <div className="sub-txt pl-3 pr-3 pt-3"><strong>Visa</strong></div>
-                  <div className="sub-title pl-3 pb-1 mb-2"> 615 Saudi Riyal </div>
                 </div>
+                <div className="sub-txt pl-3 pr-3 pt-3"><strong>Visa</strong></div>
+                <div className="sub-title pl-3 pb-1 mb-2"> 615 Saudi Riyal </div>
               </div>
+            </div>
 
-              <div className="col-lg-9 col-md-9">
-                <div className="right-bar p-4 flight-detail booking-detail">
+            <div className="col-lg-9 col-md-9">
+              <div className="right-bar p-4 flight-detail booking-detail">
 
-            <div className="container tabs-wrap">
-               <ul className="nav nav-pills nav-pills-bg" role="tablist">
-                 <li role="presentation" className="nav-item">
-                   <a className={bgColor ? "nav-link  active" : "nav-link nav-bg"} onClick={activeStep} href="#billing" aria-controls="billing" role="tab" data-toggle="tab" aria-expanded="true">VISA</a>
-                 </li>
-                 <li className="nav-item" >
-                   <a  className={bgColor2 ? "nav-link  active" : "nav-link nav-bg"} onClick={activeStep2} href="#shipping" aria-controls="shipping" role="tab" data-toggle="tab" aria-expanded="false">PASSENGER</a>
-                 </li>
+                <div className="container tabs-wrap">
+                  <ul className="nav nav-pills nav-pills-bg" role="tablist">
+                    <li role="presentation" className="nav-item">
+                      <a className={bgColor ? "nav-link  active" : "nav-link nav-bg"} onClick={activeStep} href="#billing" aria-controls="billing" role="tab" data-toggle="tab" aria-expanded="true">VISA</a>
+                    </li>
+                    <li className="nav-item" >
+                      <a className={bgColor2 ? "nav-link  active" : "nav-link nav-bg"} onClick={activeStep2} href="#shipping" aria-controls="shipping" role="tab" data-toggle="tab" aria-expanded="false">PASSENGER</a>
+                    </li>
 
-               </ul>
+                  </ul>
 
 
-             <div className="tab-content">
+                  <div className="tab-content">
 
-               <div role="tabpanel" className="tab-pane active" id="billing">
+                    <div role="tabpanel" className="tab-pane active" id="billing">
 
-<div class="col-md-offset-3 mt-4">
-                          <div class="sub-title pb-2">Visa Details</div>
+                      <div class="col-md-offset-3 mt-4">
+                        <div class="sub-title pb-2">Visa Details</div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-2 col-12">
+                            <label class="for-color1 pt-2">Resident Country <span>*</span></label>
+                            <div class="enter-name">
+                              <select>
+                                <option>Please Select</option>
+                                <option>Pakistan</option>
+                                <option>Dubai</option>
+                                <option>Turkey</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                            <label class="for-color1 pt-2">Applying For<span>*</span></label>
+                            <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                            <label class="for-color1 pt-2">Visa Type <span>*</span></label>
+                            <div class="enter-name">
+                              <select>
+                                <option>Please Select</option>
+                                <option>Urgent</option>
+                                <option>Normal</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                            <label class="for-color1 pt-2">Visa Category<span>*</span></label>
+                            <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                            <label class="for-color1 pt-4">Port of Arrival <span>*</span></label>
+                            <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                            <label class="for-color1 pt-4">Start Trip<span>*</span></label>
+                            <div class="enter-name"><input type="date" name="" class="" value="01/01/2018 - 01/15/2018" /></div>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                            <label class="for-color1 pt-4">End Trip<span>*</span></label>
+                            <div class="enter-name"><input type="date" name="" class="" value="01/01/2018 - 01/15/2018" /></div>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+
+
+                      <div className="row">
+                        <div className="col-lg-12 float-right text-right mt-3">
+                          <a className="btn nav-next-btn continue" onClick={activeStep2} href="#shipping" role="tab" data-toggle="tab" aria-expanded="true">NEXT</a>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                    <div role="tabpanel" className="tab-pane" id="shipping">
+
+                      {[...Array(noOfRows)].map((elementInArray, index) => {
+
+                        return (
+
+                          <div class="col-md-offset-3 mt-4">
+                            <div class="sub-title pb-2"></div>
                             <div class="row">
-                              <div class="col-lg-3 col-md-3 col-sm-2 col-12">
-                                <label class="for-color1 pt-2">Resident Country <span>*</span></label>
+
+                              <div class="col-lg-6 col-md-6 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Gender<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-6 col-md-6 col-sm-2 col-12">
+                                <label class="for-color1 pt-2">Title <span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Miss</option>
+                                    <option>Mr</option>
+                                    <option>Mrs</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">First Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Middle Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Last Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Date Of Birth <span>*</span></label>
+                                <div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Passport Number<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Expire Date <span>*</span></label>
+                                <div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Nationality<span>*</span></label>
                                 <div class="enter-name">
                                   <select>
                                     <option>Please Select</option>
                                     <option>Pakistan</option>
                                     <option>Dubai</option>
-                                    <option>Turkey</option>
                                   </select>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
-                                <label class="for-color1 pt-2">Applying For<span>*</span></label>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Citizenship Number<span>*</span></label>
                                 <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
                               </div>
-                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
-                                <label class="for-color1 pt-2">Visa Type <span>*</span></label>
+
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Fully Vaccinated<span>*</span></label>
                                 <div class="enter-name">
                                   <select>
-                                    <option>Please Select</option>
-                                    <option>Urgent</option>
-                                    <option>Normal</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
                                   </select>
                                 </div>
                               </div>
-                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
-                                <label class="for-color1 pt-2">Visa Category<span>*</span></label>
-                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Document Attached <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                <label class="for-color1 pt-4">Port of Arrival <span>*</span></label>
-                                <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Passport 1st Page <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                <label class="for-color1 pt-4">Start Trip<span>*</span></label>
-                                <div class="enter-name"><input type="date" name="" class="" value="01/01/2018 - 01/15/2018" /></div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Picture <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                <label class="for-color1 pt-4">End Trip<span>*</span></label>
-                                <div class="enter-name"><input type="date" name="" class="" value="01/01/2018 - 01/15/2018" /></div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Citizenship Card <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Visa<span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Vaccination Certificate <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4">
+                                <label class="for-color1 pt-4">Other Documents <span>*</span></label>
+                                <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
+                              </div>
+
+                            </div>
+
+                            <div className="row">
+                              <div className="col-lg-12">
+                                <button id="rowAdder" type="button" onClick={Increment} className="btn mt-4 nav-next-btn btn-dark"><span className="bi bi-plus-square-dotted"></span> Add Passenger</button>
+                                {deleteButton ?
+                                  <button id="rowAdder" type="button" onClick={Decrement} className="btn ml-1 mt-4 nav-next-btn btn-dark"><span className="bi bi-plus-square-dotted"></span> Delete</button>
+                                  :
+                                  <p></p>
+                                }
                               </div>
                             </div>
 
@@ -197,192 +348,41 @@ return(
 
 
 
-                                                            <div className="row">
-                                                              <div className="col-lg-12 float-right text-right mt-3">
-                                                                      <a className="btn nav-next-btn continue" onClick={activeStep2} href="#shipping" role="tab" data-toggle="tab" aria-expanded="true">NEXT</a>
-
-
-                                                              </div>
-                                                            </div>
-
-                                                          </div>
-
-
-               <div role="tabpanel" className="tab-pane" id="shipping">
-
-   {[...Array(noOfRows)].map((elementInArray, index) => {
-
-           return (
-
-         <div class="col-md-offset-3 mt-4">
-                                   <div class="sub-title pb-2"></div>
-                                     <div class="row">
-
-                                       <div class="col-lg-6 col-md-6 col-sm-4 col-12">
-                                         <label class="for-color1 pt-2">Gender<span>*</span></label>
-                                         <div class="enter-name">
-                                           <select>
-                                             <option>Male</option>
-                                             <option>Female</option>
-                                           </select>
-                                         </div>
-                                       </div>
-
-                                       <div class="col-lg-6 col-md-6 col-sm-2 col-12">
-                                         <label class="for-color1 pt-2">Title <span>*</span></label>
-                                         <div class="enter-name">
-                                           <select>
-                                             <option>Miss</option>
-                                             <option>Mr</option>
-                                             <option>Mrs</option>
-                                           </select>
-                                         </div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">First Name<span>*</span></label>
-                                         <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Middle Name<span>*</span></label>
-                                         <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Last Name<span>*</span></label>
-                                         <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Date Of Birth <span>*</span></label>
-                                         <div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Passport Number<span>*</span></label>
-                                         <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Expire Date <span>*</span></label>
-                                         <div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Nationality<span>*</span></label>
-                                         <div class="enter-name">
-                                           <select>
-                                             <option>Please Select</option>
-                                             <option>Pakistan</option>
-                                             <option>Dubai</option>
-                                           </select>
-                                         </div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Citizenship Number<span>*</span></label>
-                                         <div class="enter-name"><input type="text" id="fname" name="fname" /></div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                                         <label class="for-color1 pt-4">Fully Vaccinated<span>*</span></label>
-                                         <div class="enter-name">
-                                           <select>
-                                             <option>Yes</option>
-                                             <option>No</option>
-                                           </select>
-                                         </div>
-                                       </div>
-
-                                       <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Document Attached <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Passport 1st Page <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Picture <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Citizenship Card <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Visa<span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Vaccination Certificate <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-md-4">
-                                         <label class="for-color1 pt-4">Other Documents <span>*</span></label>
-                                         <div class=""><input type="file" id="img" name="img" accept="image/*" /></div>
-                                     </div>
-
-                                     </div>
-
-  <div className="row">
-                             <div className="col-lg-12">
-                                 <button id="rowAdder" type="button" onClick={Increment} className="btn mt-4 nav-next-btn btn-dark"><span className="bi bi-plus-square-dotted"></span> Add Passenger</button>
-                                 {deleteButton ?
-                                   <button id="rowAdder" type="button" onClick={Decrement} className="btn ml-1 mt-4 nav-next-btn btn-dark"><span className="bi bi-plus-square-dotted"></span> Delete</button>
-                                    :
-                                    <p></p>
-                                    }
-                             </div>
+                        );
+                      })}
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <div className="float-right mt-3">
+                            <a className="btn nav-next-btn btn-primary back mr-1" onClick={activeStep} href="#billing" role="tab" data-toggle="tab" aria-expanded="true">Previous</a>
+                            <Link to="/visa-booking-confirm"><button className="btn nav-next-btn btn-primary nextBtn btn-lg pull-right btn-bg-color" type="button">Continue Booking</button></Link>
                           </div>
-
-
-                                   </div>
-
-
-
-           ) ;
-                                    })}
-   <div className="row">
-                  <div className="col-lg-12">
-                     <div className="float-right mt-3">
-                             <a className="btn nav-next-btn btn-primary back mr-1" onClick={activeStep} href="#billing" role="tab" data-toggle="tab" aria-expanded="true">Previous</a>
-                             <Link to="/visa-booking-confirm"><button className="btn nav-next-btn btn-primary nextBtn btn-lg pull-right btn-bg-color" type="button">Continue Booking</button></Link>
-                     </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-             </div>
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div>
+
           </div>
-</div>
 
-</div>
-
-
-
-</div>
+        </div>
 
 
 
-     </div>
+        <CompaniesLogo />
+      </section>
+      <Footer />
+    </div>
 
- </div>
-
-</div>
-
-
-
-          <CompaniesLogo />
-        </section>
-        <Footer />
-</div>
-
-)
+  )
 }
 
 export default ContinueBookingVisa;

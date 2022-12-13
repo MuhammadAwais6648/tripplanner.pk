@@ -16,14 +16,14 @@ import Axios from "axios";
 const FlightSearchResult = () => {
   const [searchedResult, setSearchedResult] = useState({
     key: '',
-    departureAirport: '',
-    arrivalAirport: '',
-    returned: '',
+    origin: '',
+    destination: '',
+    //returned: '',
     adult: '',
     infant: '',
-    economyClass: '',
+   // economyClass: '',
     child: '',
-    selectedDate: ''
+    depart_date: ''
   });
   const location = useLocation();
 
@@ -31,7 +31,7 @@ const FlightSearchResult = () => {
     window.scrollTo(0, 0);
     document.title = "Flight Search Result | Tripplanner PK ";
 
-    console.log("searchedResult: ", location.state.searchedItems);
+    // console.log("searchedResult: ", location.state.searchedItems);
     setSearchedResult(location.state.searchedItems);
     console.log("searchedResult 2: ", searchedResult);
 
@@ -84,15 +84,15 @@ const FlightSearchResult = () => {
                 <div className="row g-3 needs-validation main-search p-4 bot-search-eng mt-2 m-0" >
                   <div className="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
                     <label className="form-label pl-3">Departure Airport </label>
-                    <input type="text" value={searchedResult.departureAirport.split('-')[0]} className="form-control" placeholder=" Islamabad (ISB)..." required />
+                    <input type="text" value={searchedResult.origin.split('-')[0]} className="form-control" placeholder=" Islamabad (ISB)..." required />
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
                     <label className="form-label pl-3">Arrival Airport</label>
-                    <input type="text" value={searchedResult.arrivalAirport.split('-')[0]} className="form-control" placeholder=" Going Airport..." required />
+                    <input type="text" value={searchedResult.destination.split('-')[0]} className="form-control" placeholder=" Going Airport..." required />
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4">
                     <label className="form-label pl-3">Departure/Return Date</label>
-                    <input type="text" value={searchedResult.selectedDate} name="daterange" className="form-control" />
+                    <input type="text" value={searchedResult.depart_date} name="daterange" className="form-control" />
                   </div>
                   <div className="col-xl-2 col-lg-2 col-md-2 col-12 pb-lg-0 pt-1">
                     <a href="flight-search-result.html"><button className="search-btn w-100" type="submit">Modify</button></a>
@@ -325,7 +325,7 @@ const FlightSearchResult = () => {
                               </div>
                               <div className="col-lg-6 col-md-6 col-sm-7 col-12">
                                 <div className="dep-det"><strong>Depart:</strong> 04:00 - Wed, 09-03</div>
-                                <div className="sub-txt">ISB Islamabad Int - Sydney Airport</div>
+                                <div className="sub-txt">{searchedResult.arrivalAirport} - {searchedResult.departureAirport} </div>
                               </div>
                               <div className="col-lg-2 col-md-2 col-sm-2 col-6 mt-lg-0 mt-md-0 mt-3">
                                 <div className="dep-det"><strong>direct</strong> </div>

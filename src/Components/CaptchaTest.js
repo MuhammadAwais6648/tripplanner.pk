@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-class  CaptchaTest extends Component {
+class CaptchaTest extends Component {
   componentDidMount() {
     loadCaptchaEnginge(8);
   }
@@ -31,23 +31,23 @@ class  CaptchaTest extends Component {
 
   render() {
     return (
-      <div className="Container fluid" style={{marginTop: '12px'}}>
-      <Row>
-        <Col className="capchaOuterBlock"> 
-          <LoadCanvasTemplateNoReload />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <input
+      <div className="Container fluid" style={{ marginTop: '12px' }}>
+        <Row>
+          <Col className="capchaOuterBlock">
+            <LoadCanvasTemplateNoReload />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <input
               className="form-control"
               placeholder="Kindly write text as above *"
               id="user_captcha_input"
               name="user_captcha_input"
               type="text"
             ></input>
-         </Col>
-      </Row>
+          </Col>
+        </Row>
       </div>
     );
   }

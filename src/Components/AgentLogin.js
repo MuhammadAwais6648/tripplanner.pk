@@ -31,17 +31,17 @@ const Agentn = () => {
                 <input type="hidden" id="AgentnCaptcha" name="AgentnCaptcha" value="<?= $code ?>" />
                 <div className="n-title text-center mt-4">n As Agent</div>
                 <div className="row">
-                  <div className="col-lg-3 col-md-2 col-sm-2 col-1"></div> 
+                  <div className="col-lg-3 col-md-2 col-sm-2 col-1"></div>
                   <div className="col-lg-6 col-md-8 col-sm-8 col-10">
                     <div className="for-n pt-4 mt-lg-3">
                       <label className="text-left">Email</label>
                       <input type="text" className="form-control" id="agent_email" name="agent_email"
-                         onChange={(e) => setUserEmail(e.target.value)} />
+                        onChange={(e) => setUserEmail(e.target.value)} />
                     </div>
                     <div className="for-n pt-3">
                       <label className="text-left">Password</label>
                       <input type="password" className="form-control" id="agent_password" name="agent_password"
-                         onChange={(e) => setUserPassword(e.target.value)} />
+                        onChange={(e) => setUserPassword(e.target.value)} />
                     </div>
                     <div className="for-n pt-3" >
                       <CaptchaTest />
