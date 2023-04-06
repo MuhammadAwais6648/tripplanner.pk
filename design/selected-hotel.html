@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Selected Hotel</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favi.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/trip-planner.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- Start Template Main CSS File for menu bar -->
+  <link href="css/menubar-bootstrap.min.css" rel="stylesheet">
+  <link href="css/menubar-style.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <!-- End Template Main CSS File for menu bar -->
+  <!-- Date  CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top dark-fix-bg" id="mainNav">
+            <div class="container-fluid">
+              <div class="row custom-width custom-nav">
+                <div class="col-lg-5 col-4">
+                  <div class="sidebar d-inline">
+                  <div class="toggle d-inline">
+                    <a href="#" class="js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-none d-lg-block d-md-block"><i class="fa fa-bars pr-2"></i> Menu</span>
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-block d-lg-none d-md-none"><i class="fa fa-bars pr-2"></i> </span>
+                    </a>
+                  </div>
+                </div>
+                <aside class="sidebar">
+                  <div class="side-inner">
+                    <div class="nav-menu">
+                      <ul>
+                        <li class="active d-inline d-lg-none">
+                          <a href="flight.html">Flight</a>
+                        </li>
+                        <li class="d-inline d-lg-none">
+                          <a href="umrah.html">Umrah</a>
+                        </li>
+                        <li><a href="hotel.html">Hotel</a></li>
+                        <li><a href="tour.html">Tour</a></li>
+                        <li><a href="visa.html">Visa</a></li>
+                        <li><a href="transport.html">Rent A Car</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </aside>
+                <div class="top-menu d-lg-inline d-none">
+                  <a href="flight.html"><span class="nav-link pl-2">Flight</span></a>
+                  <a href="umrah.html"><span class="nav-link pl-2">Umrah</span></a>
+                  <!--<a href=""><span class="nav-link pl-2">Hotel</span></a>
+                  <a href=""><span class="nav-link pl-2">Tour</span></a>
+                  <a href=""><span class="nav-link pl-2">Rent A Car</span></a>-->
+                </div>
+                </div>
+                <div class="col-lg-2 col-4 mt-lg-1 main-logo-width text-center">
+                  <a href="index.html">
+                    <!--<div class="main-logo"></div>-->
+                      <img class="d-lg-block d-none" src="assets/img/main-logo.png">
+                      <img class="d-block d-lg-none" src="assets/img/main-logo-mobile.png">
+                    </a>
+                </div>
+                <div class="col-lg-5 col-4 text-lg-right text-right">
+                  <a class="nav-link user-icon pr-0 pr-lg-3" href="user-login.html"><i class="fa fa-user"></i> <span class="d-none d-lg-inline">Sign</span></a>
+                  <div class="custom-dropdown cus-down-arrow pr-0 d-lg-inline-block d-none">
+                    <button class="dropbtn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#">Arabic</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead short-header"></header>
+        <!-- start Price Detail-->
+        <section class="flight-found flight-detail">
+          <div class="container">
+            <h2 class="">Selected Flight</h2>
+            <span class="filter-result float-right w-100 d-block d-lg-none d-md-none">
+              <div class="mobile-container">
+                <div class="topnav">
+                  <ahref="#home" class="active"></a>
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="myLinks">
+                          <a class="for-border-btm" href="#news">
+                            <button type="button" class="btn btn-primary airline-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Price</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                     <i class="fa fa-filter" aria-hidden="true"></i>
+                  </a>
+              </div>
+            </div>
+          </span>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  Price Details
+                </div>
+                <div class="modal-body">
+                  <div class="sub-title"> Price Details </div>
+                  <div class="sub-txt pb-4 pt-2">Passenger</div>
+                  <div class="sub-txt pb-2"><strong> 1 Adult</strong></div>
+                  <div class="sub-txt pb-3"> Adult x 1 <span>AED 320</span> </div>
+                  <div class="sub-txt pb-3"> Child x 1 <span>AED 320</span> </div>
+                  <div class="sub-txt fr-br-botm pb-3"> Infant x 1 <span>AED 320</span> </div>
+                  <div class="sub-title mt-3 p-2"> Total <span> 960</span> </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary apply-btn">Apply Filter</button>
+                </div>
+              </div>
+            </div>
+      </div>
+            <div class="row mt-5">
+               <!-- Filter-->
+              <div class="col-lg-3 col-md-3 d-none d-lg-block d-md-block">
+                <div class="left-bar">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="sub-title for-tit-bor pl-3 pt-4 pb-2"> Your booking details </div>
+                    </div>
+                  </div>
+                  <div class="row pl-3 pt-4">
+                    <div class="col-lg-6 col-md-6">
+                      <div class="sub-txt">Check In</div>
+                      <div class="sub-txt"><strong>Tue 8 Feb 2022</strong></div>
+                      <div class="sub-txt">From 12:00</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <div class="sub-txt">Check Out</div>
+                      <div class="sub-txt"><strong>Tue 8 Feb 2022</strong></div>
+                      <div class="sub-txt">From 12:00</div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="sub-txt pt-3">Total length of stay:</div>
+                      <div class="sub-txt"><strong>17 Nights</strong></div>
+                    </div>
+                  </div>
+                  <div class="row pl-3 pr-3">
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="sub-title for-tit-bor pt-3 pb-2"> Price Details </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="sub-txt pt-3 pb-1"><strong> Passenger</strong></div>
+                    <div class="sub-txt"> Adult x 1 <span>AED 320</span> </div>
+                    <div class="sub-txt"> Child x 1 <span>AED 320</span> </div>
+                    <div class="sub-txt fr-br-botm pb-3"> Infant x 1 <span>AED 320</span> </div>
+                    <div class="sub-title pb-4"> Total <span> 960</span> </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- End Price Detail -->
+               <!-- View Details Form-->
+              <div class="col-lg-9 col-md-9">
+                <div class="right-bar p-4 flight-detail">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-4">
+                      <img class="" src="assets/img/Address-Boulevard-hotel.jpg" />
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-8">
+                      <div class="sub-title"> Address Boulevard </div>
+                      <div class="sub-txt"><img class="pr-1" src="assets/img/hotel-loction-map.png" alt="">21447 - Sheikh Mohammed bin Rashid Blvd - Downtown Dubai - Dubai - United Arab Emirates</div>
+                      <div class="sub-txt mt-3"><strong>Superior Family Room</strong></div>
+                      <div class="sub-txt">2 extra-large double beds</div>
+                      <div class="client-review">
+                        <div class="row mt-3">
+                          <div class="col-lg-1 col-md-3">
+                            <div class="ranking p-1 text-center">9.5</div>
+                          </div>
+                          <div class="col-lg-3 col-md-5">
+                            <div class="review">Very Good</div>
+                            <div class="review-count">2563 reviews</div>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <div class="sub-txt free-cancel d-inline-flex mt-2"><i class="fas fa-check mr-1"></i>Free parking</div>
+                            <div class="sub-txt free-cancel d-inline-flex mt-2 pl-2"><i class="fas fa-check mr-1"></i>Free Wifi</div>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>  
+                </div>
+                <div class="right-bar p-4 flight-detail mt-5">
+                  <div class="stepwizard col-md-offset-3 mt-4 mb-4">
+                      <div class="stepwizard-row setup-panel">
+                          <div class="stepwizard-step">
+                              <a href="#step-1" type="button" class="btn btn-primary btn-circle"> Hotel</a>
+                          </div>
+                          <div class="stepwizard-step">
+                              <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">Passenger</a>
+                          </div>
+                        </div>
+                    </div>
+                <form role="form" action="" method="post">
+                  <div class="setup-content" id="step-1">
+                      <div class="col-md-offset-3">
+                          <div class="sub-title pb-2">Hotel Details</div>
+                            <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-2 col-12">
+                                <label class="for-color1 pt-2">Booking Date <span>*</span></label>
+                                <div class="enter-name"><input type="date" name="" class="" value="01/01/2018 - 01/15/2018"></div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Hotel Category<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname"></div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Hotel Name <span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Destination<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Islamabad</option>
+                                    <option>Dubai</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">City <span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Islamabad</option>
+                                    <option>Dubai</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Check in date/ Checkout Date<span>*</span></label>
+                                <div class="enter-name"><input type="text" name="daterange" class="" value="01/01/2018 - 01/15/2018"></div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Room Type<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Travelers<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Adult</option>
+                                    <option>Child</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">No of Rooms<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                    <option>Please Select</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <button class="btn btn-primary nextBtn float-right btn-lg pull-right btn-bg-color mt-3" type="button">Next</button>
+                              </div>
+                            </div>
+                    
+                          </div>
+                        </div>
+                      <div class="setup-content" id="step-2">
+                      <div class="col-md-offset-3">
+                          <div class="sub-title pb-2">Passenger Details</div>
+                            <div class="row"> 
+                              <div class="col-lg-3 col-md-3 col-sm-2 col-12">
+                                <label class="for-color1 pt-2">Title <span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Miss</option>
+                                    <option>Mr</option>
+                                    <option>Mrs</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">First Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname"></div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Middle Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname"></div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-4 col-12">
+                                <label class="for-color1 pt-2">Last Name<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname"></div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Passport Number<span>*</span></label>
+                                <div class="enter-name"><input type="text" id="fname" name="fname"></div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Date Of Birth <span>*</span></label>
+                                <div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018"></div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                <label class="for-color1 pt-4">Nationality<span>*</span></label>
+                                <div class="enter-name">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Pakistan</option>
+                                    <option>Dubai</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12">
+                                  <div id="newinput"></div>
+                                  <button id="rowAdder" type="button"class="btn btn-dark"><span class="bi bi-plus-square-dotted"></span> +Add Passengers</button>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <div class="float-right mt-3">
+                                  <button class="btn btn-primary prevBtn btn-lg pull-left mr-2" type="button">Previous</button>
+                                  <a href="hotel-booking-confirm.html"><button class="btn btn-primary nextBtn btn-lg pull-right btn-bg-color" type="button">Next</button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </form>
+
+                </div>
+              </div>
+               <!-- View Details Form-->
+            </div>
+            <!-- Stay with us -->
+            <div class="stay-us">
+            <h3 class="text-center mt-5 pt-3">Stay With Us</h3>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 center-col text-center mt-3">
+                  <a href="#" class="social-btn fb-btn button"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-btn whats-btn button"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="social-btn twitter-btn button"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-btn google-btn button"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social-btn linked-btn button"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Stay with us -->
+          </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center d-none d-lg-block d-md-block"><div class="container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Trip Planner</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="pb-2"><a href="index.html">Home</a></li>
+                  <li class="pb-2"><a href="about-us.html">About Company</a></li>
+                  <li class="pb-2"><a href="terms-conditions.html">Terms & Conditions</a></li>
+                  <li class="pb-2"><a href="faq's.html">Faq's</a></li>
+                  <li class="pb-2"><a href="complaints.html">Complaints</a></li>
+                  <li class="pb-2"><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Contact Now</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="number-details pb-2"><img class="pr-2" src="assets/img/footer-cal-icon.png" />00966 12535 5589</li>
+                  <li class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" />00966 55 5670699</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Subscribe newsletter</div>
+                <div class="sub-detail pl-0 text-left pt-3">
+                  <label>Name</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <label class="pt-3">Email</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <div class="sub-btn mt-4 float-right"><button>Subscribe</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="container">
+            <div class="copy-right text-center p-3 mb-lg-0 mb-md-0 mb-5">
+              <div class="row">
+                <div class="col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">© Copyright 2021 Trip Planner. All Rights Reserved.</div>
+              </div>
+            </div>
+          </div>
+           <!-- mobile stricky note-->
+        <div class="mobile-stricky-note d-lg-none d-md-none">
+          <div class="container1">
+            <div class="mobile-stricky-nav col-lg-none p-3 text-center">
+              <div class="row">
+                <div class="col-6 br-right-mob-stric">
+                  <div class="number-details"><img class="pr-2" src="assets/img/footer-cal-icon.png" /><span class="pt-2">00966 12535 5589</span></div>
+                </div>
+                <div class="col-6">
+                  <div class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" /><span>00966 55 5670699</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Start Template Main JS File for menu bar -->
+        <script src="js/menu-bar/popper.min.js"></script>
+        <script src="js/menu-bar/main.js"></script>
+        <!-- End Template Main JS File for menu bar -->
+        <!-- for date-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script>
+          $(function() {
+            $('input[name="daterange"]').daterangepicker({
+              opens: 'left'
+            }, function(start, end, label) {
+              console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+          });
+          $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+        </script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+        $('.count').prop('disabled', true);
+        $(document).on('click','.plus',function(){
+        $('.count').val(parseInt($('.count').val()) + 1 );
+        });
+          $(document).on('click','.minus',function(){
+          $('.count').val(parseInt($('.count').val()) - 1 );
+            if ($('.count').val() == 0) {
+            $('.count').val(1);
+          }
+            });
+    });
+        </script>
+        <!-- for date-->
+
+          <!-- for small-screnn filter-->
+      
+
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+        <script type="text/javascript">
+                      
+            $('#myModal').on('shown.bs.modal', function () {
+              $('#myInput').trigger('focus')
+            })
+
+
+            $('#exampleModal').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget) // Button that triggered the modal
+              var recipient = button.data('whatever') // Extract info from data-* attributes
+              // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+              // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+              var modal = $(this)
+              modal.find('.modal-title').text('New message to ' + recipient)
+              modal.find('.modal-body input').val(recipient)
+            })
+
+        </script>
+
+
+        <script>
+          //
+          //    $(".appendbtn").click(function () {
+          //        $('#collapseExample1').append('<br /><a class="btn btn-warning appendbtn" ><i class="fa fa-plus"></i> Traveler</a><div class="sub-heading p-0">Traveller 2: Adult</div><br />');
+          //
+          //    });
+          var count = 1;
+
+          $('.appendbtn').on('click', function() {
+            count++;
+            $(".form-group").attr('id', 'traveler_'+count);
+            var html = '<div class="form-row form-group mt-5" id="traveler_2" >';
+            html +='<div class="col-md-5">';
+            html +='<div class="sub-heading p-0">Traveller '+ count + ' : Adult</div>';
+            html +='<label class="for-color pt-2">';
+            html +='First Name ';
+            html +='<span>*</span>';
+            html +='</label>';
+            html += '<input type="text" class="form-control" id="websiteUrl" name="website_url[]" value="">';
+            html += '</div>';
+            html +='<div class="col-md-5">';
+            html += '<label class="for-color paddingTop1">';
+            html +='Middle Name ';
+            html +=	'</label>';
+            html += '<input type="text" class="form-control" id="websiteUrl" name="website_url[]" value="">';
+            html += '</div>';
+            html +='<div class="col-md-5">';
+            html +='<label class="for-color pt-2">';
+            html +='Passport ';
+            html +='<span>*</span>';
+            html +='</label>';
+            html += '<select class="form-control" id="websiteUrlType" name="website_type[]">';
+            html +=			'<option selected="" value="1"> United Kingdom </option>';
+            html +=			'<option value="2"> United Kingdom  </option>';
+            html +=			'<option value="3"> United Kingdom </option>';
+            html +=			'<option value="4"> United Kingdom </option>';
+            html +=			'<option value="5"> United Kingdom </option>';
+            html +=	'</select>';
+            html += '</div>';
+            html += '<div class="col-md-2 paddingTop">'
+            html += '<button type="button" name="remove" class="btn remove view-btn search-btn a">Delete</button>';
+            html += '</div>';
+            html += '</div>';
+            $('#addTraveler').append(html);
+          });
+
+          $(document).on('click', '.remove', function(){
+            count--;
+            $(this).closest('.form-group').remove();
+          });
+        </script>
+
+        
+        <script type="text/javascript">
+          $(document).ready(function () {
+            var navListItems = $('div.setup-panel div a'),
+                    allWells = $('.setup-content'),
+                    allNextBtn = $('.nextBtn'),
+                  allPrevBtn = $('.prevBtn');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+            
+            allPrevBtn.click(function(){
+                var curStep = $(this).closest(".setup-content"),
+                    curStepBtn = curStep.attr("id"),
+                    prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+                    prevStepWizard.removeAttr('disabled').trigger('click');
+            });
+
+            allNextBtn.click(function(){
+                var curStep = $(this).closest(".setup-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    isValid = true;
+
+                $(".form-group").removeClass("has-error");
+                for(var i=0; i<curInputs.length; i++){
+                    if (!curInputs[i].validity.valid){
+                        isValid = false;
+                        $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    }
+                }
+
+                if (isValid)
+                    nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+
+            $('div.setup-panel div a.btn-primary').trigger('click');
+          });
+          </script>
+
+
+              <script type="text/javascript">
+ 
+        $("#rowAdder").click(function () {
+            newRowAdd =
+            '<div id="row" class="for-margin"> <div class="input-group">' +
+            '<div class="input-group-prepend">' +
+            '<button class="btn btn-danger float-right" id="DeleteRow" type="button">' +
+            '<i class="bi bi-trash"></i> <i class="fa fa-trash" aria-hidden="true"></i></button> </div>' +
+            '<div class="row"> <div class="col-lg-3 col-md-3 col-sm-2 col-12"><label class="for-color1 pt-2">Title <span>*</span></label><div class="enter-name"><select><option>Miss</option><option>Mr</option><option>Mrs</option></select></div></div><div class="col-lg-3 col-md-3 col-sm-4 col-12"><label class="for-color1 pt-2">First Name<span>*</span></label><div class="enter-name"><input type="text" id="fname" name="fname"></div></div><div class="col-lg-3 col-md-3 col-sm-4 col-12"><label class="for-color1 pt-2">Middle Name<span>*</span></label><div class="enter-name"><input type="text" id="fname" name="fname"></div></div><div class="col-lg-3 col-md-3 col-sm-4 col-12"><label class="for-color1 pt-2">Last Name<span>*</span></label><div class="enter-name"><input type="text" id="fname" name="fname"></div></div><div class="col-lg-4 col-md-4 col-sm-4 col-12"><label class="for-color1 pt-4">Passport Number<span>*</span></label><div class="enter-name"><input type="text" id="fname" name="fname"></div></div><div class="col-lg-4 col-md-4 col-sm-4 col-12"><label class="for-color1 pt-4">Date Of Birth <span>*</span></label><div class="enter-name"><input type="Date" name="daterange" class="" value="01/01/2018 - 01/15/2018"></div></div><div class="col-lg-4 col-md-4 col-sm-4 col-12"><label class="for-color1 pt-4">Nationality<span>*</span></label><div class="enter-name"><select><option>Please Select</option><option>Pakistan</option><option>Dubai</option></select></div></div></div>';
+ 
+            $('#newinput').append(newRowAdd);
+        });
+ 
+        $("body").on("click", "#DeleteRow", function () {
+            $(this).parents("#row").remove();
+        })
+    </script>
+        <!-- for small-screnn filter-->
+    </body>
+
+<style>
+  .paddingTop{
+    padding-top: 37px;
+  }
+  .paddingTop1{
+    padding-top: 29px;
+  }
+  .form-control{
+    border-color: gray;
+    height: 35px !important;
+    font-size: 12px !important;
+    color:black;
+  }
+
+  .a:hover{
+    color:white;
+  }
+  .stepwizard-step p {
+    margin-top: 10px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 48%;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border:none;
+}
+
+.btn{box-shadow: none!important;}
+.btn-primary{background:#fb6311; }
+.btn-primary:hover{background:#fb6311; }
+.nextBtn{background:#fb6311!important;font-size: 14px;}
+.prevBtn{background:#fb6311!important;font-size: 14px;}
+.btn-success{background:#fb6311!important;font-size: 14px;}
+.for-tabel th, td{border:none;}
+#rowAdder{background: transparent; color: #fb6311;letter-spacing: 0px;margin-top:20px;}
+#DeleteRow{background: transparent;!important;margin-top: 52px;padding:10px 19px;color: #fb6311;margin-top: -36px;margin-left: 699px;}
+.input-group-prepend{float:right;margin-top: 10px!important;}
+.for-margin{margin-top: 40px!important;}
+</style>
+</html>

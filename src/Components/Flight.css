@@ -1,0 +1,13 @@
+.flight-booking-heading{
+    padding-top: 10px;
+    font-size: 35px !important;
+    color: #155088;
+    text-align: center;
+    
+}
+.top-booking-flight{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+
+}

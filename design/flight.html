@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Flight</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favi.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/trip-planner.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- Start Template Main CSS File for menu bar -->
+  <link href="css/menubar-bootstrap.min.css" rel="stylesheet">
+  <link href="css/menubar-style.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <!-- End Template Main CSS File for menu bar -->
+  <!-- Date  CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container-fluid">
+              <div class="row custom-width custom-nav">
+                <div class="col-lg-5 col-4">
+                  <div class="sidebar d-inline">
+                  <div class="toggle d-inline">
+                    <a href="#" class="js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-none d-lg-block d-md-block"><i class="fa fa-bars pr-2"></i> Menu</span>
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-block d-lg-none d-md-none"><i class="fa fa-bars pr-2"></i> </span>
+                    </a>
+                  </div>
+                </div>
+                <aside class="sidebar">
+                  <div class="side-inner">
+                    <div class="nav-menu">
+                      <ul>
+                        <li class="active d-inline d-lg-none">
+                          <a href="flight.html">Flight</a>
+                        </li>
+                        <li class="d-inline d-lg-none">
+                          <a href="umrah.html">Umrah</a>
+                        </li>
+                        <li><a href="hotel.html">Hotel</a></li>
+                        <li><a href="tour.html">Tour</a></li>
+                        <li><a href="visa.html">Visa</a></li>
+                        <li><a href="transport.html">Rent A Car</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </aside>
+                <div class="top-menu d-lg-inline d-none">
+                  <a href="flight.html"><span class="nav-link pl-2">Flight</span></a>
+                  <a href="umrah.html"><span class="nav-link pl-2">Umrah</span></a>
+                  <!--<a href=""><span class="nav-link pl-2">Hotel</span></a>
+                  <a href=""><span class="nav-link pl-2">Tour</span></a>
+                  <a href=""><span class="nav-link pl-2">Rent A Car</span></a>-->
+                </div>
+                </div>
+                <div class="col-lg-2 col-4 mt-lg-1 main-logo-width text-center">
+                  <a href="index.html">
+                    <!--<div class="main-logo"></div>-->
+                      <img class="d-lg-block d-none" src="assets/img/main-logo.png">
+                      <img class="d-block d-lg-none" src="assets/img/main-logo-mobile.png">
+                    </a>
+                </div>
+                <div class="col-lg-5 col-4 text-lg-right text-right">
+                  <a class="nav-link user-icon pr-0 pr-lg-3" href="user-login.html"><i class="fa fa-user"></i> <span class="d-none d-lg-inline">Sign</span></a>
+                  <div class="custom-dropdown cus-down-arrow pr-0 d-lg-inline-block d-none">
+                    <button class="dropbtn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#">Arabic</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead main-header flight-header">
+            <div class="container d-flex h-100 align-items-center">
+        <!-- Search form -->
+            <div class="search-form w-100">
+
+              <div class="container">
+                <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-7 mb-md-2 mb-sm-0 mb-0">
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Return<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Ony Way</a>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow cus-down-arrow pr-0">
+          <button class="dropbtn">Adult <i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <div class="passenger pt-3 pb-3 pl-2 pr-2">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="title-pax">Adult</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark adultMinus1">-</span>
+                        <input type="number" class="count" id="adult1" name="qty" value="1">
+                        <span class="plus bg-dark adultPlus1">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 mt-3 mb-3">
+                  <div class="title-pax">Child</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark childMinus1">-</span>
+                        <input type="number" class="count" id="child1" name="qty" value="1">
+                        <span class="plus bg-dark childPlus1">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="title-pax">Infant</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark infantMinus1">-</span>
+                        <input type="number" class="count" id="infant1" name="qty" value="1">
+                        <span class="plus bg-dark infantPlus1">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Economy<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Business</a>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn multicities">Multi Cities</i></button>
+
+        </div>
+      </div>
+    </div>
+                <div class="row " id="flight_1"  >
+                  <div class="col-lg-12 col-md-12 col-12">
+
+                    <div class="row g-3 scroll-height needs-validation main-search p-4 mt-2 mr-0 ml-0" novalidate>
+                      <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4 onClickHide">
+                        <label class="form-label pl-2">Departure Airport</label>
+                        <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+                        <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4 onClickHide">
+                        <label class="form-label pl-2">Arrival Airport</label>
+                        <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+                        <input type="text" class="form-control" placeholder=" Going Airport..." required>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4 onClickHide">
+                        <label class="form-label pl-2">Departure/Return Date</label>
+                        <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/calender-icon.png" /> </div>
+                        <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-12 pb-lg-0 pb-0 onClickHide">
+                        <a href="flight-search-result.html"> <button class="search-btn  w-100" type="submit">SEARCH</button></a>
+                      </div>
+
+                      <div class="row hide">
+
+
+                        <div class="col-sm-12 col-md-12 col-12">
+
+
+                          <div class="row">
+                            <div class="col-sm-12 col-md-12 col-12 col-12">
+
+                              <div class="row ml-3 mob-margin" id="flight_2">
+
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Leaving From</label>
+                                  <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+                                  <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Going To</label>
+                                  <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+                                  <input type="text" class="form-control" placeholder=" Going Airport..." required>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Departure</label>
+                                  <div class="dep-icon d-none d-lg-block">  </div>
+                                  <!--                         <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />-->
+                                  <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Class</label>
+                                  <div class="dep-icon d-none d-lg-block"> </div>
+                                  <select class="form-control">
+                                    <option selected>Economy</option>
+                                    <option>Business</option>
+                                    <option>Premium</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4">
+
+                                  <input type="text" name="daterange" class="form-control" style="visibility: hidden" />
+                                </div>
+                              </div>
+
+                              <div class="row ml-3 mob-margin" id="flight_3">
+
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Leaving From</label>
+                                  <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+                                  <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Going To</label>
+                                  <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+                                  <input type="text" class="form-control" placeholder=" Going Airport..." required>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Departure</label>
+                                  <div class="dep-icon d-none d-lg-block">  </div>
+                                  <!--                         <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />-->
+                                  <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-12 pt-lg-0 pt-4">
+                                  <label class="form-label pl-2">Class</label>
+                                  <div class="dep-icon d-none d-lg-block"> </div>
+                                  <select class="form-control">
+                                    <option selected>Economy</option>
+                                    <option>Business</option>
+                                    <option>Premium</option>
+                                  </select>
+                                </div>
+                                <div class="col-xl-1 col-lg-1 col-md-1 col-12 pt-lg-0 pt-4">
+                                  <div class="dep-icon d-none d-lg-block"> </div>
+                                  <i class="fa fa-times"></i>
+                                </div>
+
+
+                              </div>
+
+
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <div  id="addTraveler">
+
+
+                                  </div>
+                                </div>
+
+                              </div>
+
+
+                              <div class="row mt-4">
+                                <div class="col-sm-10 col-lg-10 col-md-10 float-right text-right">
+                                  <p>
+                          <span class="appendbtn"  >
+                            <span class="font-weight-bold text-color"><i class="fa fa-plus"></i> Add Another City</span>
+                          </span>
+
+                                  </p>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-12 sub-btn ">
+                                  <a href="multiple-flight-search-result.html"> <button class="search-btn1  w-100" type="submit">SEARCH</button></a>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+
+                        </div>
+
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div></div>
+      </div>
+<!-- End form -->
+      </div>
+    </header>
+        <section class="flight-det pb-lg-5 pb-md-5 pb-sm-3 pb-3">
+          <div class="container">
+            <!-- Most Popular Flight Destinations -->
+            <h1 class="pb-5">Most Popular Flight Destinations</h1>
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-12">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100" src="assets/img/london-pop-flig.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">London  -  254 SAR</div>
+                        <p class="hover-1-description mb-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center"> <img class="w-100" src="assets/img/india-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left  flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0">India  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center"> <img class="w-100" src="assets/img/china-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left  flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0">China  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center"> <img class="w-100" src="assets/img/itlay-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left  flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0">Itlay  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center"> <img class="w-100" src="assets/img/islamabad-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left  flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0">Pakistan  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-12">
+                <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center"> <img class="w-100" src="assets/img/united-state-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0 mob-margin-top">United State Of America  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="image-box mob-margin-top1 ">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="flight-deti-img for-width-size text-center "> <img class="w-100" src="assets/img/thailand-pop-flig.png" /></div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left  flight-sub-title mt-1 ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0">Thailand  -  254 SAR</div>
+                        <p class="hover-1-description mb-0 sub-txt flight-sub-title ml-lg-1 ml-md-1 ml-5 pl-lg-0 pl-md-0 pl-sm-5 pl-0"><a href="country-page.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          <!-- Most Popular Flight Destinations -->
+
+          <!-- Book Flights -->
+              <div class="book-flight pt-0">
+                  <h2 class="mt-5 mb-3 pb-5 pt-3">Book Flights Around the World</h2>
+                      <div class="row mb-5">
+                      <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                        <div class="map-africa text-center">
+                          <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                          <div class="country-name">Africa</div>
+                          <div class="custom-dropdown cus-down-arrow">
+                          <button class="map-btn1 dropbtn1 btn search-btn1 ">View All</button>
+                            <div class="dropdown-menu text-center flight-dropdown-content dropdown-content ">
+                              <a href="country-page.html" class="dropdown-text">Harare Flights</a>
+                              <a href="country-page.html" class="dropdown-text">Johannesburg Flights</a>
+                              <a href="country-page.html" class="dropdown-text">Accra Flights</a>
+                              <a href="country-page.html" class="dropdown-text">Lagos Flights</a>
+                              <a class="no-border dropdown-text" href="country-page.html">Nairobi Flights</a>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                        <div class="map-south-america text-center">
+                          <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                          <div class="country-name">South America</div>
+                          <div class="custom-dropdown cus-down-arrow">
+                            <button class=" map-btn1 dropbtn1 btn search-btn1">View All</button>
+                            <div class="dropdown-menu flight-dropdown-content dropdown-content mt">
+                              <a class="dropdown-text" href="country-page.html">Rio De Janeiro Flights</a>
+                              <a class="dropdown-text" href="country-page.html">Sao Paulo Flights</a>
+                              <a class="dropdown-text" href="country-page.html">Buenos Aires Flights</a>
+                              <a class="dropdown-text" href="country-page.html">Lima Flights</a>
+                              <a class="dropdown-text" class="no-border" href="country-page.html">Santiago Flights</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                        <div class="map-oceania text-center">
+                          <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                          <div class="country-name">Oceania</div>
+                          <div class="custom-dropdown cus-down-arrow">
+                            ` <button class=" map-btn1 dropbtn1 btn search-btn1">View All</button>
+                              <div class="dropdown-menu flight-dropdown-content dropdown-content ">
+                                <a class="dropdown-text" href="country-page.html">Brisbane Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Perth Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Sydney Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Auckland Flights</a>
+                                <a class="dropdown-text" class="no-border" href="country-page.html">Melbourne Flights</a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                          <div class="map-europe text-center">
+                            <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                            <div class="country-name">Europe</div>
+                            <div class="custom-dropdown cus-down-arrow">
+                              <button class=" map-btn1 dropbtn1 btn search-btn1">View All</button>
+                              <div class="dropdown-menu flight-dropdown-content dropdown-content ">
+                                <a class="dropdown-text" href="country-page.html">Amsterdam Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Paris Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Athens Flights</a>
+                                <a class="dropdown-text" href="country-page.html">Madrid Flights</a>
+                                <a class="dropdown-text" class="no-border" href="#">Frankfurt Flights</a>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                          <div class="map-north-america text-center">
+                            <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                            <div class="country-name">North America</div>
+                            <div class="custom-dropdown cus-down-arrow">
+                              <button class=" map-btn1 dropbtn1 btn search-btn1">View All</button>
+                              <div class="dropdown-menu flight-dropdown-content dropdown-content ">
+                                <a class="dropdown-text" href="country-page.html">Montreal Flights</a>
+                                <a href="country-page.html" class="dropdown-text">Las Vegas Flights</a>
+                                <a href="country-page.html" class="dropdown-text">Chicago Flights</a>
+                                <a href="country-page.html" class="dropdown-text" >Calgary Flights</a>
+                                <a class="no-border dropdown-text" href="country-page.html">Orlando Flights</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 min-height">
+                          <div class="map-asia text-center">
+                            <img class="mt-5 mb-3" src="assets/img/map-pin.png" />
+                            <div class="country-name">Asia</div>
+                            <div class="custom-dropdown cus-down-arrow">
+                              <button class=" map-btn1 dropbtn1 btn search-btn1">View All</button>
+                              <div class="dropdown-menu flight-dropdown-content dropdown-content ">
+                                <a class="dropdown-text" href="country-page.html">Manila Flights</a>
+                                <a href="country-page.html" class="dropdown-text">DubaiFlights</a>
+                                <a href="country-page.html" class="dropdown-text">Islamabad Flights</a>
+                                <a href="country-page.html" class="dropdown-text">Kuala Lumpur Flights</a>
+                                <a class="no-border dropdown-text" href="country-page.html">Beijing Flights</a>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                    </div>
+              </div>
+            <!-- Book Flights -->
+
+            <!-- Certified -->
+            <div class="container mt-5">
+              <h3 class="text-center">We Are Certified Company</h3>
+              <div class="row mt-5">
+                <div class="col-lg-3 col-md-3 col-6 mb-lg-0 mb-md-0 mb-4">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-tourism-logo1.jpg" />
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-citizenship-logo.jpg" />
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-interior-logo.jpg" />
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-islamic-fair-logo.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Certified -->
+
+            <!-- Stay with us -->
+            <div class="stay-us">
+            <h3 class="mt-5 pt-3 text-center">Stay With Us</h3>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 center-col text-center mt-3">
+                  <a href="#" class="social-btn fb-btn button"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-btn whats-btn button"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="social-btn twitter-btn button"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-btn google-btn button"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social-btn linked-btn button"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+        <!-- Stay with us -->
+          </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center d-none d-lg-block d-md-block"><div class="container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Trip Planner</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="pb-2"><a href="index.html">Home</a></li>
+                  <li class="pb-2"><a href="about-us.html">About Company</a></li>
+                  <li class="pb-2"><a href="terms-conditions.html">Terms & Conditions</a></li>
+                  <li class="pb-2"><a href="faq's.html">Faq's</a></li>
+                  <li class="pb-2"><a href="complaints.html">Complaints</a></li>
+                  <li class="pb-2"><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Contact Now</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="number-details pb-2"><img class="pr-2" src="assets/img/footer-cal-icon-1.png" />00966 12535 5589</li>
+                  <li class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon-1.png" />00966 55 5670699</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Subscribe newsletter</div>
+                <div class="sub-detail pl-0 text-left pt-3">
+                  <label>Name</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <label class="pt-3">Email</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <div class="sub-btn mt-4 float-right"><button>Subscribe</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="container">
+            <div class="copy-right text-center p-3 mb-lg-0 mb-md-0 mb-5">
+              <div class="row">
+                <div class="col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">© Copyright 2021 Trip Planner. All Rights Reserved.</div>
+              </div>
+            </div>
+          </div>
+           <!-- mobile stricky note-->
+           <div class="mobile-stricky-note d-lg-none d-md-none">
+             <div class="container1">
+               <div class="mobile-stricky-nav col-lg-none p-2 text-center">
+                 <div class="row">
+                   <div class="col-6 br-right-mob-stric">
+                     <div class="number-details pb-2"><img class="pr-2" src="assets/img/footer-cal-icon.png" /><span class="pt-2">00966 12535 5589</span></div>
+                   </div>
+                   <div class="col-6">
+                     <div class="number-details pb-2"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" /><span>00966 55 5670699</span></div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Start Template Main JS File for menu bar -->
+        <script src="js/menu-bar/popper.min.js"></script>
+        <script src="js/menu-bar/main.js"></script>
+        <!-- End Template Main JS File for menu bar -->
+        <!-- for date-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script>
+          $(function() {
+            $('input[name="daterange"]').daterangepicker({
+              opens: 'left'
+            }, function(start, end, label) {
+              console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+          });
+          $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+        </script>
+        <script type="text/javascript">
+
+          $(document).ready(function(){
+
+            $('.count').prop('disabled', true);
+            $(document).on('click','.adultPlus1',function(){
+              $('#adult1').val(parseInt($('#adult1').val()) + 1 );
+            });
+            $(document).on('click','.adultMinus1',function(){
+              $('#adult1').val(parseInt($('#adult1').val()) - 1 );
+              if ($('#adult1').val() == 0) {
+                $('#adult1').val(1);
+              }
+            });
+
+            $(document).on('click','.childPlus1',function(){
+              $('#child1').val(parseInt($('#child1').val()) + 1 );
+            });
+            $(document).on('click','.childMinus1',function(){
+              $('#child1').val(parseInt($('#child1').val()) - 1 );
+              if ($('#child1').val() == 0) {
+                $('#child1').val(1);
+              }
+            });
+
+
+            $(document).on('click','.infantPlus1',function(){
+              $('#infant1').val(parseInt($('#infant1').val()) + 1 );
+
+            });
+            $(document).on('click','.infantMinus1',function(){
+              $('#infant1').val(parseInt($('#infant1').val()) - 1 );
+              if ($('#infant1').val() == 0) {
+                $('#infant1').val(1);
+              }
+            });
+
+            // $(document).on('click','.minus',function(){
+            //     $('.count').val(parseInt($('.count').val()) - 1 );
+            //         if ($('.count').val() == 0) {
+            //             $('.count').val(1);
+            //         }
+            //     });
+          });
+        </script>
+
+
+
+        <script>
+          $('.multicities').click(function(){
+          $('.hide').toggle();
+          $('.onClickHide').toggle();
+          }
+          )
+        </script>
+
+
+
+        <script>
+          //
+          //    $(".appendbtn").click(function () {
+          //        $('#collapseExample1').append('<br /><a class="btn btn-warning appendbtn" ><i class="fa fa-plus"></i> Traveler</a><div class="sub-heading p-0">Traveller 2: Adult</div><br />');
+          //
+          //    });
+          var count = 2;
+
+          $('.appendbtn').on('click', function() {
+           $('.scroll-height').css('overflow-y','auto');
+            count++;
+
+            $(".form-group").attr('id', 'flight_'+count);
+            var html = '<div class="row ml-3 form-group mt-5 mob-margin" id="flight_3" >';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3">';
+            html +='<label class="ml-1 mt-1">';
+            html +='Leaving From ';
+            html +='</label>';
+            html +='<div class="dep-icon d-none d-lg-block">';
+            html +='<img class="icon-im" src="assets/img/deperture-icon.png" />';
+            html +='</div>';
+            html += '<input type="text" class="form-control input-width" placeholder=" Islamabad (ISB)... " required>';
+            html += '</div>';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3 paddingTop mt-1 ">';
+            html +='<label class=" ">';
+            html +='Going To ';
+            html +='</label>';
+            html +='<div class="dep-icon d-none d-lg-block">';
+            html +='<img class="icon-im" src="assets/img/location-icon.png" />';
+            html +='</div>';
+            html += '<input type="text" class="form-control input-width" placeholder=" Going Airport... " required>';
+            html += '</div>';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3 paddingTop mt-1 float-left">';
+            html +='<label class=" ">';
+            html +='Departure ';
+            html +='</label>';
+            html += '<input type="date" class="form-control input-width " placeholder=" Going Airport... " required>';
+            html += '</div>';
+
+             html +='<div class="col-md-2 col-sm-2 col-lg-2 paddingTop mt-1 float-left">';
+            html +='<label class=" ">';
+            html +='Class ';
+            html +='</label>';
+            html += '<select class="form-control">';
+            html += '<option>Economy</option>';
+            html += '</select>';
+            html += '</div>';
+
+            html += '<div class="col-md-1 mt-1 ">';
+            html += '<i class="fa fa-times "></i>';
+            html += '</div>';
+            html += '</div>';
+            $('#addTraveler').append(html);
+          });
+
+$(document).on('click', '.fa-times', function(){
+            count--;
+            $(this).closest('#flight_3').hide();
+          });
+
+          $(document).on('click', '.fa-times', function(){
+            count--;
+            $(this).closest('.form-group').remove();
+          });
+        </script>
+        <!-- for date-->
+    </body>
+
+<style>
+  .hide{
+    display: none;
+  }
+
+  .paddingTop1{
+    padding-top: 35px;
+  }
+
+  .input-width{
+    /*width: 98%;*/
+  }
+
+  .remove{
+    border: none;
+    background-color: transparent;
+    margin-top: 5px;
+    color: #fb6311;
+    font-weight: bold;
+  }
+
+  .text-color{
+    color: #fb6311;
+    text-decoration: none;
+
+  }
+
+  .text-color:hover{
+    text-decoration: none;
+    text-decoration-line: none;
+    cursor: pointer;
+  }
+
+  .scroll-height{
+    max-height: 500px;
+    /*overflow-x: auto;*/
+  }
+
+  .fa-times{
+    font-size: 18px;
+    margin-top: 40px;
+    /*font-weight: bold;*/
+    color:#fb6311;
+  }
+
+  .icon-img{
+    margin-top: -65px;
+  }
+
+  .icon-img1{
+    margin-top: -73px;
+  }
+
+
+
+  .scroll-height::-webkit-scrollbar {
+    width: 10px;
+
+
+  }
+
+  /* Track */
+  .scroll-height::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+
+  }
+
+  /* Handle */
+  .scroll-height::-webkit-scrollbar-thumb {
+    background: #fb6311;
+    border-radius: 10px;
+
+
+  }
+
+  /* Handle on hover */
+  .scroll-height::-webkit-scrollbar-thumb:hover {
+    background: #fb6311;
+  }
+
+  .btn{
+    background-color: #fb6311;
+    color: white;
+  }
+
+  .btn:hover{
+    color: white;
+  }
+
+  .dropdown-text{
+    font-size: 14px;
+  }
+  .mobile-stricky-nav {
+
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  @media (max-width: 767px) {
+    .for-width-size img {
+       width: 100% !important;
+    }
+
+    .ml-5, .mx-5 {
+       margin-left: 0rem!important;
+    }
+
+    .mob-margin-top{
+      margin-top: -168px !important;
+
+    }
+
+    .mob-margin-top1{
+      /*display: none;*/
+      margin-top: -116px !important;
+      z-index: 999 !important;
+
+
+    }
+
+    .mob-margin{
+      margin-left: -10px !important;
+      margin-top: -50px;
+    }
+
+    .scroll-height{
+      /* max-height: 100vh !important; */
+      overflow-x: auto;
+      /*overflow-x: auto;*/
+    }
+    .fa-times{
+      margin-top: 10px;
+    }
+
+    .mobile-stricky-nav {
+
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+
+  }
+
+</style>
+</html>

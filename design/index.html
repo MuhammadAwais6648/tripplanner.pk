@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Trip Planner</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favi.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/carousel/owl.carousel.min.css" rel="stylesheet" />
+  <link href="css/trip-planner.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" >
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- Start Template Main CSS File for menu bar -->
+  <link href="css/menubar-bootstrap.min.css" rel="stylesheet">
+  <link href="css/menubar-style.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <!-- End Template Main CSS File for menu bar -->
+  <!-- Date  CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container-fluid">
+              <div class="row custom-width custom-nav">
+                <div class="col-lg-5 col-4">
+                  <div class="sidebar d-inline">
+                  <div class="toggle d-inline">
+                    <a href="#" class="js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-none d-lg-block d-md-block"><i class="fa fa-bars pr-2"></i> Menu</span>
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-block d-lg-none d-md-none"><i class="fa fa-bars pr-2"></i> </span>
+                    </a>
+                  </div>
+                </div>
+                  <aside class="sidebar">
+                    <div class="side-inner">
+                      <div class="nav-menu">
+                        <ul>
+                          <li class="active d-inline d-lg-none">
+                            <a href="flight.html">Flight</a>
+                          </li>
+                          <li class="d-inline d-lg-none">
+                            <a href="umrah.html">Umrah</a>
+                          </li>
+                          <li><a href="hotel.html">Hotel</a></li>
+                          <li><a href="tour.html">Tour</a></li>
+                          <li><a href="visa.html">Visa</a></li>
+                          <li><a href="transport.html">Rent A Car</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </aside>
+                <div class="top-menu d-lg-inline d-none">
+                  <a href="flight.html"><span class="nav-link pl-2">Flight</span></a>
+                  <a href="umrah.html"><span class="nav-link pl-2">Umrah</span></a>
+                  <!--<a href=""><span class="nav-link pl-2">Hotel</span></a>
+                  <a href=""><span class="nav-link pl-2">Tour</span></a>
+                  <a href=""><span class="nav-link pl-2">Rent A Car</span></a>-->
+                </div>
+                </div>
+                <div class="col-lg-2 col-4 mt-lg-1 main-logo-width text-center">
+                  <a href="index.html">
+                    <!--<div class="main-logo"></div>-->
+                      <img class="d-lg-block d-none" src="assets/img/main-logo.png">
+                      <img class="d-block d-lg-none" src="assets/img/main-logo-mobile.png">
+                    </a>
+                </div>
+                <div class="col-lg-5 col-4 text-lg-right text-right">
+                  <a class="nav-link user-icon pr-0 pr-lg-3" href="user-login.html"><i class="fa fa-user"></i> <span class="d-none d-lg-inline">Sign</span></a>
+                  <div class="custom-dropdown cus-down-arrow pr-0 d-lg-inline-block d-none">
+                    <button class="dropbtn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content" >
+                      <a href="#">Arabic</a>
+                    </div>
+                  </div>
+
+                  <!--<div class="collapse navbar-collapse login-info" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto for-postion nopadding">
+                      <li class="nav-item"><a class="nav-link for-color" href="#about"><i class="fa fa-user"></i> Sign</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">
+                          <select class="selectpicker nav-link">
+                              <option>Arabic</option>
+                              <option>English</option>
+                         </select></a>
+                     </li>
+                  </ul>
+              </div>-->
+
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead main-header">
+            <div class="container d-flex h-100 align-items-center">
+     <!-- Search form -->
+  <div class="search-form w-100">
+     <div class="container">
+       <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-7 mb-md-2 mb-sm-0 mb-0">
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Return<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Ony Way</a>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow cus-down-arrow pr-0">
+          <button class="dropbtn">Adult <i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <div class="passenger pt-3 pb-3 pl-2 pr-2">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="title-pax">Adult</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark adultMinus">-</span>
+                        <input type="number" class="count" id="adult" name="qty" value="1">
+                        <span class="plus bg-dark adultPlus">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 mt-3 mb-3">
+                  <div class="title-pax">Child</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark childMinus">-</span>
+                        <input type="number" class="count" id="child" name="qty" value="1">
+                        <span class="plus bg-dark childPlus">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="title-pax">Infant</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark infantMinus">-</span>
+                        <input type="number" class="count" id="infant" name="qty" value="1">
+                        <span class="plus bg-dark infantPlus">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Economy<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Business</a>
+          </div>
+        </div>
+          <div class="custom-dropdown cus-down-arrow pr-0">
+            <button class="dropbtn multicities">Multi Cities</button>
+
+          </div>
+      </div>
+  </div>
+
+
+     <div class="row " id="flight_1"  >
+       <div class="col-lg-12 col-md-12 col-12">
+
+         <div class="row g-3 scroll-height needs-validation main-search p-4 mt-2 ml-0 mr-0" novalidate>
+           <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4 onClickHide">
+             <label class="form-label pl-2">Departure Airport</label>
+             <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+             <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+           </div>
+           <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4 onClickHide">
+             <label class="form-label pl-2">Arrival Airport</label>
+             <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+             <input type="text" class="form-control" placeholder=" Going Airport..." required>
+           </div>
+           <div class="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4 onClickHide">
+             <label class="form-label pl-2">Departure/Return Date</label>
+             <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/calender-icon.png" /> </div>
+             <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />
+           </div>
+           <div class="col-xl-2 col-lg-2 col-md-2 col-12 pb-lg-0 pb-0 onClickHide">
+             <a href="flight-search-result.html"> <button class="search-btn  w-100" type="submit">SEARCH</button></a>
+           </div>
+
+           <div class="row hide">
+
+
+                 <div class="col-sm-12 col-md-12 col-12 col-12">
+
+                   <div class="row ml-3 mob-margin" id="flight_2">
+
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Leaving From</label>
+                       <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+                       <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Going To</label>
+                       <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+                       <input type="text" class="form-control" placeholder=" Going Airport..." required>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Departure</label>
+                       <div class="dep-icon d-none d-lg-block">  </div>
+                       <!--                         <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />-->
+                       <input type="date" class="form-control" />
+                     </div>
+                     <div class="col-xl-2 col-lg-2 col-md-2 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Class</label>
+                       <div class="dep-icon d-none d-lg-block"> </div>
+                       <select class="form-control">
+                         <option selected>Economy</option>
+                         <option>Business</option>
+                         <option>Premium</option>
+                       </select>
+                     </div>
+
+                     <div class="col-xl-4 col-lg-4 col-md-4 col-12 pt-lg-0 pt-4">
+
+                       <input type="text" name="daterange" class="form-control" style="visibility: hidden" />
+                     </div>
+                   </div>
+
+                   <div class="row ml-3 mob-margin" id="flight_3">
+
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Leaving From</label>
+                       <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/deperture-icon.png" /> </div>
+                       <input type="text" class="form-control" placeholder=" Islamabad (ISB)... " required>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Going To</label>
+                       <div class="dep-icon d-none d-lg-block"> <img class="" src="assets/img/location-icon.png" /> </div>
+                       <input type="text" class="form-control" placeholder=" Going Airport..." required>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Departure</label>
+                       <div class="dep-icon d-none d-lg-block">  </div>
+                       <!--                         <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />-->
+                       <input type="date" class="form-control" />
+                     </div>
+                     <div class="col-xl-2 col-lg-2 col-md-2 col-12 pt-lg-0 pt-4">
+                       <label class="form-label pl-2">Class</label>
+                       <div class="dep-icon d-none d-lg-block"> </div>
+                       <select class="form-control">
+                         <option selected>Economy</option>
+                         <option>Business</option>
+                         <option>Premium</option>
+                       </select>
+                     </div>
+                     <div class="col-xl-1 col-lg-1 col-md-1 col-12 pt-lg-0 pt-4">
+                       <div class="dep-icon d-none d-lg-block"> </div>
+                       <i class="fa fa-times"></i>
+                     </div>
+
+
+                   </div>
+
+
+                   <div class="row">
+                     <div class="col-sm-12">
+                       <div  id="addTraveler">
+
+
+                       </div>
+                     </div>
+
+                   </div>
+
+
+                   <div class="row mt-4">
+                     <div class="col-sm-10 col-lg-10 col-md-10 float-right text-right">
+                       <p>
+                          <span class="appendbtn"  >
+                            <span class="font-weight-bold text-color"><i class="fa fa-plus"></i> Add Another City</span>
+                          </span>
+
+                       </p>
+                     </div>
+                     <div class="col-xl-2 col-lg-2 col-md-2 col-12 sub-btn ">
+                       <a href="multiple-flight-search-result.html"> <button class="search-btn1  w-100" type="submit">SEARCH</button></a>
+                     </div>
+
+                   </div>
+
+                 </div>
+
+
+
+
+
+
+           </div>
+         </div>
+
+       </div>
+     </div>
+
+
+ </div>
+
+  </div>
+<!-- End form -->
+  </div>
+</header>
+<!-- Best Travel Deals -->
+        <section class="best-deals">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-md-7 col-12">
+                <h1 class="pb-4">Find The Best Travel Deals!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec justo orci. Duis bibendum, eros tempor vehicula tincidunt, justo augue tincidunt velit, vitae tempus odio sem sit amet purus. Nam gravida sem pretium nunc placerat sagittis. Curabitur hendrerit pellentesque purus at mattis. Maecenas aliquet, nulla at imperdiet tempor, tellus nulla lobortis tortor, accumsan faucibus eros orci non tellus.</p>
+              <a href="view-all.html"><button class="mt-3 mob-margin-bottom">View All Deals</button> </a>
+              </div>
+              <div class="col-lg-5 col-md-5 col-12">
+                <img class="w-100" src="assets/img/best-travels-deals.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+<!-- Best Travel Deals -->
+<section class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class=" best-services heig-width-small-sc">
+              <div class="container">
+                <div class="row">
+                <div class="col-md-12">
+                  <h3 class="pb-5">We Are Best In Services</h3>
+                </div>
+                <!-- DEMO 1 Item-->
+                <div class="col-lg-12 mb-3 mb-lg-4">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100 h-75" src="assets/img/best-services.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Hotel</div>
+                        <div class="">Your booking instantly confirmed!</div>
+                        <p class="hover-1-description mb-0"><a href="hotel.html"><strong>Discover & Explore</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-lg-4">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100" src="assets/img/tourisum.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">TOURISUM</div>
+                        <div class="">Book your dream tour package</div>
+                        <p class="hover-1-description mb-0"><a href="tour.html"><strong>Discover & Explore</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-lg-4">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100" src="assets/img/hajj.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Hajj / Umrah</div>
+                        <div class="">We offers umrah packages with premium services</div>
+                        <p class="hover-1-description mb-0"><a href="umrah.html"><strong>Discover & Explore</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100" src="assets/img/transport.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Transport</div>
+                        <div class="">Book online car rental with driver as tour package</div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Discover & Explore</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <img class="w-100" src="assets/img/visa.png" alt="">
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Visa</div>
+                        <div class="">Please access Visa Online</div>
+                        <p class="hover-1-description mb-0"><a href="visa.html"><strong>Discover & Explore</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+</section>
+<section class="sec-pt">
+    <div class="ftco-section best-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="pb-5">Worldwide Travel Offers</h3>
+          </div>
+          <div class="col-md-12">
+            <div class="featured-carousel owl-carousel mb-5">
+              <div class="item">
+              <a href="flight.html">
+                <div class="work">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/world-wide-sydney.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Cheappest Flights  -  254 SAR</div>
+                        <div class="sub-txt-desc">Book Cheapest Flight World Wide.</div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="hotel.html">
+                <div class="work">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/world-wide-newyork.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Luxury Hotel  -  254 SAR</div>
+                        <div class="sub-txt-desc">Best Five Star Hotels World Wide </div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="transport.html">
+                <div class="work">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/world-wide-jeddah.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Transport  -  254 SAR</div>
+                        <div class="sub-txt-desc">Book Cheapest Transport.</div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+               <div class="item">
+                <a href="umrah.html">
+                  <div class="work">
+                    <div class="image-box">
+                      <div class="name-desc hover-1 image-box rounded">
+                        <div class="img align-items-center justify-content-center rounded">
+                      <img class="w-100" src="assets/img/world-wide-umrah.png" />
+                      <a href="#" class="icon d-flex align-items-center justify-content-center">
+                        <span class="ion-ios-search"></span>
+                      </a>
+                      </div>
+                        <div class="hover-1-content p-2">
+                          <div class="title text-left">Cheapest Umrah  -  254 SAR</div>
+                          <div class="sub-txt-desc">Umrah packages for all Muslims of the world.</div>
+                          <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+              </div>
+              <div class="item">
+              <a href="tour.html">
+                <div class="work">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/world-sydney-tour.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Sydney Tour  -  450 SAR</div>
+                        <div class="sub-txt-desc">You can find the Cheap Tour</div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="transport.html">
+                <div class="work">
+                  <div class="image-box">
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/world-wide-jeddah.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Transport  -  254 SAR</div>
+                        <div class="sub-txt-desc">Book Cheapest Transport..</div>
+                        <p class="hover-1-description mb-0"><a href="transport.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="right-cour-arrow"></div>
+            <div class="left-cour-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Find Hotels -->
+    <div id="" class="mt-0 mt-lg-auto">
+      <div class="find-hotel p-5 mt-5">
+        <div class="hotel-details text-center">
+          <div class="title pb-2">Find & Book World Best Hotel Deals</div>
+          <div class="sub-txt pb-2">Price Starts From</div>
+          <div class="price pb-4">SAR - 156</div>
+          <a href="hotel.html"><button>View All Deals</button></a>
+        </div>
+      </div>
+  </div>
+   <!-- Find Hotels -->
+   
+  <!-- Certified -->
+     <div class="container mt-5">
+              <h3 class="text-center">We Are Certified Company</h3>
+              <div class="row mt-5">
+                <div class="col-lg-3 col-md-3 col-6 mb-lg-0 mb-md-0 mb-4">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-tourism-logo1.jpg" />
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-citizenship-logo.jpg" />
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-interior-logo.jpg" />
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                  <div class="comp-name p-3 text-center">
+                    <img class="" src="assets/img/ministry-islamic-fair-logo.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+  <!-- Certified -->
+  <!-- Stay with us -->
+        <div class="stay-us">
+          <div class="container">
+            <h3 class="text-center mt-5 pt-3">Stay With Us</h3>
+             <div class="row">
+              <div class="col-md-12 col-sm-12 center-col text-center mt-3">
+                <a href="#" class="social-btn fb-btn button"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn whats-btn button"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-btn twitter-btn button"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn google-btn button"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social-btn linked-btn button"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+  <!-- Stay with us -->
+</section>
+
+
+<!--   Modal     -->
+        <div id="StayConnectedModel" data-backdrop="static" data-keyboard="false" class="modal fade">
+          <div class="modal-dialog modal-newsletter">
+            <div class="modal-content">
+              <form  method="post">
+                <div class="modal-header text-center">
+                  <div class="icon-box1 mx-auto">
+                    <i class="fa fa-envelope email-icon"></i>
+
+                  </div>
+                  <div class="mx-auto icon-box1 text-center">
+                    <i class="fa fa-phone phone-icon fa-rotate-90"></i>
+
+                  </div>
+                  <button type="button"  class="close Stay-connected-close-button" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                </div>
+                <div class="modal-body text-center ">
+                  <h4>Stay Connected</h4>
+                  <p>Join to get the latest news, updates and special offers delieverd directly in your box</p>
+                  <div class="p-3">
+                    <input type="text" name="name" class="form-control mb-3 input" placeholder="Your Name" required>
+                    <span class="fa fa-user errspan user-icon"></span>
+                    <input type="email" name="email" class="form-control mb-3 input" placeholder="Your Email" required>
+                    <span class="fa fa-envelope errspan1"></span>
+                    <input type="text"  name="phone" class="form-control mb-3 input" placeholder="Contat Number" required>
+                    <span class="fa fa-phone errspan fa-rotate-90 phon-icon"></span>
+
+
+                    <button class="btn btn-warning w-100 Stay-connected-submit">Connect</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+<!--   End Modal     -->
+
+<!-- Footer-->
+<footer class="footer bg-black small text-center d-none d-lg-block d-md-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-4">
+        <div class="title text-left pb-2">Trip Planner</div>
+        <ul class="text-left pl-0 pt-3">
+          <li class="pb-2"><a href="index.html">Home</a></li>
+          <li class="pb-2"><a href="about-us.html">About Company</a></li>
+          <li class="pb-2"><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li class="pb-2"><a href="faq's.html">Faq's</a></li>
+          <li class="pb-2"><a href="complaints.html">Complaints</a></li>
+          <li class="pb-2"><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4 col-4">
+        <div class="title text-left pb-2">Contact Now</div>
+        <ul class="text-left pl-0 pt-3">
+          <li class="number-details pb-2"><img class="pr-2" src="assets/img/footer-cal-icon-1.png" />00966 12535 5589</li>
+          <li class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon-1.png" />00966 55 5670699</li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4 col-4">
+        <div class="title text-left pb-2">Subscribe newsletter</div>
+        <div class="sub-detail pl-0 text-left pt-3">
+          <label>Name</label>
+          <input class="w-100 p-2" type="text" id="fname" name="fname">
+          <label class="pt-3">Email</label>
+          <input class="w-100 p-2" type="text" id="fname" name="fname">
+          <div class="sub-btn mt-4 float-right"><button>Subscribe</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="container">
+    <div class="copy-right text-center p-3 mb-lg-0 mb-md-0 mb-5">
+      <div class="row">
+        <div class="col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">© Copyright 2021 Trip Planner. All Rights Reserved.</div>
+      </div>
+    </div>
+  </div>
+   <!-- mobile stricky note-->
+   <div class="mobile-stricky-note d-lg-none d-md-none">
+     <div class="container1">
+       <div class="mobile-stricky-nav col-lg-none p-3 text-center">
+         <div class="row">
+           <div class="col-6 br-right-mob-stric">
+             <div class="number-details"><img class="pr-2" src="assets/img/footer-cal-icon.png" /><span class="pt-2">00966 12535 5589</span></div>
+           </div>
+           <div class="col-6">
+             <div class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" /><span>00966 55 5670699</span></div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- mobile stricky note-->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Start Template Main JS File for menu bar -->
+        <script src="js/menu-bar/popper.min.js"></script>
+        <script src="js/menu-bar/main.js"></script>
+        <!-- End Template Main JS File for menu bar -->
+        <!-- start js file for couresul -->
+        <script src="js/carousel/jquery.min.js"></script>
+        <script src="js/carousel/popper.js"></script>
+        <script src="js/carousel/bootstrap.min.js"></script>
+        <script src="js/carousel/owl.carousel.min.js"></script>
+        <script src="js/carousel/main.js"></script>
+        <!-- End js file for couresul -->
+        <!-- for date-->
+<!--        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script>
+          $(function() {
+            $('input[name="daterange"]').daterangepicker({
+              opens: 'left'
+            }, function(start, end, label) {
+              console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+          });
+          $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+        </script>
+
+        <script type="text/javascript">
+
+$('#carouselExample').on('slide.bs.carousel', function (e) {
+
+
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $('.carousel-item').length;
+
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+
+
+  $('#carouselExample').carousel({
+                interval: 2000
+        });
+
+
+  $(document).ready(function() {
+/* show lightbox when clicking a thumbnail */
+    $('a.thumb').click(function(event){
+      event.preventDefault();
+      var content = $('.modal-body');
+      content.empty();
+        var title = $(this).attr("title");
+        $('.modal-title').html(title);
+        content.html($(this).html());
+        $(".modal-profile").modal({show:true});
+    });
+
+  });
+        </script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $('.count').prop('disabled', true);
+                $(document).on('click','.adultPlus',function(){
+                    $('#adult').val(parseInt($('#adult').val()) + 1 );
+                });
+                $(document).on('click','.adultMinus',function(){
+                    $('#adult').val(parseInt($('#adult').val()) - 1 );
+                    if ($('#adult').val() == 0) {
+                        $('#adult').val(1);
+                    }
+                });
+
+                $(document).on('click','.childPlus',function(){
+                    $('#child').val(parseInt($('#child').val()) + 1 );
+                });
+                $(document).on('click','.childMinus',function(){
+                    $('#child').val(parseInt($('#child').val()) - 1 );
+                    if ($('#child').val() == 0) {
+                        $('#child').val(1);
+                    }
+                });
+
+
+                $(document).on('click','.infantPlus',function(){
+                    $('#infant').val(parseInt($('#infant').val()) + 1 );
+
+                });
+                $(document).on('click','.infantMinus',function(){
+                    $('#infant').val(parseInt($('#infant').val()) - 1 );
+                    if ($('#infant').val() == 0) {
+                        $('#infant').val(1);
+                    }
+                });
+
+
+            });
+        </script>
+
+        <script>
+          $('.multicities').click(function(){
+          $('.hide').toggle();
+          $('.onClickHide').toggle();
+          }
+          )
+        </script>
+
+
+        <script>
+          //
+          //    $(".appendbtn").click(function () {
+          //        $('#collapseExample1').append('<br /><a class="btn btn-warning appendbtn" ><i class="fa fa-plus"></i> Traveler</a><div class="sub-heading p-0">Traveller 2: Adult</div><br />');
+          //
+          //    });
+          var count = 2;
+
+          $('.appendbtn').on('click', function() {
+           $('.scroll-height').css('overflow-y','auto');
+            count++;
+
+            $(".form-group").attr('id', 'flight_'+count);
+            var html = '<div class="row form-group mt-5 ml-3 mob-margin" id="flight_3" >';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3">';
+            html +='<label class="ml-1 mt-1">';
+            html +='Leaving From ';
+            html +='</label>';
+            html +='<div class="dep-icon d-none d-lg-block">';
+            html +='<img class="icon-im" src="assets/img/deperture-icon.png" />';
+            html +='</div>';
+            html += '<input type="text" class="form-control input-width" placeholder=" Islamabad (ISB)... " required>';
+            html += '</div>';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3 paddingTop mt-1 ">';
+            html +='<label class=" ">';
+            html +='Going To ';
+            html +='</label>';
+            html +='<div class="dep-icon d-none d-lg-block">';
+            html +='<img class="icon-im" src="assets/img/location-icon.png" />';
+            html +='</div>';
+            html += '<input type="text" class="form-control input-width" placeholder=" Going Airport... " required>';
+            html += '</div>';
+            html +='<div class="col-md-3 col-sm-3 col-lg-3 paddingTop mt-1 float-left">';
+            html +='<label class=" ">';
+            html +='Departure ';
+            html +='</label>';
+            html += '<input type="date" class="form-control input-width " placeholder=" Going Airport... " required>';
+            html += '</div>';
+
+             html +='<div class="col-md-2 col-sm-2 col-lg-2 paddingTop mt-1 float-left">';
+            html +='<label class=" ">';
+            html +='Class ';
+            html +='</label>';
+            html += '<select class="form-control">';
+            html += '<option>Economy</option>';
+            html += '</select>';
+            html += '</div>';
+
+            html += '<div class="col-md-1 mt-1 ">';
+            html += '<i class="fa fa-times "></i>';
+            html += '</div>';
+            html += '</div>';
+            $('#addTraveler').append(html);
+          });
+
+$(document).on('click', '.fa-times', function(){
+            count--;
+            $(this).closest('#flight_3').hide();
+          });
+
+          $(document).on('click', '.fa-times', function(){
+            count--;
+            $(this).closest('.form-group').remove();
+          });
+        </script>
+
+
+<script>
+ $(document).ready(function(){
+ setTimeout(function() {
+         $('#StayConnectedModel').modal('show');
+
+    }, 3000);
+
+    });
+</script>
+
+    </body>
+
+<style>
+  .hide{
+   display: none;
+  }
+
+  .paddingTop1{
+    padding-top: 35px;
+  }
+
+  .input-width{
+    /*width: 98%;*/
+  }
+
+  .remove{
+    border: none;
+    background-color: transparent;
+    margin-top: 5px;
+    color: #fb6311;
+    font-weight: bold;
+  }
+
+  .text-color{
+    color: #fb6311;
+    text-decoration: none;
+
+  }
+
+  .text-color:hover{
+    text-decoration: none;
+    text-decoration-line: none;
+    cursor: pointer;
+  }
+
+  .scroll-height{
+    max-height: 500px;
+    /*overflow-x: auto;*/
+  }
+
+  .fa-times{
+    font-size: 18px;
+    margin-top: 40px;
+    /*font-weight: bold;*/
+    color:#fb6311;
+  }
+
+  .icon-img{
+    margin-top: -65px;
+  }
+
+  .icon-img1{
+    margin-top: -73px;
+  }
+
+
+
+  .scroll-height::-webkit-scrollbar {
+    width: 10px;
+
+
+  }
+
+  /* Track */
+  .scroll-height::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+
+  }
+
+  /* Handle */
+  .scroll-height::-webkit-scrollbar-thumb {
+    background: #fb6311;
+    border-radius: 10px;
+
+
+  }
+
+  /* Handle on hover */
+  .scroll-height::-webkit-scrollbar-thumb:hover {
+    background: #fb6311;
+  }
+
+
+
+/* Modal */
+  .input{
+    padding-left: 40px;
+
+  }
+
+
+  body {
+    font-family: 'Verdana', sans-serif;
+  }
+  .modal-newsletter {
+    color: #999;
+    font-size: 15px;
+    /* min-width: 600px; */
+    width:400px;
+
+  }
+
+  .modal-newsletter .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    /* border: none; */
+
+  }
+  .modal-newsletter .modal-header {
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+  }
+  .modal-newsletter h4 {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .modal-newsletter .close {
+    background: #c0c3c8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 19px;
+    text-align: center;
+    padding: 0;
+  }
+  .modal-newsletter .close span {
+    position: relative;
+    top: -1px;
+  }
+  .modal-newsletter .close:hover {
+    opacity: 0.8;
+  }
+  .modal-newsletter .icon-box {
+    color: #fb6311;
+    display: inline-block;
+    z-index: 9;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .modal-newsletter .icon-box i {
+    font-size: 80px;
+  }
+  .modal-newsletter .form-control, .modal-newsletter .btn {
+    min-height: 46px;
+    border-radius: 3px;
+  }
+  .modal-newsletter .form-control {
+    box-shadow: none;
+    border-color: #dbdbdb;
+  }
+  .modal-newsletter .form-control:focus {
+    border-color: #fb6311;
+    box-shadow: 0 0 8px rgba(114, 101, 234, 0.5);
+  }
+
+  .modal-newsletter .btn:hover, .modal-newsletter .btn:focus {
+    /* background: #4e3de4; */
+    outline: none;
+  }
+  .modal-newsletter .input-group {
+    margin: 30px 0 15px;
+  }
+  .hint-text {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .btn-warning{
+    color:white;
+    background-color: #fb6311!important;
+  }
+  input{
+    border-radius: 8px !important;
+  }
+
+  #myModal{
+    border-radius: 100px !important;
+  }
+  .errspan {
+    float: left;
+    margin-right: 6px;
+    margin-top: -52px;
+    position: relative;
+    z-index: 2;
+    font-size: 26px;
+    color:black;
+    padding-left: 10px;
+
+  }
+  .errspan1 {
+    float: left;
+    margin-right: 6px;
+    margin-top: -52px;
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    color:black;
+    padding-left: 10px;
+
+  }
+
+  .input{
+    padding-left: 40px !important;
+
+  }
+
+  .phone-icon{
+    font-size: 90px;
+    color:#fb6311;
+    margin-left: -170px !important;
+  }
+
+.user-icon{
+  font-size: 16px;
+  margin-top: -50px;
+}
+
+  .email-icon{
+    /* margin-top: -100px !important; */
+    margin-right: -200px;
+    font-size: 40px;
+    color:#fb6311;
+  }
+  .phon-icon{
+    margin-top:-56px;
+    margin-left: 5px;
+  }
+
+
+
+  @media (max-width: 480px) {
+    .modal-newsletter {
+      margin-left: auto;
+      margin-right: auto;
+      width:90%;
+
+    }
+
+    .mobile-margin-top{
+      margin-top: 10px;
+    }
+
+    .find-hotel{
+      /*padding: 0 !important;*/
+      height: 100vh;
+    }
+
+    .price{
+      font-size: 20px !important;
+      padding-bottom: 10px !important;
+    }
+
+
+    .scroll-height{
+      /* max-height: 100vh !important; */
+      overflow-x: auto;
+      /*overflow-x: auto;*/
+    }
+
+    .mob-margin-bottom{
+      margin-bottom: 20px;
+    }
+
+    .mob-margin{
+      margin-left: -10px !important;
+      margin-top: -50px;
+    }
+
+    .fa-times{
+      margin-top: 10px;
+    }
+    .mobile-stricky-nav {
+
+       border-top-right-radius: 0px;
+       border-top-left-radius: 0px;
+    }
+
+
+
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .modal-newsletter {
+      margin-left: auto;
+      margin-right: auto;
+      width:400px;
+
+    }
+    .mobile-stricky-nav {
+
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+
+    .find-hotel{
+      /*padding: 0 !important;*/
+      height: 100vh;
+    }
+
+    .price{
+      font-size: 20px !important;
+      padding-bottom: 10px !important;
+    }
+
+
+  }
+
+
+</style>
+</html>

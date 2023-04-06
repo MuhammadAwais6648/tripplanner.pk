@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title> View All </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favi.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/trip-planner.css" rel="stylesheet" />
+  <link href="css/carousel/owl.carousel.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- Start Template Main CSS File for menu bar -->
+  <link href="css/menubar-bootstrap.min.css" rel="stylesheet">
+  <link href="css/menubar-style.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <!-- End Template Main CSS File for menu bar -->
+  <!-- Date  CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <style type="text/css">
+.dropbtn {
+        background:transparent;
+        color: white;
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        width:100%;
+        text-align:left;
+        }
+
+        .search-dropdown {
+        position: relative;
+        display: inline-block;
+        width:100%;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        min-width: 160px;
+        width:100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 999;
+        line-height: 40px;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 2px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        .dropdown-content a:hover {background:#f1f1f1;}
+        .search-dropdown:hover .dropdown-content {display: block;}
+        .search-dropdown:hover .dropbtn {}
+        .dropbtn .fa, .dropbtn .far, .dropbtn .fas, .dropbtn .fal{font-size:16px; padding-left:10px;}
+        .dropdown-passenger input[type="text"]{line-height:38px;}
+        .form-field .fa, .form-field .far, .form-field .fas, .form-field .fal{font-size:22px; color:#f7e300;padding:10px 0px 0px 12px;}
+        .btn-main-search button{width:100%; background:#f7e300; line-height:42px; border-bottom-right-radius:25px;  border-top-right-radius:25px; border:none; font-size:14px; text-transform:uppercase;}
+        .form-field ::-webkit-input-placeholder{/* Chrome/Opera/Safari */ color:#252327;}
+        .form-field ::-moz-placeholder{/* Firefox 19+ */ color:#252327;}
+        .form-field :-ms-input-placeholder{/* IE 10+ */ color:#252327;}
+        .form-field:-moz-placeholder{/* Firefox 18- */ color:#252327;}
+        .bold-field ::-webkit-input-placeholder{/* Chrome/Opera/Safari */ color:#252327; font-size:18px;}
+        .bold-field ::-moz-placeholder{/* Firefox 19+ */ color:#252327; font-size:18px;}
+        .bold-field :-ms-input-placeholder{/* IE 10+ */ color:#252327; font-size:18px;}
+        .bold-field :-moz-placeholder{/* Firefox 18- */ color:#252327; font-size:18px;}
+        .dropdown-passenger{}
+        .dropdown-passenger .dropbtn{ color:#252327; padding:0px 0px 0px 0px; font-size:13px; font-weight:bold;}
+        .dropdown-passenger .fa, .dropdown-passenger .far, .dropdown-passenger .fas, .dropdown-passenger .fal{font-size:22px; color:#f7e300;padding:10px 0px 0px 12px;}
+        .icon-passenger .fa, .icon-passenger .far, .icon-passenger .fas, .icon-passenger .fal{padding:0px 0px 0px 12px!important;}
+        .qty {}
+        .qty .count {
+        color: #000;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 0 2px;
+        min-width: 30px;
+        text-align: center;
+        }
+        .qty .plus {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        width: 20px;
+        height: 20px;
+        font: 22px/1 Arial,sans-serif;
+        text-align: center;
+        background:#ccc;
+        }
+        .qty .minus {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        width: 20px;
+        height: 20px;
+        font: 22px/1 Arial,sans-serif;
+        text-align: center;
+        background-clip: padding-box;
+        background:#ccc;
+        }
+
+        .minus:hover{
+        background-color: #65199f !important;
+        }
+        .plus:hover{
+        background-color: #65199f !important;
+        }
+        /*Prevent text selection*/
+        .qty span{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        }
+        .qty input{  
+        border: 0;
+        width: 2%;
+        }
+        .qty input::-webkit-outer-spin-button,
+        .qty input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        .qty input:disabled{
+        background-color:white;
+        }
+        .dropdown-content label{font-weight:normal; font-size:13px; padding-left:15px; margin-bottom:0px; color: #000;}
+        .dropdown-content hr{margin:0px;border-bottom:solid 1px #d8d8d8;}
+  </style>
+  </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container-fluid">
+              <div class="row custom-width custom-nav">
+                <div class="col-lg-5 col-4">
+                  <div class="sidebar d-inline">
+                  <div class="toggle d-inline">
+                    <a href="#" class="js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-none d-lg-block d-md-block"><i class="fa fa-bars pr-2"></i> Menu</span>
+                        <span class="nav-link pl-0 pr-0 pr-lg-3 d-block d-lg-none d-md-none"><i class="fa fa-bars pr-2"></i> </span>
+                    </a>
+                  </div>
+                </div>
+                <aside class="sidebar">
+                  <div class="side-inner">
+                    <div class="nav-menu">
+                      <ul>
+                        <li class="active d-inline d-lg-none">
+                          <a href="flight.html">Flight</a>
+                        </li>
+                        <li class="d-inline d-lg-none">
+                          <a href="umrah.html">Umrah</a>
+                        </li>
+                        <li><a href="hotel.html">Hotel</a></li>
+                        <li><a href="tour.html">Tour</a></li>
+                        <li><a href="visa.html">Visa</a></li>
+                        <li><a href="transport.html">Rent A Car</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </aside>
+                <div class="top-menu d-lg-inline d-none">
+                  <a href="flight.html"><span class="nav-link pl-2">Flight</span></a>
+                  <a href="umrah.html"><span class="nav-link pl-2">Umrah</span></a>
+                  <!--<a href=""><span class="nav-link pl-2">Hotel</span></a>
+                  <a href=""><span class="nav-link pl-2">Tour</span></a>
+                  <a href=""><span class="nav-link pl-2">Rent A Car</span></a>-->
+                </div>
+                </div>
+                <div class="col-lg-2 col-4 mt-lg-1 main-logo-width text-center">
+                  <a href="index.html">
+                    <!--<div class="main-logo"></div>-->
+                      <img class="d-lg-block d-none" src="assets/img/main-logo.png">
+                      <img class="d-block d-lg-none" src="assets/img/main-logo-mobile.png">
+                    </a>
+                </div>
+                <div class="col-lg-5 col-4 text-lg-right text-right">
+                  <a class="nav-link user-icon pr-0 pr-lg-3" href="user-login.html"><i class="fa fa-user"></i> <span class="d-none d-lg-inline">Sign</span></a>
+                  <div class="custom-dropdown cus-down-arrow pr-0 d-lg-inline-block d-none">
+                    <button class="dropbtn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#">Arabic</a>
+                    </div>
+                  </div>
+                  
+                  <!--<div class="collapse navbar-collapse login-info" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto for-postion nopadding">
+                      <li class="nav-item"><a class="nav-link for-color" href="#about"><i class="fa fa-user"></i> Sign</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">
+                          <select class="selectpicker nav-link">
+                              <option>Arabic</option>
+                              <option>English</option>
+                         </select></a>
+                     </li>
+                  </ul>
+              </div>-->
+             
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead main-header tour-header">
+            <div class="container d-flex h-100 align-items-center">
+     <!-- Search form -->
+            <div class="search-form w-100">
+              <div class="container">
+                <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-7 mb-md-2 mb-sm-0 mb-0">
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Return<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Ony Way</a>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow cus-down-arrow pr-0">
+          <button class="dropbtn">Adult <i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <div class="passenger pt-3 pb-3 pl-2 pr-2">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="title-pax">Adult</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus bg-dark">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 mt-3 mb-3">
+                  <div class="title-pax">Child</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus bg-dark">+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="title-pax">Infant</div>
+                  <div class="count-pax">
+                    <div class="qty">
+                        <span class="minus bg-dark">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus bg-dark">+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-dropdown cus-down-arrow pr-0">
+          <button class="dropbtn">Economy<i class="fas fa-chevron-down"></i></button></button>
+          <div class="dropdown-content">
+            <a href="#">Business</a>
+          </div>
+        </div>         
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-lg-12 col-md-12 col-12">
+          <div class="row g-3 needs-validation main-search p-4 mt-2" novalidate>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-12 pt-lg-0 pt-4">
+                <label class="form-label pl-3">Destination</label>
+                <input type="text" class="form-control" placeholder =" New York " required>
+              </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-12 pt-lg-0 pt-4">
+                  <label class="form-label pl-3">Check In / Check Out</label>
+                  <input type="text" name="daterange" class="form-control" value="01/01/2018 - 01/15/2018" />
+                </div>
+               <div class="col-xl-2 col-lg-2 col-md-4 col-12 pt-lg-0 pt-4">
+                  <label class="form-label pl-3">No of Room</label>
+                  <select class="form-control">
+                    <option>1 Room</option>
+                    <option>2 Room</option>
+                    <option>3 Room</option>
+                  </select>
+                </div>
+               <div class="col-xl-3 col-lg-3 col-md-4 col-12 pt-lg-0 pt-4">
+                  <label class="form-label pl-3">No of Travlers</label>
+                   <div class="dpt-icon custom-border">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="main-input">
+                                            <div class="search-dropdown dropdown-passenger">
+                                                <div class="dropbtn">
+                                                        <input class="form-control form-control-lg" type="text" placeholder="ADT 1, CNN 0, INF 0">            
+                                                </div>
+                                                <div class="dropdown-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                            <label>Adult</label>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">                                           
+                                                            <div class="qty">
+                                                                <span class="minus bg-dark">-</span>
+                                                                <input type="number" class="count" name="adult" value="1">
+                                                                <span class="plus bg-dark">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12"><hr></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            <label>Child</label>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">                                           
+                                                            <div class="qty">
+                                                                <span class="minus bg-dark">-</span>
+                                                                <input type="number" class="count" name="child" value="1">
+                                                                <span class="plus bg-dark">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12"><hr></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            <label>Infant</label>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">                                           
+                                                            <div class="qty">
+                                                                <span class="minus bg-dark">-</span>
+                                                                <input type="number" class="count" name="infant" value="1">
+                                                                <span class="plus bg-dark">+</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--<div class="input-nor-text pl-3">Passenger</div>
+                                        <input class="form-control form-control-lg" type="text" placeholder="ADT 1, CNN 0, INF 0">-->
+                                    </div>
+                                </div>
+                  </div>
+                </div>
+                 <div class="col-xl-2 col-lg-2 col-md-4 col-12 pb-lg-0">
+                    <a href="flight-search-result.html"><button class="search-btn btn-primary w-100" type="submit">SEARCH</button></a>
+                  </div>
+              </div>
+          </div>
+          </div>
+       </div>
+    </div>
+<!-- End form -->
+    </div>
+        </header>
+        <section class="flight-det hotel-page view-all">
+          <div class="container">
+            <!-- Deal of the day -->
+            <h1 class="pb-4 mb-4">Cheapest Flights Available</h1>
+            <div class="featured-carousel owl-carousel mb-5">
+              <div class="item">
+              <a href="city-page.html">
+                <div class="work">
+                  <div class="image-box">                    
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/view-all-deal-img-1.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">New York  -  254 SAR</div>
+                        <div class="">United State of America</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="city-page.html">
+                <div class="work">
+                  <div class="image-box">                    
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/view-all-deal-img-2.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Birmingham</div>
+                        <div class="">United Kingdom</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="city-page.html">
+                <div class="work">
+                  <div class="image-box">                    
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/view-all-deal-img-3.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Moscow</div>
+                        <div class="">United State of America</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+               <div class="item">
+                <a href="city-page.html">
+                  <div class="work">
+                    <div class="image-box">                    
+                      <div class="name-desc hover-1 image-box rounded">
+                        <div class="img align-items-center justify-content-center rounded">
+                      <img class="w-100" src="assets/img/view-all-deal-img-1.png" />
+                      <a href="#" class="icon d-flex align-items-center justify-content-center">
+                        <span class="ion-ios-search"></span>
+                      </a>
+                      </div>
+                        <div class="hover-1-content p-2">
+                        <div class="title text-left">New York  -  254 SAR</div>
+                        <div class="">United State of America</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+              </div>
+              <div class="item">
+              <a href="city-page.html">
+                <div class="work">
+                  <div class="image-box">                    
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/view-all-deal-img-2.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Birmingham</div>
+                        <div class="">United Kingdom</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="item">
+              <a href="city-page.html">
+                <div class="work">
+                  <div class="image-box">                    
+                    <div class="name-desc hover-1 image-box rounded">
+                      <div class="img align-items-center justify-content-center rounded">
+                    <img class="w-100" src="assets/img/view-all-deal-img-3.png" />
+                    <a href="#" class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-search"></span>
+                    </a>
+                    </div>
+                      <div class="hover-1-content p-2">
+                        <div class="title text-left">Moscow</div>
+                        <div class="">United State of America</div>
+                        <p class="hover-1-description mb-0"><a href="city-page.html"><strong>Book Now</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="right-cour-arrow"></div>
+            <div class="left-cour-arrow"></div>
+                      <!--Start We Offer the Best Luxury Transport-->
+              <div class="ftco-section flight-det hotel-page">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h5 class="pb-5 mt-5 pt-3">luxury hotel accommodation</h5>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="featured-carousel owl-carousel mb-5">
+                        <div class="item">
+                        <a href="hotel-search-result.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/hotel-main-img-3.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">london  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="hotel-search-result.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/hotel-main-img-4.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">paris  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="hotel-search-result.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/hotel-main-img-5.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">berlin  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                         <div class="item">
+                          <a href="hotel-search-result.html">
+                            <div class="work">
+                              <div class="image-box">                    
+                                <div class="name-desc hover-1 image-box rounded">
+                                  <div class="img align-items-center justify-content-center rounded">
+                                <img class="w-100" src="assets/img/hotel-main-img-3.png" />
+                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                  <span class="ion-ios-search"></span>
+                                </a>
+                                </div>
+                                  <div class="hover-1-content p-2">
+                                  <div class="title text-left">london  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                        <a href="hotel-search-result.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/hotel-main-img-4.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">paris  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="hotel-search-result.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/hotel-main-img-5.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">berlin  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="hotel-search-result.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="right-cour-arrow"></div>
+                      <div class="left-cour-arrow"></div>
+
+
+
+                  </div>
+                </div>
+            </div>
+            <!--End We Offer the Best Luxury Transport-->
+            <!-- Deal of the day -->
+
+            <!-- Umrah section -->
+            <div class="ftco-section flight-det view-umrah-sect">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3 class="pb-5 pt-5 mt-4">Cheap Umrah Packages</h3>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="featured-carousel owl-carousel mb-5">
+                        <div class="item">
+                        <a href="umrah-packages.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/view-all-deals-umrah-1.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">3 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="umrah-packages.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/view-all-deals-umrah-2.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">4 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="umrah-packages.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/view-all-deals-umrah-3.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">5 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                         <div class="item">
+                          <a href="umrah-packages.html">
+                            <div class="work">
+                              <div class="image-box">                    
+                                <div class="name-desc hover-1 image-box rounded">
+                                  <div class="img align-items-center justify-content-center rounded">
+                                <img class="w-100" src="assets/img/view-all-deals-umrah-1.png" />
+                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                  <span class="ion-ios-search"></span>
+                                </a>
+                                </div>
+                                  <div class="hover-1-content p-2">
+                                  <div class="title text-left">3 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                        <a href="umrah-packages.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/view-all-deals-umrah-2.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">4 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="umrah-packages.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/view-all-deals-umrah-3.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">5 Star  -  268 aed</div>
+                                  <p class="hover-1-description mb-0"><a href="umrah-packages.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="right-cour-arrow"></div>
+                      <div class="left-cour-arrow"></div>
+                  </div>
+                </div>
+            </div>
+          <!-- Umrah section -->
+          <!-- Tour section -->
+              <div class="ftco-section best-services">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4 class="pb-5 mt-5 pt-5">Affordable Tours</h4>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="featured-carousel owl-carousel mb-5">
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/tour-img-4.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Thailand Beach  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/tour-img-5.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Cayman Island  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/tour-img-6.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Vali  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                         <div class="item">
+                          <a href="tour-detail.html">
+                            <div class="work">
+                              <div class="image-box">                    
+                                <div class="name-desc hover-1 image-box rounded">
+                                  <div class="img align-items-center justify-content-center rounded">
+                                <img class="w-100" src="assets/img/tour-img-4.png" />
+                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                  <span class="ion-ios-search"></span>
+                                </a>
+                                </div>
+                                  <div class="hover-1-content p-2">
+                                  <div class="title text-left">Thailand Beach  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/tour-img-5.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Cayman Island  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/tour-img-6.png" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Vali  -  268 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="tour-detail.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="right-cour-arrow"></div>
+                      <div class="left-cour-arrow"></div>
+                    </div>
+                  </div>
+              </div>
+          <!-- Tour section -->
+          <!-- Travel section -->
+              <div class="ftco-section best-services">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4 class="pb-5 mt-5 pt-5">Travel to your favorite destinations</h4>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="featured-carousel owl-carousel mb-5">
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/transport/tran-view-all-economy-gmc.jpg" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Economy GMC - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="economy-gmc.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/transport/tran-view-all-business-car.jpg" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Business Car - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="business-car.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/transport/tran-view-all-economy-coaster.jpg" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Economy Coaster - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="economy-coaster.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                         <div class="item">
+                          <a href="tour-detail.html">
+                            <div class="work">
+                              <div class="image-box">                    
+                                <div class="name-desc hover-1 image-box rounded">
+                                  <div class="img align-items-center justify-content-center rounded">
+                                <img class="w-100" src="assets/img/transport/tran-view-all-economy-car.jpg" />
+                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                  <span class="ion-ios-search"></span>
+                                </a>
+                                </div>
+                                  <div class="hover-1-content p-2">
+                                  <div class="title text-left">Economy car - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="economy-car.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/transport/tran-view-all-business-gmc.jpg" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Business GMC - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="business-gmc.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="item">
+                        <a href="tour-detail.html">
+                          <div class="work">
+                            <div class="image-box">                    
+                              <div class="name-desc hover-1 image-box rounded">
+                                <div class="img align-items-center justify-content-center rounded">
+                              <img class="w-100" src="assets/img/transport/tran-view-all-standard-gmc.jpg" />
+                              <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-search"></span>
+                              </a>
+                              </div>
+                                <div class="hover-1-content p-2">
+                                  <div class="title text-left">Standard GMC - 250 SAR</div>
+                                  <p class="hover-1-description mb-0"><a href="standard-gmc.html"><strong>Click to Book</strong> <i class="fas fa-angle-double-right"></i> </a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="right-cour-arrow"></div>
+                      <div class="left-cour-arrow"></div>
+                    </div>
+                  </div>
+              </div>
+          <!-- Travel section -->
+                    <!-- Transport section -->
+          <!-- <div class="ftco-section flight-det luxury-trans">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="pb-5 mt-5">Travel to your favorite destinations</h2>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="featured-carousel owl-carousel">
+                    <div class="item">
+                      <div class="work">
+                        <div class="img d-flex align-items-center justify-content-center rounded">
+                        <div class="transport-option p-4">
+                          <img class="" src="assets/img/transport/economy-gmc.png" />
+                        </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Economy GMC - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="economy-gmc.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="work">
+                        <div class="img d-flex align-items-center justify-content-center rounded">
+                          <div class="transport-option p-4">
+                            <img class="" src="assets/img/transport/business-car.png" />
+                          </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Business Car - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="business-car.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="work">
+                          <div class="img d-flex align-items-center justify-content-center rounded">
+                              <div class="transport-option p-4">
+                                <img class="" src="assets/img/transport/economy-coaster.png" />
+                              </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Economy Coaster - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="economy-coaster.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="work">
+                        <div class="img d-flex align-items-center justify-content-center rounded">
+                            <div class="transport-option p-4">
+                              <img class="" src="assets/img/transport/economy-car.png" />
+                            </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Economy car - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="economy-car.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="work">
+                        <div class="img d-flex align-items-center justify-content-center rounded">
+                            <div class="transport-option p-4">
+                              <img class="" src="assets/img/transport/business-gmc.png" />
+                            </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Business GMC - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="business-gmc.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="work">
+                        <div class="img d-flex align-items-center justify-content-center rounded">
+                            <div class="transport-option p-4">
+                              <img class="" src="assets/img/transport/standard-gmc.png" />
+                            </div>
+                          <a href="#" class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-search"></span>
+                          </a>
+                        </div>
+                        <div class="title mt-1 ml-3">Standard GMC - 250 SAR</div>
+                        <div class="sub-txt ml-3"><a href="standard-gmc.html">Click to Book</a></div>
+                      </div>
+                    </div>
+                  </div>
+            <div class="right-cour-arrow"></div>
+            <div class="left-cour-arrow"></div>
+            </div>
+          </div>
+        </div> -->
+            <!-- Transport section -->
+
+          <!-- Certified -->
+              <div class="container mt-5">
+                  <h3 class="text-center">We Are Certified Company</h3>
+                  <div class="row mt-5">
+                      <div class="col-lg-3 col-md-3 col-6 mb-lg-0 mb-md-0 mb-4">
+                          <div class="comp-name p-3 text-center">
+                              <img class="" src="assets/img/ministry-tourism-logo1.jpg" />
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-6">
+                          <div class="comp-name p-3 text-center">
+                              <img class="" src="assets/img/ministry-citizenship-logo.jpg" />
+                          </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-3 col-6">
+                          <div class="comp-name p-3 text-center">
+                              <img class="" src="assets/img/ministry-interior-logo.jpg" />
+                          </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-3 col-6">
+                          <div class="comp-name p-3 text-center">
+                              <img class="" src="assets/img/ministry-islamic-fair-logo.jpg" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      <!-- Certified -->
+          <!-- Stay with us -->
+          <div class="stay-us">
+            <h3 class="text-center mt-5 pt-3">Stay With Us</h3>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 center-col text-center mt-3">
+                  <a href="#" class="social-btn fb-btn button"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-btn whats-btn button"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="social-btn twitter-btn button"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-btn google-btn button"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social-btn linked-btn button"><i class="fab fa-linkedin"></i></a>
+                </div>
+             </div>
+          </div>
+          <!-- Stay with us -->
+          </div>
+        </section>
+        <!-- Footer-->
+          <!-- Footer-->
+        <footer class="footer bg-black small text-center d-none d-lg-block d-md-block"><div class="container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Trip Planner</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="pb-2"><a href="index.html">Home</a></li>
+                  <li class="pb-2"><a href="about-us.html">About Company</a></li>
+                  <li class="pb-2"><a href="terms-conditions.html">Terms & Conditions</a></li>
+                  <li class="pb-2"><a href="faq's.html">Faq's</a></li>
+                  <li class="pb-2"><a href="complaints.html">Complaints</a></li>
+                  <li class="pb-2"><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Contact Now</div>
+                <ul class="text-left pl-0 pt-3">
+                  <li class="number-details pb-2"><img class="pr-2" src="assets/img/footer-cal-icon.png" />00966 12535 5589</li>
+                  <li class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" />00966 55 5670699</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-4">
+                <div class="title text-left pb-2">Subscribe newsletter</div>
+                <div class="sub-detail pl-0 text-left pt-3">
+                  <label>Name</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <label class="pt-3">Email</label>
+                  <input class="w-100 p-2" type="text" id="fname" name="fname">
+                  <div class="sub-btn mt-4 float-right"><button>Subscribe</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="container">
+          <div class="copy-right text-center p-3 mb-lg-0 mb-md-0 mb-5">
+            <div class="row">
+              <div class="col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">© Copyright 2021 Trip Planner. All Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+         <!-- mobile stricky note-->
+        <div class="mobile-stricky-note d-lg-none d-md-none">
+            <div class="container1">
+                <div class="mobile-stricky-nav col-lg-none p-3 text-center">
+                    <div class="row">
+                        <div class="col-6 br-right-mob-stric">
+                            <div class="number-details"><img class="pr-2" src="assets/img/footer-cal-icon.png" /><span class="pt-2">00966 12535 5589</span></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="number-details"><img class="pr-2" src="assets/img/footer-whattsapp-icon.png" /><span>00966 55 5670699</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <!-- mobile stricky note-->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Start Template Main JS File for menu bar -->
+        <script src="js/menu-bar/popper.min.js"></script>
+        <script src="js/menu-bar/main.js"></script>
+        <!-- End Template Main JS File for menu bar -->
+        <!-- start js file for couresul -->
+        <script src="js/carousel/jquery.min.js"></script>
+        <script src="js/carousel/popper.js"></script>
+        <script src="js/carousel/bootstrap.min.js"></script>
+        <script src="js/carousel/owl.carousel.min.js"></script>
+        <script src="js/carousel/main.js"></script>
+        <!-- End js file for couresul -->
+        <!-- for date-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script>
+          $(function() {
+            $('input[name="daterange"]').daterangepicker({
+              opens: 'left'
+            }, function(start, end, label) {
+              console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+          });
+          $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+        </script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+        $('.count').prop('disabled', true);
+        $(document).on('click','.plus',function(){
+        $('.count').val(parseInt($('.count').val()) + 1 );
+        });
+          $(document).on('click','.minus',function(){
+          $('.count').val(parseInt($('.count').val()) - 1 );
+            if ($('.count').val() == 0) {
+            $('.count').val(1);
+          }
+            });
+    });
+        </script>
+        <!-- for date-->
+    </body>
+</html>
